@@ -63,10 +63,10 @@
     <ClInclude Include="..\..\Source\PersonalProject\UI\GUIBase.h">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\PersonalProject\UI\MainMenuUI.cpp">
+    <ClCompile Include="..\..\Source\PersonalProject\UI\TitleScreen.cpp">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\UI\MainMenuUI.h">
+    <ClInclude Include="..\..\Source\PersonalProject\UI\TitleScreen.h">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClInclude>
   </ItemGroup>
