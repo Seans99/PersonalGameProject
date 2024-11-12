@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "PersonalProject/PrimaryPlayerCharacter.h"
+#include "PersonalProject/PrimarySystems/PrimaryPlayerCharacter.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePrimaryPlayerCharacter() {}
 
@@ -33,34 +33,34 @@ struct Z_Construct_UClass_APrimaryPlayerCharacter_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "PrimaryPlayerCharacter.h" },
-		{ "ModuleRelativePath", "PrimaryPlayerCharacter.h" },
+		{ "IncludePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[] = {
 		{ "AllowPrivateAcess", "true" },
 		{ "Category", "PrimaryPlayerCharacter" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "PrimaryPlayerCharacter.h" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InputMapping_MetaData[] = {
 		{ "Category", "EnhancedInput" },
-		{ "ModuleRelativePath", "PrimaryPlayerCharacter.h" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveAction_MetaData[] = {
 		{ "Category", "EnhancedInput" },
-		{ "ModuleRelativePath", "PrimaryPlayerCharacter.h" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JumpAction_MetaData[] = {
 		{ "Category", "EnhancedInput" },
-		{ "ModuleRelativePath", "PrimaryPlayerCharacter.h" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LookAction_MetaData[] = {
 		{ "Category", "EnhancedInput" },
-		{ "ModuleRelativePath", "PrimaryPlayerCharacter.h" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AttackAction_MetaData[] = {
 		{ "Category", "EnhancedInput" },
-		{ "ModuleRelativePath", "PrimaryPlayerCharacter.h" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
@@ -128,14 +128,14 @@ APrimaryPlayerCharacter::~APrimaryPlayerCharacter() {}
 // End Class APrimaryPlayerCharacter
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimaryPlayerCharacter_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APrimaryPlayerCharacter, APrimaryPlayerCharacter::StaticClass, TEXT("APrimaryPlayerCharacter"), &Z_Registration_Info_UClass_APrimaryPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APrimaryPlayerCharacter), 2786643483U) },
+		{ Z_Construct_UClass_APrimaryPlayerCharacter, APrimaryPlayerCharacter::StaticClass, TEXT("APrimaryPlayerCharacter"), &Z_Registration_Info_UClass_APrimaryPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APrimaryPlayerCharacter), 3870447370U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimaryPlayerCharacter_h_3484585225(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimaryPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimaryPlayerCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_3103704922(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -39,17 +39,35 @@
     <ClInclude Include="..\..\Source\PersonalProject\PersonalProject.h">
       <Filter>Source\PersonalProject</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\PersonalProject\PrimaryGameMode.cpp">
-      <Filter>Source\PersonalProject</Filter>
+    <Filter Include="Source\PersonalProject\PrimarySystems">
+      <UniqueIdentifier>{3FD8BCC3-A5CF-3EC9-9252-EFB7E7B897AF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameMode.cpp">
+      <Filter>Source\PersonalProject\PrimarySystems</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\PrimaryGameMode.h">
-      <Filter>Source\PersonalProject</Filter>
+    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameMode.h">
+      <Filter>Source\PersonalProject\PrimarySystems</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\PersonalProject\PrimaryPlayerCharacter.cpp">
-      <Filter>Source\PersonalProject</Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerCharacter.cpp">
+      <Filter>Source\PersonalProject\PrimarySystems</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\PrimaryPlayerCharacter.h">
-      <Filter>Source\PersonalProject</Filter>
+    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerCharacter.h">
+      <Filter>Source\PersonalProject\PrimarySystems</Filter>
+    </ClInclude>
+    <Filter Include="Source\PersonalProject\UI">
+      <UniqueIdentifier>{8A102ED0-A86A-3244-87B3-BB482EEDEAA9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\GUIBase.cpp">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\GUIBase.h">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\MainMenuUI.cpp">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\MainMenuUI.h">
+      <Filter>Source\PersonalProject\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
