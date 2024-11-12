@@ -4,7 +4,7 @@
 
 APrimaryGameMode::APrimaryGameMode()
 {
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnClassFinder(TEXT("/Game/Blueprints/PrimaryPlayerCharacter"));
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnClassFinder(TEXT("/Game/Blueprints/PrimarySystems/BP_PrimaryPlayerCharacter"));
 	DefaultPawnClass = PlayerPawnClassFinder.Class;
 }
 

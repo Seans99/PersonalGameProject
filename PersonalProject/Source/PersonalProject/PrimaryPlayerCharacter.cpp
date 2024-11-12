@@ -1,21 +1,23 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "PrimaryPlayerCharacter.h"
+#include "InputMappingContext.h"
+#include "EnhancedInputSubsystems.h"
+#include "EnhancedInputComponent.h"
+#include "Camera/CameraComponent.h"
 
 // Sets default values
 APrimaryPlayerCharacter::APrimaryPlayerCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
+	Camera->SetupAttachment(RootComponent);
+	Camera->bUsePawnControlRotation = true;
 
+	PrimaryActorTick.bCanEverTick = true;
 }
 
 // Called when the game starts or when spawned
 void APrimaryPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -30,5 +32,52 @@ void APrimaryPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+	{
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+		{
+			Subsystem->AddMappingContext(InputMapping, 0);
+		}
+	}
+
+	if (UEnhancedInputComponent* Input = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
+	{
+		Input->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Move);
+		Input->BindAction(JumpAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Jump);
+		Input->BindAction(LookAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Look);
+		Input->BindAction(AttackAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Attack);
+	}
+}
+
+void APrimaryPlayerCharacter::Move(const FInputActionValue& InputValue)
+{
+	FVector2D InputVector = InputValue.Get<FVector2D>();
+
+	const FVector ForwardDirection = GetActorForwardVector();
+	const FVector RightDirection = GetActorRightVector();
+
+	AddMovementInput(ForwardDirection, InputVector.Y);
+	AddMovementInput(RightDirection, InputVector.X);
+}
+
+void APrimaryPlayerCharacter::Jump()
+{
+	ACharacter::Jump();
+}
+
+void APrimaryPlayerCharacter::Look(const FInputActionValue& InputValue)
+{
+	FVector2D InputVector = InputValue.Get<FVector2D>();
+
+	if (IsValid(Controller))
+	{
+		AddControllerYawInput(InputVector.X);
+		AddControllerPitchInput(InputVector.Y);
+	}
+}
+
+void APrimaryPlayerCharacter::Attack()
+{
+	
 }
 
