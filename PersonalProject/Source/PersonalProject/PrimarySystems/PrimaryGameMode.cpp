@@ -20,7 +20,7 @@ void APrimaryGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (!bDebugMode)
+	if (!bDebugMode && UGameplayStatics::GetCurrentLevelName(this) == TitleScreenLevel)
 	{
 		SetState(EGameState::ETitleScreen);
 	}
