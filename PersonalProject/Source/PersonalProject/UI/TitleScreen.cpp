@@ -1,11 +1,15 @@
 #include "TitleScreen.h"
+#include "../PrimarySystems/PrimaryGameMode.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Components/Button.h"
 #include "Components/HorizontalBox.h"
+#include <Kismet/GameplayStatics.h>
 
 void UTitleScreen::NativeConstruct()
 {
 	Super::NativeConstruct();
+
+	GameMode = Cast<APrimaryGameMode>(UGameplayStatics::GetGameMode(GetWorld()));
 
 	StartGameBtn->OnClicked.AddDynamic(this, &UTitleScreen::StartGame);
 	PlayGameBtn->OnClicked.AddDynamic(this, &UTitleScreen::PlayGame);
@@ -16,13 +20,12 @@ void UTitleScreen::NativeConstruct()
 void UTitleScreen::StartGame()
 {
 	// Show menu buttons
-	MenuButtonsBox->SetVisibility(ESlateVisibility::Visible);
-	StartGameBtn->SetVisibility(ESlateVisibility::Hidden);
 }
 
 void UTitleScreen::PlayGame()
 {
 	// Play game
+	GameMode->SetState(EGameState::EInGame);
 }
 
 void UTitleScreen::Settings()

@@ -3,6 +3,8 @@
 #include "GUIBase.h"
 #include "TitleScreen.generated.h"
 
+class APrimaryGameMode;
+
 class UButton;
 class UHorizontalBox;
 
@@ -15,11 +17,17 @@ protected:
 	virtual void NativeConstruct() override;
 	
 public:
+	UFUNCTION()
 	void StartGame();
 
 public:
+	UFUNCTION()
 	void PlayGame();
+
+	UFUNCTION()
 	void Settings();
+
+	UFUNCTION()
 	void QuitGame();
 
 public:
@@ -38,4 +46,7 @@ public:
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UButton* QuitGameBtn;
+
+private:
+	APrimaryGameMode* GameMode;
 };
