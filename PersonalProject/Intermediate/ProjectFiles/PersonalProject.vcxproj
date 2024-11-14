@@ -270,6 +270,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerCharacter.h"/>
+    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerController.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerController.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\UI\GUIBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primaryplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primaryplayercontroller.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primaryplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

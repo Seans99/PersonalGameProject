@@ -5,20 +5,25 @@
 #include "PrimaryGameMode.generated.h"
 
 class UTitleScreen;
+class APrimaryPlayerController;
 
 UENUM(BlueprintType)
 enum class EGameState : uint8
 {
 	ETitleScreen		UMETA(DisplayName = "TitleScreen"),
-	EInGame			UMETA(DisplayName = "In Game"),
-	EPause			UMETA(DisplayName = "Pause"),
-	EGameOver		UMETA(DisplayName= "Game Over")
+	EInGame				UMETA(DisplayName = "In Game"),
+	EPause				UMETA(DisplayName = "Pause"),
+	EGameOver			UMETA(DisplayName= "Game Over")
 };
 
 UCLASS()
 class PERSONALPROJECT_API APrimaryGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
+
+private:
+	UPROPERTY(EditAnywhere)
+	bool bDebugMode = false;
 	
 public: 
 	APrimaryGameMode();
@@ -51,6 +56,9 @@ private:
 
 	UPROPERTY()
 	UTitleScreen* TitleScreenWidget;
+
+private:
+	APrimaryPlayerController* Controller;
 
 private:
 	void TitleScreenSetup();
