@@ -54,6 +54,12 @@
     <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerCharacter.h">
       <Filter>Source\PersonalProject\PrimarySystems</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerController.cpp">
+      <Filter>Source\PersonalProject\PrimarySystems</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerController.h">
+      <Filter>Source\PersonalProject\PrimarySystems</Filter>
+    </ClInclude>
     <Filter Include="Source\PersonalProject\UI">
       <UniqueIdentifier>{8A102ED0-A86A-3244-87B3-BB482EEDEAA9}</UniqueIdentifier>
     </Filter>
