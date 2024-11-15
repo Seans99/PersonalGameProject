@@ -5,6 +5,7 @@
 #include "PrimaryGameMode.generated.h"
 
 class UTitleScreen;
+class UMainMenu;
 class USettings;
 class APrimaryPlayerController;
 
@@ -12,6 +13,8 @@ UENUM(BlueprintType)
 enum class EGameState : uint8
 {
 	ETitleScreen		UMETA(DisplayName = "TitleScreen"),
+	EMainMenu			UMETA(DisplayName = "MainMenu"),
+	ESettings			UMETA(DisplayName = "Settings"),
 	EInGame				UMETA(DisplayName = "In Game"),
 	EPause				UMETA(DisplayName = "Pause"),
 	EGameOver			UMETA(DisplayName = "Game Over")
@@ -22,11 +25,12 @@ class PERSONALPROJECT_API APrimaryGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
-public: 
+private: 
 	APrimaryGameMode();
 
 	EGameState CurrentState;
 
+public:
 	void SetState(EGameState NewState);
 
 	EGameState GetCurrentState() const;
@@ -37,12 +41,9 @@ protected:
 public:
 	virtual void Tick(float DeltaTime) override;
 
-private:
-	virtual void StartPlay() override;
-
 public: 
 	UPROPERTY(EditAnywhere, Category = "Level")
-	FName TitleScreenLevel;
+	FName MainLevel;
 
 	UPROPERTY(EditAnywhere, Category = "Level")
 	FName Level1;
@@ -55,7 +56,13 @@ public:
 	UTitleScreen* TitleScreenWidget;
 
 	UPROPERTY(EditAnywhere, Category = "UI")
-	TSubclassOf<USettings> SettingsScreenWidgetClass;
+	TSubclassOf<UMainMenu> MainMenuWidgetClass;
+
+	UPROPERTY()
+	UMainMenu* MainMenuWidget;
+
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<USettings> SettingsWidgetClass;
 
 	UPROPERTY()
 	USettings* SettingsWidget;
@@ -65,6 +72,8 @@ private:
 
 private:
 	void TitleScreenSetup();
+	void MainMenuSetup();
+	void SettingsSetup();
 	void InGameSetup();
 	void PauseSetup();
 	void GameOverSetup();

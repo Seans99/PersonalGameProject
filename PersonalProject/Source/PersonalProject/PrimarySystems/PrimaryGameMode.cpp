@@ -1,5 +1,7 @@
 #include "PrimaryGameMode.h"
 #include "../UI/TitleScreen.h"
+#include "../UI/MainMenu.h"
+#include "../UI/Settings.h"
 #include "PrimaryPlayerController.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Kismet/GameplayStatics.h"
@@ -13,6 +15,8 @@ APrimaryGameMode::APrimaryGameMode()
 	static ConstructorHelpers::FClassFinder<APrimaryPlayerController> ControllerFinder(TEXT("/Game/Blueprints/PrimarySystems/BP_PrimaryPlayerController"));
 	PlayerControllerClass = ControllerFinder.Class;
 
+	Controller = Cast<APrimaryPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
+
 	PrimaryActorTick.bCanEverTick = true;
 }
 
@@ -22,7 +26,7 @@ void APrimaryGameMode::BeginPlay()
 
 	FString CurrentLevel = UGameplayStatics::GetCurrentLevelName(this);
 
-	if (CurrentLevel == TitleScreenLevel)
+	if (CurrentLevel == MainLevel)
 	{
 		SetState(EGameState::ETitleScreen);
 	}
@@ -37,7 +41,13 @@ void APrimaryGameMode::Tick(float DeltaTime)
 	switch (CurrentState)
 	{
 	case EGameState::ETitleScreen:
+		// Logic for Title screen state
+		break;
+	case EGameState::EMainMenu:
 		// Logic for Main Menu state
+		break;
+	case EGameState::ESettings:
+		// Logic for Settings state
 		break;
 	case EGameState::EInGame:
 		// Logic for In-Game state
@@ -53,22 +63,10 @@ void APrimaryGameMode::Tick(float DeltaTime)
 	}
 }
 
-void APrimaryGameMode::StartPlay()
-{
-	Super::StartPlay();
-
-	// Dont spawn player when in titlescreen state
-	if (CurrentState == EGameState::ETitleScreen)
-	{
-		return;
-	}
-}
-
 void APrimaryGameMode::TitleScreenSetup()
 {
-	if (TitleScreenLevel == "") return;
+	if (MainLevel == "") return;
 
-	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
 		Controller->EnableMouse();
@@ -81,11 +79,57 @@ void APrimaryGameMode::TitleScreenSetup()
 	}
 }
 
+void APrimaryGameMode::MainMenuSetup()
+{
+	if (MainLevel == "") return;
+
+	// Need to find another way to not display these
+	if (TitleScreenWidget != nullptr)
+	{
+		TitleScreenWidget->RemoveFromViewport();
+	}
+	if (SettingsWidget != nullptr)
+	{
+		SettingsWidget->RemoveFromViewport();
+	}
+
+	if (Controller)
+	{
+		Controller->EnableMouse();
+	}
+
+	MainMenuWidget = CreateWidget<UMainMenu>(GetWorld(), MainMenuWidgetClass);
+	if (MainMenuWidget)
+	{
+		MainMenuWidget->AddToViewport();
+	}
+}
+
+void APrimaryGameMode::SettingsSetup()
+{
+	if (Level1 == "" || MainLevel == "") return;
+
+	if (MainMenuWidget != nullptr)
+	{
+		MainMenuWidget->RemoveFromViewport();
+	}
+
+	if (Controller)
+	{
+		Controller->EnableMouse();
+	}
+
+	SettingsWidget = CreateWidget<USettings>(GetWorld(), SettingsWidgetClass);
+	if (SettingsWidget)
+	{
+		SettingsWidget->AddToViewport();
+	}
+}
+
 void APrimaryGameMode::InGameSetup()
 {
 	if (Level1 == "") return;
 
-	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
 		Controller->DisableMouse();
@@ -108,6 +152,12 @@ void APrimaryGameMode::SetState(EGameState NewState)
 	{
 	case EGameState::ETitleScreen:
 		TitleScreenSetup();
+		break;
+	case EGameState::EMainMenu:
+		MainMenuSetup();
+		break;
+	case EGameState::ESettings:
+		SettingsSetup();
 		break;
 	case EGameState::EInGame:
 		InGameSetup();

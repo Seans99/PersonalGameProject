@@ -1,4 +1,5 @@
 #include "Settings.h"
+#include "../PrimarySystems/PrimaryGameMode.h"
 #include "Components/Button.h"
 #include "Components/HorizontalBox.h"
 
@@ -13,6 +14,7 @@ void USettings::NativeConstruct()
 void USettings::Back()
 {
 	// Close settings and open titlescreen menu
+	GameMode->SetState(EGameState::EMainMenu);
 }
 
 void USettings::Apply()

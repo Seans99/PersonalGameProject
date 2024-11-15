@@ -14,6 +14,7 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_APrimaryGameMode();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_APrimaryGameMode_NoRegister();
+PERSONALPROJECT_API UClass* Z_Construct_UClass_UMainMenu_NoRegister();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings_NoRegister();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UTitleScreen_NoRegister();
 PERSONALPROJECT_API UEnum* Z_Construct_UEnum_PersonalProject_EGameState();
@@ -43,8 +44,12 @@ struct Z_Construct_UEnum_PersonalProject_EGameState_Statics
 		{ "EGameOver.Name", "EGameState::EGameOver" },
 		{ "EInGame.DisplayName", "In Game" },
 		{ "EInGame.Name", "EGameState::EInGame" },
+		{ "EMainMenu.DisplayName", "MainMenu" },
+		{ "EMainMenu.Name", "EGameState::EMainMenu" },
 		{ "EPause.DisplayName", "Pause" },
 		{ "EPause.Name", "EGameState::EPause" },
+		{ "ESettings.DisplayName", "Settings" },
+		{ "ESettings.Name", "EGameState::ESettings" },
 		{ "ETitleScreen.DisplayName", "TitleScreen" },
 		{ "ETitleScreen.Name", "EGameState::ETitleScreen" },
 		{ "ModuleRelativePath", "PrimarySystems/PrimaryGameMode.h" },
@@ -52,6 +57,8 @@ struct Z_Construct_UEnum_PersonalProject_EGameState_Statics
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
 		{ "EGameState::ETitleScreen", (int64)EGameState::ETitleScreen },
+		{ "EGameState::EMainMenu", (int64)EGameState::EMainMenu },
+		{ "EGameState::ESettings", (int64)EGameState::ESettings },
 		{ "EGameState::EInGame", (int64)EGameState::EInGame },
 		{ "EGameState::EPause", (int64)EGameState::EPause },
 		{ "EGameState::EGameOver", (int64)EGameState::EGameOver },
@@ -98,7 +105,7 @@ struct Z_Construct_UClass_APrimaryGameMode_Statics
 		{ "ModuleRelativePath", "PrimarySystems/PrimaryGameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TitleScreenLevel_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainLevel_MetaData[] = {
 		{ "Category", "Level" },
 		{ "ModuleRelativePath", "PrimarySystems/PrimaryGameMode.h" },
 	};
@@ -114,7 +121,15 @@ struct Z_Construct_UClass_APrimaryGameMode_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "PrimarySystems/PrimaryGameMode.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SettingsScreenWidgetClass_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainMenuWidgetClass_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryGameMode.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainMenuWidget_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryGameMode.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SettingsWidgetClass_MetaData[] = {
 		{ "Category", "UI" },
 		{ "ModuleRelativePath", "PrimarySystems/PrimaryGameMode.h" },
 	};
@@ -123,11 +138,13 @@ struct Z_Construct_UClass_APrimaryGameMode_Statics
 		{ "ModuleRelativePath", "PrimarySystems/PrimaryGameMode.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FNamePropertyParams NewProp_TitleScreenLevel;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_MainLevel;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_Level1;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_TitleScreenWidgetClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TitleScreenWidget;
-	static const UECodeGen_Private::FClassPropertyParams NewProp_SettingsScreenWidgetClass;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_MainMenuWidgetClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MainMenuWidget;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_SettingsWidgetClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsWidget;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -136,18 +153,22 @@ struct Z_Construct_UClass_APrimaryGameMode_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_TitleScreenLevel = { "TitleScreenLevel", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, TitleScreenLevel), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TitleScreenLevel_MetaData), NewProp_TitleScreenLevel_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_MainLevel = { "MainLevel", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, MainLevel), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainLevel_MetaData), NewProp_MainLevel_MetaData) };
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_Level1 = { "Level1", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, Level1), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Level1_MetaData), NewProp_Level1_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_TitleScreenWidgetClass = { "TitleScreenWidgetClass", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, TitleScreenWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UTitleScreen_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TitleScreenWidgetClass_MetaData), NewProp_TitleScreenWidgetClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_TitleScreenWidget = { "TitleScreenWidget", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, TitleScreenWidget), Z_Construct_UClass_UTitleScreen_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TitleScreenWidget_MetaData), NewProp_TitleScreenWidget_MetaData) };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_SettingsScreenWidgetClass = { "SettingsScreenWidgetClass", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, SettingsScreenWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_USettings_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsScreenWidgetClass_MetaData), NewProp_SettingsScreenWidgetClass_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_MainMenuWidgetClass = { "MainMenuWidgetClass", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, MainMenuWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UMainMenu_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuWidgetClass_MetaData), NewProp_MainMenuWidgetClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_MainMenuWidget = { "MainMenuWidget", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, MainMenuWidget), Z_Construct_UClass_UMainMenu_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuWidget_MetaData), NewProp_MainMenuWidget_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_SettingsWidgetClass = { "SettingsWidgetClass", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, SettingsWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_USettings_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsWidgetClass_MetaData), NewProp_SettingsWidgetClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_SettingsWidget = { "SettingsWidget", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryGameMode, SettingsWidget), Z_Construct_UClass_USettings_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsWidget_MetaData), NewProp_SettingsWidget_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APrimaryGameMode_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_TitleScreenLevel,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_MainLevel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_Level1,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_TitleScreenWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_TitleScreenWidget,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_SettingsScreenWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_MainMenuWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_MainMenuWidget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_SettingsWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryGameMode_Statics::NewProp_SettingsWidget,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APrimaryGameMode_Statics::PropPointers) < 2048);
@@ -188,18 +209,18 @@ APrimaryGameMode::~APrimaryGameMode() {}
 // End Class APrimaryGameMode
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EGameState_StaticEnum, TEXT("EGameState"), &Z_Registration_Info_UEnum_EGameState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 685128169U) },
+		{ EGameState_StaticEnum, TEXT("EGameState"), &Z_Registration_Info_UEnum_EGameState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2831489760U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APrimaryGameMode, APrimaryGameMode::StaticClass, TEXT("APrimaryGameMode"), &Z_Registration_Info_UClass_APrimaryGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APrimaryGameMode), 387799864U) },
+		{ Z_Construct_UClass_APrimaryGameMode, APrimaryGameMode::StaticClass, TEXT("APrimaryGameMode"), &Z_Registration_Info_UClass_APrimaryGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APrimaryGameMode), 4251029243U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_1746653974(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_3681665037(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryGameMode_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
