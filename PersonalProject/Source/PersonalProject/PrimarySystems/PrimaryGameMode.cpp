@@ -15,8 +15,6 @@ APrimaryGameMode::APrimaryGameMode()
 	static ConstructorHelpers::FClassFinder<APrimaryPlayerController> ControllerFinder(TEXT("/Game/Blueprints/PrimarySystems/BP_PrimaryPlayerController"));
 	PlayerControllerClass = ControllerFinder.Class;
 
-	Controller = Cast<APrimaryPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
-
 	PrimaryActorTick.bCanEverTick = true;
 }
 
@@ -67,6 +65,7 @@ void APrimaryGameMode::TitleScreenSetup()
 {
 	if (MainLevel == "") return;
 
+	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
 		Controller->EnableMouse();
@@ -83,16 +82,18 @@ void APrimaryGameMode::MainMenuSetup()
 {
 	if (MainLevel == "") return;
 
-	// Need to find another way to not display these
-	if (TitleScreenWidget != nullptr)
+	if (TitleScreenWidget)
 	{
-		TitleScreenWidget->RemoveFromViewport();
-	}
-	if (SettingsWidget != nullptr)
-	{
-		SettingsWidget->RemoveFromViewport();
+		TitleScreenWidget->RemoveFromParent();
+		TitleScreenWidget = nullptr;
 	}
 
+	if (SettingsWidget)
+	{
+		SettingsWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+
+	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
 		Controller->EnableMouse();
@@ -109,11 +110,12 @@ void APrimaryGameMode::SettingsSetup()
 {
 	if (Level1 == "" || MainLevel == "") return;
 
-	if (MainMenuWidget != nullptr)
+	if (MainMenuWidget)
 	{
-		MainMenuWidget->RemoveFromViewport();
+		MainMenuWidget->SetVisibility(ESlateVisibility());
 	}
 
+	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
 		Controller->EnableMouse();
@@ -130,6 +132,7 @@ void APrimaryGameMode::InGameSetup()
 {
 	if (Level1 == "") return;
 
+	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
 		Controller->DisableMouse();

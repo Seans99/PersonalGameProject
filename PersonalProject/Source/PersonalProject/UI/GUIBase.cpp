@@ -8,14 +8,3 @@ void UGUIBase::NativeConstruct()
 
 	GameMode = Cast<APrimaryGameMode>(UGameplayStatics::GetGameMode(GetWorld()));
 }
-
-void UGUIBase::SetVisibilityState(ESlateVisibility state)
-{
-	Visibility = state;
-	SetVisibility(Visibility);
-}
-
-void UGUIBase::SetWidgetOpacity(float value)
-{
-	SetRenderOpacity(value);
-}

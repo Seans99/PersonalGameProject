@@ -5,18 +5,16 @@
 APrimaryPlayerController::APrimaryPlayerController()
 {
 	GameMode = Cast<APrimaryGameMode>(UGameplayStatics::GetGameMode(GetWorld()));
-
-	PrimaryActorTick.bCanEverTick = true;
 }
 
 void APrimaryPlayerController::EnableMouse()
 {
-	bShowMouseCursor = true;
+	SetShowMouseCursor(true);
 	SetInputMode(FInputModeUIOnly());
 }
 
 void APrimaryPlayerController::DisableMouse()
 {
-	bShowMouseCursor = false;
+	SetShowMouseCursor(false);
 	SetInputMode(FInputModeGameOnly());
 }

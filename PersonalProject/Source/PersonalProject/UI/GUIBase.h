@@ -15,12 +15,5 @@ protected:
 	virtual void NativeConstruct() override;
 
 public:
-	virtual void SetVisibilityState(ESlateVisibility state);
-	virtual void SetWidgetOpacity(float value);
-
-protected:
-	ESlateVisibility Visibility;
-
-public:
 	APrimaryGameMode* GameMode;
 };

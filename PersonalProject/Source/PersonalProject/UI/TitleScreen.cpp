@@ -14,7 +14,6 @@ void UTitleScreen::NativeConstruct()
 void UTitleScreen::StartGame()
 {
 	// Open main menu
-	UE_LOG(LogTemp, Warning, TEXT("Clicked!"));
 	GameMode->SetState(EGameState::EMainMenu);
 }
 
