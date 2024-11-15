@@ -3,8 +3,6 @@
 #include "GUIBase.h"
 #include "TitleScreen.generated.h"
 
-class APrimaryGameMode;
-
 class UButton;
 class UHorizontalBox;
 
@@ -46,7 +44,4 @@ public:
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UButton* QuitGameBtn;
-
-private:
-	APrimaryGameMode* GameMode;
 };

@@ -9,14 +9,10 @@ void UTitleScreen::NativeConstruct()
 {
 	Super::NativeConstruct();
 
-	GameMode = Cast<APrimaryGameMode>(UGameplayStatics::GetGameMode(GetWorld()));
-
 	StartGameBtn->OnClicked.AddDynamic(this, &UTitleScreen::StartGame);
 	PlayGameBtn->OnClicked.AddDynamic(this, &UTitleScreen::PlayGame);
 	SettingsBtn->OnClicked.AddDynamic(this, &UTitleScreen::Settings);
 	QuitGameBtn->OnClicked.AddDynamic(this, &UTitleScreen::QuitGame);
-
-	UE_LOG(LogTemp, Warning, TEXT("StartGameBtn: %s"), StartGameBtn ? TEXT("Valid") : TEXT("Invalid"));
 }
 
 void UTitleScreen::StartGame()

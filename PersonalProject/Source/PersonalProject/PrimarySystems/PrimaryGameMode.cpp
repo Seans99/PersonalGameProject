@@ -20,9 +20,15 @@ void APrimaryGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (!bDebugMode && UGameplayStatics::GetCurrentLevelName(this) == TitleScreenLevel)
+	FString CurrentLevel = UGameplayStatics::GetCurrentLevelName(this);
+
+	if (CurrentLevel == TitleScreenLevel)
 	{
 		SetState(EGameState::ETitleScreen);
+	}
+	if (CurrentLevel == Level1)
+	{
+		SetState(EGameState::EInGame);
 	}
 }
 

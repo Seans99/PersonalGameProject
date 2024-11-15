@@ -48,12 +48,6 @@
     <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameMode.h">
       <Filter>Source\PersonalProject\PrimarySystems</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameStateBase.cpp">
-      <Filter>Source\PersonalProject\PrimarySystems</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameStateBase.h">
-      <Filter>Source\PersonalProject\PrimarySystems</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerCharacter.cpp">
       <Filter>Source\PersonalProject\PrimarySystems</Filter>
     </ClCompile>
@@ -73,6 +67,12 @@
       <Filter>Source\PersonalProject\UI</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\UI\GUIBase.h">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\Settings.cpp">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\Settings.h">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\UI\TitleScreen.cpp">

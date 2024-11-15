@@ -266,10 +266,6 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameMode.h"/>
-    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameStateBase.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameStateBase.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -282,6 +278,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\UI\GUIBase.h"/>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\Settings.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\Settings.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\UI\TitleScreen.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
