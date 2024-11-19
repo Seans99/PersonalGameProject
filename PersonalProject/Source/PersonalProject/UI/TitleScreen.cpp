@@ -8,13 +8,6 @@ void UTitleScreen::NativeConstruct()
 {
 	Super::NativeConstruct();
 
-	StartGameBtn->OnClicked.AddDynamic(this, &UTitleScreen::StartGame);
-}
-
-void UTitleScreen::StartGame()
-{
-	// Open main menu
-	GameMode->SetState(EGameState::EMainMenu);
 }
 
 

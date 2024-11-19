@@ -7,6 +7,7 @@
 class UTitleScreen;
 class UMainMenu;
 class USettings;
+class UPauseMenu;
 class APrimaryPlayerController;
 
 UENUM(BlueprintType)
@@ -66,6 +67,12 @@ public:
 
 	UPROPERTY()
 	USettings* SettingsWidget;
+
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UPauseMenu> PauseMenuWidgetClass;
+
+	UPROPERTY()
+	UPauseMenu* PauseMenuWidget;
 
 private:
 	APrimaryPlayerController* Controller;

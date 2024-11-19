@@ -75,6 +75,12 @@
     <ClInclude Include="..\..\Source\PersonalProject\UI\MainMenu.h">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\PauseMenu.cpp">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\PauseMenu.h">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\UI\Settings.cpp">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClCompile>

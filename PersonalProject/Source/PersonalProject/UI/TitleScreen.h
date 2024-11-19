@@ -3,7 +3,7 @@
 #include "GUIBase.h"
 #include "TitleScreen.generated.h"
 
-class UButton;
+class UTextBlock;
 
 UCLASS(Abstract)
 class PERSONALPROJECT_API UTitleScreen : public UGUIBase
@@ -12,12 +12,8 @@ class PERSONALPROJECT_API UTitleScreen : public UGUIBase
 
 protected:
 	virtual void NativeConstruct() override;
-	
-public:
-	UFUNCTION()
-	void StartGame();
 
 public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UButton* StartGameBtn;
+	UTextBlock* StartGameText;
 };

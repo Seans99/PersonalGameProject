@@ -2,6 +2,7 @@
 #include "../UI/TitleScreen.h"
 #include "../UI/MainMenu.h"
 #include "../UI/Settings.h"
+#include "../UI/PauseMenu.h"
 #include "PrimaryPlayerController.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Kismet/GameplayStatics.h"
@@ -36,6 +37,8 @@ void APrimaryGameMode::BeginPlay()
 
 void APrimaryGameMode::Tick(float DeltaTime)
 {
+	Super::Tick(DeltaTime);
+
 	switch (CurrentState)
 	{
 	case EGameState::ETitleScreen:
@@ -65,10 +68,12 @@ void APrimaryGameMode::TitleScreenSetup()
 {
 	if (MainLevel == "") return;
 
+	CurrentState = EGameState::ETitleScreen;
+
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
-		Controller->EnableMouse();
+		Controller->DisableMouse();
 	}
 
 	TitleScreenWidget = CreateWidget<UTitleScreen>(GetWorld(), TitleScreenWidgetClass);
@@ -81,6 +86,8 @@ void APrimaryGameMode::TitleScreenSetup()
 void APrimaryGameMode::MainMenuSetup()
 {
 	if (MainLevel == "") return;
+
+	CurrentState = EGameState::EMainMenu;
 
 	if (TitleScreenWidget)
 	{
@@ -110,9 +117,12 @@ void APrimaryGameMode::SettingsSetup()
 {
 	if (Level1 == "" || MainLevel == "") return;
 
+	CurrentState = EGameState::ESettings;
+
 	if (MainMenuWidget)
 	{
-		MainMenuWidget->SetVisibility(ESlateVisibility());
+		UE_LOG(LogTemp, Warning, TEXT("TEST"));
+		MainMenuWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
@@ -132,6 +142,8 @@ void APrimaryGameMode::InGameSetup()
 {
 	if (Level1 == "") return;
 
+	CurrentState = EGameState::EInGame;
+
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
@@ -141,7 +153,21 @@ void APrimaryGameMode::InGameSetup()
 
 void APrimaryGameMode::PauseSetup()
 {
-	// Logic to pause the game 
+	if (Level1 == "") return;
+
+	CurrentState = EGameState::EPause;
+
+	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
+	if (Controller)
+	{
+		Controller->EnableMouse();
+	}
+
+	PauseMenuWidget = CreateWidget<UPauseMenu>(GetWorld(), PauseMenuWidgetClass);
+	if (PauseMenuWidget)
+	{
+		PauseMenuWidget->AddToViewport();
+	}
 }
 
 void APrimaryGameMode::GameOverSetup()

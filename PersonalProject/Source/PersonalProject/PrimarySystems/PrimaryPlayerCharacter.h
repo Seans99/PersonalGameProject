@@ -6,6 +6,7 @@
 #include "PrimaryPlayerCharacter.generated.h"
 
 class UCameraComponent;
+class APrimaryGameMode;
 
 UCLASS()
 class PERSONALPROJECT_API APrimaryPlayerCharacter : public ACharacter
@@ -47,9 +48,16 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
 	class UInputAction* AttackAction;
 
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	class UInputAction* PauseAction;
+
 protected:
 	void Move(const FInputActionValue& InputValue);
 	void Jump();
 	void Look(const FInputActionValue& InputValue);
 	void Attack();
+	void PauseGame();
+
+private:
+	APrimaryGameMode* GameMode;
 };

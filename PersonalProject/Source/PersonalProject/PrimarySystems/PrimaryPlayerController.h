@@ -15,6 +15,9 @@ private:
 	APrimaryPlayerController();
 
 public:
+	virtual void Tick(float DeltaTime) override;
+
+public:
 	void EnableMouse();
 	void DisableMouse();
 
