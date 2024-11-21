@@ -4,6 +4,7 @@
 #include "EnhancedInputComponent.h"
 #include "Camera/CameraComponent.h"
 #include "../PrimarySystems/PrimaryGameMode.h"
+#include "../PrimarySystems/PrimaryPlayerController.h"
 
 // Sets default values
 APrimaryPlayerCharacter::APrimaryPlayerCharacter()
@@ -47,7 +48,6 @@ void APrimaryPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 		Input->BindAction(JumpAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Jump);
 		Input->BindAction(LookAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Look);
 		Input->BindAction(AttackAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Attack);
-		Input->BindAction(PauseAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::PauseGame);
 	}
 }
 
@@ -79,11 +79,6 @@ void APrimaryPlayerCharacter::Look(const FInputActionValue& InputValue)
 }
 
 void APrimaryPlayerCharacter::Attack()
-{
-	
-}
-
-void APrimaryPlayerCharacter::PauseGame()
 {
 	
 }

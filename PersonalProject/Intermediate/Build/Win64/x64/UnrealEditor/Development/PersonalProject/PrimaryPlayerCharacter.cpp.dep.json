@@ -49,7 +49,9 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primarygamemode.generated.h"
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primarygamemode.generated.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primaryplayercontroller.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primaryplayercontroller.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

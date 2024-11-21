@@ -121,8 +121,12 @@ void APrimaryGameMode::SettingsSetup()
 
 	if (MainMenuWidget)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("TEST"));
 		MainMenuWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+
+	if (PauseMenuWidget)
+	{
+		PauseMenuWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
@@ -144,6 +148,16 @@ void APrimaryGameMode::InGameSetup()
 
 	CurrentState = EGameState::EInGame;
 
+	if (MainMenuWidget)
+	{
+		MainMenuWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+
+	if (PauseMenuWidget)
+	{
+		PauseMenuWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
@@ -156,6 +170,11 @@ void APrimaryGameMode::PauseSetup()
 	if (Level1 == "") return;
 
 	CurrentState = EGameState::EPause;
+
+	if (SettingsWidget)
+	{
+		SettingsWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
 
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)

@@ -16,8 +16,14 @@ void APrimaryPlayerController::Tick(float DeltaTime)
 	{
 		if (IsInputKeyDown(EKeys::SpaceBar))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("TEST"));
 			GameMode->SetState(EGameState::EMainMenu);
+		}
+	}
+	if (GameMode->GetCurrentState() == EGameState::EInGame)
+	{
+		if (IsInputKeyDown(EKeys::Escape))
+		{
+			GameMode->SetState(EGameState::EPause);
 		}
 	}
 }

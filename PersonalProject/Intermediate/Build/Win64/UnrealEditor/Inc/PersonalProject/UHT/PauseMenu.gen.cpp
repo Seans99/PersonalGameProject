@@ -13,12 +13,107 @@ void EmptyLinkFunctionForGeneratedCodePauseMenu() {}
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UGUIBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UPauseMenu();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UPauseMenu_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
 // End Cross Module References
+
+// Begin Class UPauseMenu Function Quit
+struct Z_Construct_UFunction_UPauseMenu_Quit_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_Quit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "Quit", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_Quit_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_Quit_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_Quit()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_Quit_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execQuit)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Quit();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function Quit
+
+// Begin Class UPauseMenu Function ResumeGame
+struct Z_Construct_UFunction_UPauseMenu_ResumeGame_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_ResumeGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "ResumeGame", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_ResumeGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_ResumeGame_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_ResumeGame()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_ResumeGame_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execResumeGame)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResumeGame();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function ResumeGame
+
+// Begin Class UPauseMenu Function Settings
+struct Z_Construct_UFunction_UPauseMenu_Settings_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_Settings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "Settings", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_Settings_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_Settings_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_Settings()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_Settings_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execSettings)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Settings();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function Settings
 
 // Begin Class UPauseMenu
 void UPauseMenu::StaticRegisterNativesUPauseMenu()
 {
+	UClass* Class = UPauseMenu::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Quit", &UPauseMenu::execQuit },
+		{ "ResumeGame", &UPauseMenu::execResumeGame },
+		{ "Settings", &UPauseMenu::execSettings },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPauseMenu);
 UClass* Z_Construct_UClass_UPauseMenu_NoRegister()
@@ -32,13 +127,50 @@ struct Z_Construct_UClass_UPauseMenu_Statics
 		{ "IncludePath", "UI/PauseMenu.h" },
 		{ "ModuleRelativePath", "UI/PauseMenu.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ResumeGameBtn_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "PauseMenu" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SettingsBtn_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "PauseMenu" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_QuitBtn_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "PauseMenu" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResumeGameBtn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsBtn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_QuitBtn;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPauseMenu_Quit, "Quit" }, // 4014879432
+		{ &Z_Construct_UFunction_UPauseMenu_ResumeGame, "ResumeGame" }, // 660793992
+		{ &Z_Construct_UFunction_UPauseMenu_Settings, "Settings" }, // 200928094
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UPauseMenu>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_ResumeGameBtn = { "ResumeGameBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, ResumeGameBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResumeGameBtn_MetaData), NewProp_ResumeGameBtn_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_SettingsBtn = { "SettingsBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, SettingsBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsBtn_MetaData), NewProp_SettingsBtn_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitBtn = { "QuitBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, QuitBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitBtn_MetaData), NewProp_QuitBtn_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPauseMenu_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_ResumeGameBtn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_SettingsBtn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitBtn,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPauseMenu_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPauseMenu_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UGUIBase,
 	(UObject* (*)())Z_Construct_UPackage__Script_PersonalProject,
@@ -49,12 +181,12 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPauseMenu_Statics::Cla
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
-	nullptr,
+	FuncInfo,
+	Z_Construct_UClass_UPauseMenu_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
+	UE_ARRAY_COUNT(Z_Construct_UClass_UPauseMenu_Statics::PropPointers),
 	0,
 	0x00B010A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UPauseMenu_Statics::Class_MetaDataParams), Z_Construct_UClass_UPauseMenu_Statics::Class_MetaDataParams)
@@ -80,10 +212,10 @@ UPauseMenu::~UPauseMenu() {}
 struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPauseMenu, UPauseMenu::StaticClass, TEXT("UPauseMenu"), &Z_Registration_Info_UClass_UPauseMenu, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPauseMenu), 2966005267U) },
+		{ Z_Construct_UClass_UPauseMenu, UPauseMenu::StaticClass, TEXT("UPauseMenu"), &Z_Registration_Info_UClass_UPauseMenu, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPauseMenu), 1796728377U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_3215936808(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_2680407734(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

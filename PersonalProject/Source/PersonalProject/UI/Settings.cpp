@@ -2,6 +2,7 @@
 #include "../PrimarySystems/PrimaryGameMode.h"
 #include "Components/Button.h"
 #include "Components/HorizontalBox.h"
+#include <Kismet/GameplayStatics.h>
 
 void USettings::NativeConstruct()
 {
@@ -13,11 +14,13 @@ void USettings::NativeConstruct()
 
 void USettings::Back()
 {
-	// Close settings and open titlescreen menu
-	GameMode->SetState(EGameState::EMainMenu);
+	FString CurrentLevel = UGameplayStatics::GetCurrentLevelName(GetWorld());
+
+	if (CurrentLevel == GameMode->MainLevel) GameMode->SetState(EGameState::EMainMenu);
+	if (CurrentLevel == GameMode->Level1) GameMode->SetState(EGameState::EPause);
 }
 
 void USettings::Apply()
 {
-	// Apply settings and close setting / open titlescreen menu
+	// Apply settings
 }
