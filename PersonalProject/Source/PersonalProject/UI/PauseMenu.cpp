@@ -9,6 +9,7 @@ void UPauseMenu::NativeConstruct()
 
 	ResumeGameBtn->OnClicked.AddDynamic(this, &UPauseMenu::ResumeGame);
 	SettingsBtn->OnClicked.AddDynamic(this, &UPauseMenu::Settings);
+	QuitToTitleBtn->OnClicked.AddDynamic(this, &UPauseMenu::QuitToTitle);
 	QuitBtn->OnClicked.AddDynamic(this, &UPauseMenu::Quit);
 }
 
@@ -22,8 +23,13 @@ void UPauseMenu::Settings()
 	GameMode->SetState(EGameState::ESettings);
 }
 
-void UPauseMenu::Quit()
+void UPauseMenu::QuitToTitle()
 {
 	GameMode->SetState(EGameState::ETitleScreen);
 	UGameplayStatics::OpenLevel(GetWorld(), GameMode->MainLevel);
+}
+
+void UPauseMenu::Quit()
+{
+	UKismetSystemLibrary::QuitGame(GetWorld(), 0, EQuitPreference::Quit, true);
 }

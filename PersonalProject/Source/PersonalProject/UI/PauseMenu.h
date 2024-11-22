@@ -22,6 +22,9 @@ public:
 	void Settings();
 
 	UFUNCTION()
+	void QuitToTitle();
+
+	UFUNCTION()
 	void Quit();
 
 public:
@@ -30,6 +33,9 @@ public:
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UButton* SettingsBtn;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UButton* QuitToTitleBtn;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UButton* QuitBtn;
