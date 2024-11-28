@@ -8,6 +8,7 @@ class UTitleScreen;
 class UMainMenu;
 class USettings;
 class UPauseMenu;
+class UPlayerHUD;
 class APrimaryPlayerController;
 
 UENUM(BlueprintType)
@@ -73,6 +74,12 @@ public:
 
 	UPROPERTY()
 	UPauseMenu* PauseMenuWidget;
+
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UPlayerHUD> PlayerHudWidgetClass;
+
+	UPROPERTY()
+	UPlayerHUD* PlayerHudWidget;
 
 private:
 	APrimaryPlayerController* Controller;

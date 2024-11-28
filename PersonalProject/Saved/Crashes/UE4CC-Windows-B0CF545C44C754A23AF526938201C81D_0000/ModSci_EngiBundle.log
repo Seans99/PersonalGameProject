@@ -1,0 +1,460 @@
+﻿Log file open, 02/06/18 17:48:23
+LogInit:Display: Running engine for game: ModSci_EngiBundle
+LogPlatformFile: Not using cached read wrapper
+LogInit:Display: RandInit(771328615) SRandInit(771328615).
+LogTaskGraph: Started task graph with 5 named threads and 8 total threads with 1 sets of task threads.
+LogStats: Stats thread started at 0.196948
+LogInit: Using libcurl 7.47.1
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2g
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit: Build: ++UE4+Release-4.16-CL-3452394
+LogInit: Engine Version: 4.16.0-3452394+++UE4+Release-4.16
+LogInit: Compatible Engine Version: 4.16.0-3452394+++UE4+Release-4.16
+LogInit: Net CL: 3452394
+LogDevObjectVersion: Number of dev versions registered: 16
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 9
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 17
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 23
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 15
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 4
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 1
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 3
+LogInit: Compiled (64-bit): May 22 2017 17:47:00
+LogInit: Compiled with Visual C++: 19.00.23026.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.16
+LogInit: Command line:  
+LogInit: Base directory: C:/Program Files/Epic Games/UE_4.16/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2018.02.06-23.48.24:242][  0]LogInit: Selected Device Profile: [Windows]
+[2018.02.06-23.48.24:242][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2018.02.06-23.48.24:345][  0]LogInit: Computer: DEMAVEND
+[2018.02.06-23.48.24:345][  0]LogInit: User: Jon
+[2018.02.06-23.48.24:345][  0]LogInit: CPU Page size=4096, Cores=4
+[2018.02.06-23.48.24:345][  0]LogInit: High frequency timer resolution =3.312832 MHz
+[2018.02.06-23.48.24:345][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2018.02.06-23.48.24:345][  0]LogMemory: Platform Memory Stats for Windows
+[2018.02.06-23.48.24:345][  0]LogMemory: Process Physical Memory: 280.86 MB used, 280.86 MB peak
+[2018.02.06-23.48.24:345][  0]LogMemory: Process Virtual Memory: 269.09 MB used, 269.09 MB peak
+[2018.02.06-23.48.24:345][  0]LogMemory: Physical Memory: 6670.29 MB used,  9670.41 MB free, 16340.70 MB total
+[2018.02.06-23.48.24:345][  0]LogMemory: Virtual Memory: 634.44 MB used,  9670.41 MB free, 8388608.00 MB total
+[2018.02.06-23.48.24:496][  0]LogInit: Using OS detected language (en-US).
+[2018.02.06-23.48.24:496][  0]LogInit: Using OS detected locale (en-US).
+[2018.02.06-23.48.24:709][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2018.02.06-23.48.27:154][  0]LogD3D11RHI: D3D11 adapters:
+[2018.02.06-23.48.27:686][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 970' (Feature Level 11_0)
+[2018.02.06-23.48.27:686][  0]LogD3D11RHI:       4008/0/7914 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2018.02.06-23.48.27:686][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2018.02.06-23.48.27:690][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2018.02.06-23.48.27:690][  0]LogD3D11RHI:     GPU DeviceId: 0x13c2 (for the marketing name, search the web for "GPU Device Id")
+[2018.02.06-23.48.27:690][  0]LogWindows: EnumDisplayDevices:
+[2018.02.06-23.48.27:690][  0]LogWindows:    0. 'NVIDIA GeForce GTX 970' (P:1 D:1)
+[2018.02.06-23.48.27:690][  0]LogWindows:    1. 'NVIDIA GeForce GTX 970' (P:0 D:1)
+[2018.02.06-23.48.27:691][  0]LogWindows:    2. 'NVIDIA GeForce GTX 970' (P:0 D:0)
+[2018.02.06-23.48.27:691][  0]LogWindows:    3. 'NVIDIA GeForce GTX 970' (P:0 D:0)
+[2018.02.06-23.48.27:691][  0]LogWindows:    4. 'RDPDD Chained DD' (P:0 D:0)
+[2018.02.06-23.48.27:691][  0]LogWindows:    5. 'RDP Encoder Mirror Driver' (P:0 D:0)
+[2018.02.06-23.48.27:691][  0]LogWindows:    6. 'RDP Reflector Display Driver' (P:0 D:0)
+[2018.02.06-23.48.27:691][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:4 
+[2018.02.06-23.48.27:691][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 970
+[2018.02.06-23.48.27:691][  0]LogD3D11RHI:   Driver Version: 381.65 (internal:22.21.13.8165, unified:381.65)
+[2018.02.06-23.48.27:691][  0]LogD3D11RHI:      Driver Date: 3-31-2017
+[2018.02.06-23.48.27:691][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2018.02.06-23.48.28:221][  0]LogD3D11RHI: Async texture creation enabled
+[2018.02.06-23.48.28:316][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2018.02.06-23.48.28:406][  0]LogShaderCompilers: Guid format shader working directory is -27 characters bigger than the processId version (../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Intermediate/Shaders/WorkingDirectory/1924/).
+[2018.02.06-23.48.28:406][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Jon/AppData/Local/Temp/UnrealShaderWorkingDir/B9882F204F337EA02ACCAF8D5963262B/'.
+[2018.02.06-23.48.28:406][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2018.02.06-23.48.35:010][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2018.02.06-23.48.35:058][  0]LogTemp:Display: Loaded TP MacClientTargetPlatform
+[2018.02.06-23.48.35:107][  0]LogTemp:Display: Loaded TP MacNoEditorTargetPlatform
+[2018.02.06-23.48.35:153][  0]LogTemp:Display: Loaded TP MacServerTargetPlatform
+[2018.02.06-23.48.35:252][  0]LogTemp:Display: Loaded TP MacTargetPlatform
+[2018.02.06-23.48.35:297][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2018.02.06-23.48.35:346][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2018.02.06-23.48.35:402][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2018.02.06-23.48.35:441][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2018.02.06-23.48.35:517][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2018.02.06-23.48.35:563][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2018.02.06-23.48.35:606][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2018.02.06-23.48.35:652][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2018.02.06-23.48.35:700][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2018.02.06-23.48.35:749][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2018.02.06-23.48.35:837][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2018.02.06-23.48.35:837][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2018.02.06-23.48.35:869][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
+[2018.02.06-23.48.35:972][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2018.02.06-23.48.36:004][  0]LogTemp:Display: Loaded TP TVOSTargetPlatform
+[2018.02.06-23.48.36:046][  0]LogTemp:Display: Loaded TP LinuxClientTargetPlatform
+[2018.02.06-23.48.36:108][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2018.02.06-23.48.36:177][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2018.02.06-23.48.36:427][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2018.02.06-23.48.36:427][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2018.02.06-23.48.37:648][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2018.02.06-23.48.38:882][  0]LogDerivedDataCache: Loaded boot cache 1.23s 102MB C:/Users/Jon/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc.
+[2018.02.06-23.48.38:882][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/Jon/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc
+[2018.02.06-23.48.38:882][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2018.02.06-23.48.38:882][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2018.02.06-23.48.38:882][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2018.02.06-23.48.38:882][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2018.02.06-23.48.38:950][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2018.02.06-23.48.38:961][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2018.02.06-23.48.38:971][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2018.02.06-23.48.38:971][  0]LogSlate: Using Freetype 2.6.0
+[2018.02.06-23.48.39:095][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2018.02.06-23.48.39:095][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2018.02.06-23.48.42:656][  0]LogInit: Selected Device Profile: [Windows]
+[2018.02.06-23.48.42:661][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2018.02.06-23.48.43:083][  0]LogMeshUtilities: Using QuadricMeshReduction for automatic static mesh reduction
+[2018.02.06-23.48.43:140][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2018.02.06-23.48.43:179][  0]LogMeshUtilities: Using SimplygonSwarm for distributed automatic mesh merging
+[2018.02.06-23.48.43:179][  0]LogMeshUtilities: No automatic skeletal mesh reduction module available
+[2018.02.06-23.48.43:179][  0]LogMeshUtilities: No automatic mesh merging module available
+[2018.02.06-23.48.47:268][  0]LogNetVersion: ModSci_EngiBundle , NetCL: 3452394, EngineNetVer: 2, GameNetVer: 0 (Checksum: 2264039427)
+[2018.02.06-23.48.47:371][  0]LogAssetRegistry: FAssetRegistry took 0.0237 seconds to start up
+[2018.02.06-23.48.47:579][  0]LogPackageLocalizationCache: Processed 4 localized package path(s) for 2 prioritized culture(s) in 0.191685 seconds
+[2018.02.06-23.48.47:584][  0]LogUObjectArray: 34194 objects as part of root set at end of initial load.
+[2018.02.06-23.48.47:584][  0]LogUObjectAllocator: 7260416 out of 0 bytes used by permanent object pool.
+[2018.02.06-23.48.47:584][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2018.02.06-23.48.47:662][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2018.02.06-23.49.09:019][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2018.02.06-23.49.09:052][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2018.02.06-23.49.10:618][  0]LogMaterial: Uniform references updated for custom material expression Custom.
+[2018.02.06-23.49.11:899][  0]SourceControl: Info Source control is disabled
+[2018.02.06-23.49.11:899][  0]SourceControl: Info Source control is disabled
+[2018.02.06-23.49.11:940][  0]SourceControl: Info Source control is disabled
+[2018.02.06-23.49.11:997][  0]SourceControl: Info Source control is disabled
+[2018.02.06-23.49.12:326][  0]LogLinker:Warning: Can't find file '/Game/LensFlares/Tutorials/CreatingLensFlaresWithBlueprints'
+[2018.02.06-23.49.12:326][  0]LogLinker:Warning: Can't find file '/Game/LensFlares/Tutorials/CreatingLensFlaresWithBlueprints'
+[2018.02.06-23.49.12:326][  0]LogUObjectGlobals:Warning: Failed to find object 'Class /Game/LensFlares/Tutorials/CreatingLensFlaresWithBlueprints.CreatingLensFlaresWithBlueprints_C'
+[2018.02.06-23.49.12:835][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2018.02.06-23.49.13:587][  0]LogEngine: Initializing Engine...
+[2018.02.06-23.49.13:587][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2018.02.06-23.49.15:371][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2018.02.06-23.49.15:371][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2018.02.06-23.49.15:491][  0]LogAIModule: Creating AISystem for world Untitled
+[2018.02.06-23.49.15:504][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.02.06-23.49.15:592][  0]LogInit: FAudioDevice initialized.
+[2018.02.06-23.49.15:644][  0]LogDerivedDataCache: Saved boot cache 0.05s 102MB C:/Users/Jon/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc.
+[2018.02.06-23.49.15:654][  0]LogInit: Texture streaming: Enabled
+[2018.02.06-23.49.15:734][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2018.02.06-23.49.16:133][  0]LogInit: Transaction tracking system initialized
+[2018.02.06-23.49.16:417][  0]BlueprintLog: New page: Editor Load
+[2018.02.06-23.49.17:301][  0]LocalizationService: Info Localization service is disabled
+[2018.02.06-23.49.18:077][  0]LogConsoleResponse:Display: 
+[2018.02.06-23.49.19:664][  0]LogCook:Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2018.02.06-23.49.19:664][  0]LogCook:Display: Mobile HDR setting 1
+[2018.02.06-23.49.19:836][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/' took 0.05s
+[2018.02.06-23.49.21:217][  0]SourceControl: Info Source control is disabled
+[2018.02.06-23.49.21:217][  0]Cmd: MAP LOAD FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/ModSci_Engineer/Maps/Example_Dynamic.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.02.06-23.49.21:294][  0]LightingResults: New page: Lighting Build
+[2018.02.06-23.49.21:329][  0]MapCheck: New page: Map Check
+[2018.02.06-23.49.21:329][  0]LightingResults: New page: Lighting Build
+[2018.02.06-23.51.49:605][  0]LogDerivedDataCache:Warning: C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache is very slow (0.00MB/s) when accessing C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/1/5/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_E4762F6F40B6FEA67__2E00035C4E5ADBDFB8EF362690577C047280A179.udd, consider disabling it.
+[2018.02.06-23.52.20:239][  0]LogAIModule: Creating AISystem for world Example_Dynamic
+[2018.02.06-23.52.20:430][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.02.06-23.52.20:507][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.02.06-23.52.20:667][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 159.753ms to complete.
+[2018.02.06-23.52.20:667][  0]LogFileHelpers: Loading map 'Example_Dynamic' took 179.439
+[2018.02.06-23.52.21:625][  0]LogCollectionManager: Loaded 0 collections in 0.001779 seconds
+[2018.02.06-23.52.21:698][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Collections/' took 0.01s
+[2018.02.06-23.52.21:698][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/Developers/Jon/Collections/' took 0.01s
+[2018.02.06-23.52.21:698][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/Collections/' took 0.01s
+[2018.02.06-23.52.21:698][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2018.02.06-23.52.21:707][  0]LogContentBrowser: Native class hierarchy populated in 0.0090 seconds. Added 2330 classes and 493 folders.
+[2018.02.06-23.52.21:763][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0005 seconds. Added 0 classes and 0 folders.
+[2018.02.06-23.52.22:856][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0005 seconds. Added 0 classes and 0 folders.
+[2018.02.06-23.52.22:875][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2018.02.06-23.52.22:946][  0]LogSlate: Took 0.059558 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2018.02.06-23.52.22:959][  0]LogSlate: Took 0.011218 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2018.02.06-23.52.22:992][  0]LogSlate: Took 0.028314 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2018.02.06-23.52.23:206][  0]LogRenderer: Reallocating scene render targets to support 1172x904 NumSamples 1 (Frame:1).
+[2018.02.06-23.52.23:494][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2018.02.06-23.52.23:561][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0009 seconds. Added 1 classes and 2 folders.
+[2018.02.06-23.52.23:561][  0]LogLoad: (Engine Initialization) Total time: 244.68 seconds
+[2018.02.06-23.52.23:561][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.25 seconds
+[2018.02.06-23.52.23:561][  0]LogExternalProfiler: Found external profiler: VSPerf
+[2018.02.06-23.52.23:561][  0]LogExternalProfiler: Using external profiler: VSPerf
+[2018.02.06-23.52.23:900][  0]LogOcInput: OculusInput pre-init called
+[2018.02.06-23.52.23:900][  0]LogHMD: Starting GearVRController plugin
+[2018.02.06-23.52.23:918][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2018.02.06-23.52.24:576][  2]LogAssetRegistry: Asset discovery search completed in 217.2124 seconds
+[2018.02.06-23.52.24:579][  2]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000003 seconds (found 0 objects)
+[2018.02.06-23.52.24:579][  2]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000023 seconds (updated 0 objects)
+[2018.02.06-23.53.24:756][471]LogSlate: Took 0.019172 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2018.02.06-23.53.42:735][599]LogSlate: Took 0.000191 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2018.02.06-23.53.59:484][599]LogAIModule: Creating AISystem for world Vid_Warm
+[2018.02.06-23.54.02:399][599]LogSlate: Took 0.000144 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2018.02.06-23.54.03:206][599]LogSavePackage: Save=3399.90ms
+[2018.02.06-23.54.03:206][599]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_WarmCFC17C8940BF9F9C963264A8DCE53F34.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.06-23.54.03:208][599]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.06-23.54.03:277][599]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TempVideo/Vid_Warm_BuiltData" FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset" SILENT=true
+[2018.02.06-23.54.08:246][599]LogSavePackage: Save=4966.35ms
+[2018.02.06-23.54.08:246][599]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Warm_BuiltData3141FEAD459DEA051C73E5B747702166.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset'
+[2018.02.06-23.54.08:246][599]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset
+[2018.02.06-23.54.08:302][599]LogFileHelpers: Saving map 'Vid_Warm' took 25.734
+[2018.02.06-23.54.08:303][599]Cmd: MAP LOAD FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.02.06-23.54.08:336][599]LightingResults: New page: Lighting Build
+[2018.02.06-23.54.08:337][599]LoadErrors: New page: Loading map: Vid_Warm.umap
+[2018.02.06-23.54.08:355][599]MapCheck: New page: Map Check
+[2018.02.06-23.54.08:356][599]LightingResults: New page: Lighting Build
+[2018.02.06-23.54.08:593][599]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.02.06-23.54.08:743][599]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.02.06-23.54.08:923][599]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 179.34ms to complete.
+[2018.02.06-23.54.08:923][599]LogFileHelpers: Loading map 'Vid_Warm' took 0.621
+[2018.02.06-23.55.02:696][409]LogSavePackage: Save=3316.95ms
+[2018.02.06-23.55.02:696][409]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_WarmE62127564AF752BA4268988BC0864F6C.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.06-23.55.02:700][409]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.06-23.55.02:719][409]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TempVideo/Vid_Warm_BuiltData" FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset" SILENT=true
+[2018.02.06-23.55.07:712][409]LogSavePackage: Save=4948.19ms
+[2018.02.06-23.55.07:712][409]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Warm_BuiltData7D5EBFAD4A0527B3AC16C1A983C7E3C7.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset'
+[2018.02.06-23.55.07:720][409]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset
+[2018.02.06-23.55.26:976][381]LogContentBrowser: Native class hierarchy updated for 'Matinee' in 0.0008 seconds. Added 15 classes and 2 folders.
+[2018.02.06-23.55.26:981][381]LogInit: Transaction tracking system initialized
+[2018.02.06-23.55.26:986][381]EditorErrors: New page: Matinee Initialization
+[2018.02.06-23.59.32:919][417]LogSavePackage: Save=3305.99ms
+[2018.02.06-23.59.32:919][417]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_WarmA0ABB6E6454C7F8BF2D029B9F4877FFA.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.06-23.59.32:922][417]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.06-23.59.32:940][417]LogFileHelpers: Saving map 'Vid_Warm' took 3.534
+[2018.02.06-23.59.35:530][674]Cmd: SELECT NONE
+[2018.02.07-00.00.02:269][607]LogInit: Transaction tracking system initialized
+[2018.02.07-00.00.02:284][607]LogMatinee:Warning: GROUP ADD: New group found for (InterpGroupDirector_0).
+[2018.02.07-00.00.02:285][607]EditorErrors: New page: Matinee Initialization
+[2018.02.07-00.02.16:801][712]Cmd: SELECT NONE
+[2018.02.07-00.02.18:475][782]Cmd: SELECT NONE
+[2018.02.07-00.02.22:560][884]LogExit: Transaction tracking system shut down
+[2018.02.07-00.02.25:926][884]LogSavePackage: Save=3359.54ms
+[2018.02.07-00.02.25:926][884]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_WarmB322091E43196C9B595D48BA3C21BCFD.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.07-00.02.25:929][884]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.07-00.02.25:948][884]LogFileHelpers: Saving map 'Vid_Warm' took 3.620
+[2018.02.07-00.02.52:703][440]LogEditorViewport: Clicking on Actor (context menu): StaticMeshActor (Doorway_Small_A22)
+[2018.02.07-00.02.53:736][508]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (WallBrace_A6)
+[2018.02.07-00.02.53:914][515]Cmd: SELECT NONE
+[2018.02.07-00.02.55:901][746]LogDialogs:Warning: Suppressed: Matinee is now a legacy tool. Would you like to continue opening Matinee or convert your Matinee to a Level Sequence Asset?
+[2018.02.07-00.02.55:901][746]LogInit: Transaction tracking system initialized
+[2018.02.07-00.02.55:901][746]EditorErrors: New page: Matinee Initialization
+[2018.02.07-00.04.18:724][200]LogExit: Transaction tracking system shut down
+[2018.02.07-00.04.22:366][200]LogSavePackage: Save=3640.91ms
+[2018.02.07-00.04.22:366][200]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Warm158317CD444D2633FC38DFB313C13852.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.07-00.04.22:371][200]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.07-00.04.22:397][200]LogFileHelpers: Saving map 'Vid_Warm' took 3.885
+[2018.02.07-00.04.34:248][174]LogDerivedDataCache:Warning: C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache is very slow (0.00MB/s) when accessing C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/5/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_094BE30546E72A3AE56AD7B22B1D7__F53C0A5CF40F05ABF1A630D4808E14633C801410.udd, consider disabling it.
+[2018.02.07-00.04.34:248][174]LogDerivedDataCache:Warning: C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache is very slow (0.01MB/s) when accessing C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_094BE30546E72A3AE56AD7B22B1D7__DE98D154451FB02866377A0D0B2F9ECD5D766CB7.udd, consider disabling it.
+[2018.02.07-00.04.34:256][175]LogDerivedDataCache:Warning: C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache is very slow (0.00MB/s) when accessing C:/Users/Jon/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/5/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_094BE30546E72A3AE56AD7B22B1D7__9881BAB0C0283DD7456CEAA248D73CBC3302E161.udd, consider disabling it.
+[2018.02.07-00.04.51:559][898]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (GlassFloor_Door32)
+[2018.02.07-00.04.52:890][ 39]Cmd: SELECT NONE
+[2018.02.07-00.04.56:895][510]LogDialogs:Warning: Suppressed: Matinee is now a legacy tool. Would you like to continue opening Matinee or convert your Matinee to a Level Sequence Asset?
+[2018.02.07-00.04.56:896][510]LogInit: Transaction tracking system initialized
+[2018.02.07-00.04.56:896][510]EditorErrors: New page: Matinee Initialization
+[2018.02.07-00.09.46:811][310]LogExit: Transaction tracking system shut down
+[2018.02.07-00.09.50:049][310]LogSavePackage: Save=3228.82ms
+[2018.02.07-00.09.50:049][310]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Warm89A8AE16484B186E14C2AFACA866AFB3.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.07-00.09.50:054][310]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.07-00.09.50:076][310]LogFileHelpers: Saving map 'Vid_Warm' took 3.456
+[2018.02.07-00.09.52:959][588]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Doorway_Small_A23)
+[2018.02.07-00.09.53:131][593]Cmd: SELECT NONE
+[2018.02.07-00.10.12:935][769]LogAIModule: Creating AISystem for world Vid_Spin_Warm
+[2018.02.07-00.10.13:234][769]LogExit: Transaction tracking system shut down
+[2018.02.07-00.10.16:631][769]LogSavePackage: Save=3348.44ms
+[2018.02.07-00.10.16:631][769]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_WarmE7D3F0604E5FAEDB655A4590910A4EAF.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm.umap'
+[2018.02.07-00.10.16:633][769]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm.umap
+[2018.02.07-00.10.21:698][769]LogSavePackage: Save=4983.94ms
+[2018.02.07-00.10.21:698][769]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_Warm_BuiltDataF3CEA02B45800B6F67D3C1B85F7666C3.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm_BuiltData.uasset'
+[2018.02.07-00.10.21:698][769]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm_BuiltData.uasset
+[2018.02.07-00.10.21:712][769]LogFileHelpers: Saving map 'Vid_Spin_Warm' took 21.373
+[2018.02.07-00.10.21:713][769]Cmd: MAP LOAD FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.02.07-00.10.21:729][769]LightingResults: New page: Lighting Build
+[2018.02.07-00.10.21:730][769]LoadErrors: New page: Loading map: Vid_Spin_Warm.umap
+[2018.02.07-00.10.21:746][769]MapCheck: New page: Map Check
+[2018.02.07-00.10.21:746][769]LightingResults: New page: Lighting Build
+[2018.02.07-00.10.22:028][769]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.02.07-00.10.22:110][769]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.02.07-00.10.22:376][769]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 265.889ms to complete.
+[2018.02.07-00.10.22:376][769]LogFileHelpers: Loading map 'Vid_Spin_Warm' took 0.664
+[2018.02.07-00.10.42:812][131]LogSavePackage: Save=3213.52ms
+[2018.02.07-00.10.42:812][131]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_WarmB55047C141DDF65A4BC91D9B8B75BFEE.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm.umap'
+[2018.02.07-00.10.42:816][131]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm.umap
+[2018.02.07-00.10.47:807][131]LogSavePackage: Save=4930.14ms
+[2018.02.07-00.10.47:807][131]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_Warm_BuiltData784F296E4521AEE8DFD2C7BC90C05179.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm_BuiltData.uasset'
+[2018.02.07-00.10.47:814][131]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm_BuiltData.uasset
+[2018.02.07-00.12.01:563][965]LogDialogs:Warning: Suppressed: Matinee is now a legacy tool. Would you like to continue opening Matinee or convert your Matinee to a Level Sequence Asset?
+[2018.02.07-00.12.01:563][965]LogInit: Transaction tracking system initialized
+[2018.02.07-00.12.01:563][965]EditorErrors: New page: Matinee Initialization
+[2018.02.07-00.13.43:339][551]LogSavePackage: Save=3207.27ms
+[2018.02.07-00.13.43:339][551]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_Warm8A771C0D43F664986B2F55A02A1CD10D.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm.umap'
+[2018.02.07-00.13.43:352][551]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Warm.umap
+[2018.02.07-00.13.43:371][551]LogFileHelpers: Saving map 'Vid_Spin_Warm' took 3.510
+[2018.02.07-00.14.25:454][ 43]Cmd: SELECT NONE
+[2018.02.07-00.14.47:471][219]LogTemp: Repeting last play command: New Editor Window (PIE)
+[2018.02.07-00.14.47:963][219]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.02.07-00.14.47:986][219]PIE: New page: PIE session: Vid_Spin_Warm (Feb 6, 2018, 12:14:47 PM)
+[2018.02.07-00.14.47:986][219]LogPlayLevel: Creating play world package: /Game/TempVideo/UEDPIE_0_Vid_Spin_Warm
+[2018.02.07-00.14.48:102][219]LogPlayLevel: PIE: StaticDuplicateObject took: (0.115987s)
+[2018.02.07-00.14.48:103][219]LogAIModule: Creating AISystem for world Vid_Spin_Warm
+[2018.02.07-00.14.48:103][219]LogPlayLevel: PIE: World Init took: (0.001061s)
+[2018.02.07-00.14.48:104][219]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/TempVideo/Vid_Spin_Warm.Vid_Spin_Warm to /Game/TempVideo/UEDPIE_0_Vid_Spin_Warm.Vid_Spin_Warm (0.117883s)
+[2018.02.07-00.14.48:114][219]LogExit: Transaction tracking system shut down
+[2018.02.07-00.14.48:120][219]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.02.07-00.14.48:139][219]LogInit: FAudioDevice initialized.
+[2018.02.07-00.14.48:210][219]LogLoad: Game class is 'GameModeBase'
+[2018.02.07-00.14.48:268][219]LogWorld: Bringing World /Game/TempVideo/UEDPIE_0_Vid_Spin_Warm.Vid_Spin_Warm up for play (max tick rate 0) at 2018.02.06-18.14.48
+[2018.02.07-00.14.48:277][219]LogWorld: Bringing up level for play took: 0.065602
+[2018.02.07-00.14.48:314][219]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0006 seconds. Added 11 classes and 0 folders.
+[2018.02.07-00.14.48:321][219]PIE: Info Play in editor start time for /Game/TempVideo/UEDPIE_0_Vid_Spin_Warm 0.501
+[2018.02.07-00.14.48:383][219]LogRenderer: Reallocating scene render targets to support 1292x904 NumSamples 1 (Frame:1).
+[2018.02.07-00.14.51:785][343]LogRenderer: Reallocating scene render targets to support 1920x1016 NumSamples 1 (Frame:126).
+[2018.02.07-00.15.09:095][404]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor4)
+[2018.02.07-00.15.28:978][711]Cmd: EDIT COPY
+[2018.02.07-00.15.39:623][802]Cmd: MAP LOAD FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/ModSci_Engineer/Maps/Example_Dynamic_Blue.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.02.07-00.15.39:645][802]LightingResults: New page: Lighting Build
+[2018.02.07-00.15.39:646][802]LoadErrors: New page: Loading map: Example_Dynamic_Blue.umap
+[2018.02.07-00.15.39:687][802]MapCheck: New page: Map Check
+[2018.02.07-00.15.39:687][802]LightingResults: New page: Lighting Build
+[2018.02.07-00.15.40:656][802]LogAIModule: Creating AISystem for world Example_Dynamic_Blue
+[2018.02.07-00.15.40:825][802]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.02.07-00.15.40:910][802]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.02.07-00.15.41:051][802]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 141.267ms to complete.
+[2018.02.07-00.15.41:051][802]LogFileHelpers: Loading map 'Example_Dynamic_Blue' took 1.430
+[2018.02.07-00.16.09:575][116]LogAIModule: Creating AISystem for world Vid_Spin_Cool
+[2018.02.07-00.16.13:081][116]LogSavePackage: Save=3211.41ms
+[2018.02.07-00.16.13:081][116]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_Cool7E157EB545E9D6FD584B37AE870CFA93.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool.umap'
+[2018.02.07-00.16.13:083][116]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool.umap
+[2018.02.07-00.16.18:161][116]LogSavePackage: Save=5016.69ms
+[2018.02.07-00.16.18:161][116]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_Cool_BuiltDataAA8CA50C4083F9607640A59C98E43973.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool_BuiltData.uasset'
+[2018.02.07-00.16.18:162][116]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool_BuiltData.uasset
+[2018.02.07-00.16.18:206][116]LogFileHelpers: Saving map 'Vid_Spin_Cool' took 26.697
+[2018.02.07-00.16.18:207][116]Cmd: MAP LOAD FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.02.07-00.16.18:226][116]LightingResults: New page: Lighting Build
+[2018.02.07-00.16.18:227][116]LoadErrors: New page: Loading map: Vid_Spin_Cool.umap
+[2018.02.07-00.16.18:241][116]MapCheck: New page: Map Check
+[2018.02.07-00.16.18:241][116]LightingResults: New page: Lighting Build
+[2018.02.07-00.16.18:452][116]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.02.07-00.16.18:586][116]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.02.07-00.16.18:716][116]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 130.444ms to complete.
+[2018.02.07-00.16.18:716][116]LogFileHelpers: Loading map 'Vid_Spin_Cool' took 0.510
+[2018.02.07-00.16.29:668][933]LogSavePackage: Save=3100.69ms
+[2018.02.07-00.16.29:668][933]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_Cool9F20FD5E4291344731889283F08636B9.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool.umap'
+[2018.02.07-00.16.29:673][933]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool.umap
+[2018.02.07-00.16.34:692][933]LogSavePackage: Save=4955.85ms
+[2018.02.07-00.16.34:692][933]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_Cool_BuiltDataACED889044F7A29304BF7EBE4C99A98A.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool_BuiltData.uasset'
+[2018.02.07-00.16.34:699][933]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool_BuiltData.uasset
+[2018.02.07-00.16.36:253][103]Cmd: EDIT PASTE
+[2018.02.07-00.16.38:251][285]Cmd: SELECT NONE
+[2018.02.07-00.16.39:562][428]LogDialogs:Warning: Suppressed: Matinee is now a legacy tool. Would you like to continue opening Matinee or convert your Matinee to a Level Sequence Asset?
+[2018.02.07-00.16.39:562][428]LogInit: Transaction tracking system initialized
+[2018.02.07-00.16.39:562][428]LogMatinee:Warning: GROUP ADD: New group found for (InterpGroupDirector_1).
+[2018.02.07-00.16.39:562][428]EditorErrors: New page: Matinee Initialization
+[2018.02.07-00.17.02:560][997]Cmd: SELECT NONE
+[2018.02.07-00.17.18:277][582]LogSavePackage: Save=3139.73ms
+[2018.02.07-00.17.18:277][582]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_Cool20980FF94496837915A57B88FB529AB5.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool.umap'
+[2018.02.07-00.17.18:281][582]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_Cool.umap
+[2018.02.07-00.17.18:300][582]LogFileHelpers: Saving map 'Vid_Spin_Cool' took 3.312
+[2018.02.07-00.17.26:716][546]LogExit: Transaction tracking system shut down
+[2018.02.07-00.17.26:717][546]Cmd: MAP LOAD FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/ModSci_Engineer/Maps/Example_Dynamic_White.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.02.07-00.17.26:759][546]LightingResults: New page: Lighting Build
+[2018.02.07-00.17.26:760][546]LoadErrors: New page: Loading map: Example_Dynamic_White.umap
+[2018.02.07-00.17.26:777][546]MapCheck: New page: Map Check
+[2018.02.07-00.17.26:777][546]LightingResults: New page: Lighting Build
+[2018.02.07-00.17.27:943][546]LogAIModule: Creating AISystem for world Example_Dynamic_White
+[2018.02.07-00.17.28:070][546]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.02.07-00.17.28:162][546]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.02.07-00.17.28:343][546]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 181.048ms to complete.
+[2018.02.07-00.17.28:343][546]LogFileHelpers: Loading map 'Example_Dynamic_White' took 1.626
+[2018.02.07-00.17.40:616][815]LogAIModule: Creating AISystem for world Vid_Spin_White
+[2018.02.07-00.17.43:390][815]LogSavePackage: Save=2475.67ms
+[2018.02.07-00.17.43:390][815]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_White7B61DE694DC9555BB9C81FAA06C13669.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_White.umap'
+[2018.02.07-00.17.43:393][815]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_White.umap
+[2018.02.07-00.17.43:476][815]LogFileHelpers: Saving map 'Vid_Spin_White' took 3.365
+[2018.02.07-00.17.43:477][815]Cmd: MAP LOAD FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_White.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.02.07-00.17.43:493][815]LightingResults: New page: Lighting Build
+[2018.02.07-00.17.43:494][815]LoadErrors: New page: Loading map: Vid_Spin_White.umap
+[2018.02.07-00.17.43:509][815]MapCheck: New page: Map Check
+[2018.02.07-00.17.43:509][815]LightingResults: New page: Lighting Build
+[2018.02.07-00.17.43:669][815]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.02.07-00.17.43:756][815]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.02.07-00.17.43:914][815]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 158.297ms to complete.
+[2018.02.07-00.17.43:914][815]LogFileHelpers: Loading map 'Vid_Spin_White' took 0.438
+[2018.02.07-00.17.48:889][ 56]LogSavePackage: Save=2398.76ms
+[2018.02.07-00.17.48:889][ 56]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_White28EA827347AF0D8DD4B4988592527803.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_White.umap'
+[2018.02.07-00.17.48:893][ 56]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_White.umap
+[2018.02.07-00.17.53:311][577]Cmd: EDIT PASTE
+[2018.02.07-00.17.54:961][721]Cmd: SELECT NONE
+[2018.02.07-00.17.57:950][776]LogSavePackage: Save=2425.17ms
+[2018.02.07-00.17.57:950][776]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Spin_White6AEBB9E04AFF1E8FACD2068ED33B8303.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_White.umap'
+[2018.02.07-00.17.57:954][776]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Spin_White.umap
+[2018.02.07-00.18.10:395][240]Cmd: MAP LOAD FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.02.07-00.18.10:425][240]LightingResults: New page: Lighting Build
+[2018.02.07-00.18.10:425][240]LoadErrors: New page: Loading map: Vid_Warm.umap
+[2018.02.07-00.18.10:441][240]MapCheck: New page: Map Check
+[2018.02.07-00.18.10:441][240]LightingResults: New page: Lighting Build
+[2018.02.07-00.18.10:824][240]LogAIModule: Creating AISystem for world Vid_Warm
+[2018.02.07-00.18.10:941][240]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.02.07-00.18.11:028][240]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.02.07-00.18.11:161][240]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 132.207ms to complete.
+[2018.02.07-00.18.11:161][240]LogFileHelpers: Loading map 'Vid_Warm' took 0.766
+[2018.02.07-00.18.14:836][596]LogDialogs:Warning: Suppressed: Matinee is now a legacy tool. Would you like to continue opening Matinee or convert your Matinee to a Level Sequence Asset?
+[2018.02.07-00.18.14:836][596]LogInit: Transaction tracking system initialized
+[2018.02.07-00.18.14:836][596]EditorErrors: New page: Matinee Initialization
+[2018.02.07-00.18.31:524][837]LogSavePackage: Save=3240.73ms
+[2018.02.07-00.18.31:524][837]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_WarmCA9B3AD949FD2FCAB83E008F11E1FE68.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.07-00.18.31:530][837]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.07-00.18.31:552][837]LogFileHelpers: Saving map 'Vid_Warm' took 3.440
+[2018.02.07-00.18.37:863][164]Cmd: SELECT NONE
+[2018.02.07-00.18.57:853][442]Cmd: SELECT NONE
+[2018.02.07-00.19.10:311][887]LogEditorViewport: Clicking on Actor (LMB): Door_A_BP_C (Door_A_BP5)
+[2018.02.07-00.19.10:585][908]Cmd: SELECT NONE
+[2018.02.07-00.19.11:454][  3]LogExit: Transaction tracking system shut down
+[2018.02.07-00.19.14:638][  3]LogSavePackage: Save=3182.65ms
+[2018.02.07-00.19.14:638][  3]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_WarmC9999D7042560FEA686348885C921484.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.07-00.19.14:642][  3]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.07-00.19.14:663][  3]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TempVideo/Vid_Warm_BuiltData" FILE="../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset" SILENT=true
+[2018.02.07-00.19.20:936][  3]LogSavePackage: Save=6229.16ms
+[2018.02.07-00.19.20:936][  3]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_Warm_BuiltDataEF7BCF6543E74577E797AC944B5B9EF5.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset'
+[2018.02.07-00.19.20:943][  3]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm_BuiltData.uasset
+[2018.02.07-00.19.23:268][276]LogDialogs:Warning: Suppressed: Matinee is now a legacy tool. Would you like to continue opening Matinee or convert your Matinee to a Level Sequence Asset?
+[2018.02.07-00.19.23:268][276]LogInit: Transaction tracking system initialized
+[2018.02.07-00.19.23:268][276]EditorErrors: New page: Matinee Initialization
+[2018.02.07-00.20.00:686][882]LogExit: Transaction tracking system shut down
+[2018.02.07-00.20.03:898][882]LogSavePackage: Save=3211.11ms
+[2018.02.07-00.20.03:898][882]LogSavePackage: Moving '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Saved/Vid_WarmC52C2F8A4A16646E1C877F924BB73728.tmp' to '../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap'
+[2018.02.07-00.20.03:902][882]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/Jon/Documents/Unreal Projects/ModSci_EngiBundle/Content/TempVideo/Vid_Warm.umap
+[2018.02.07-00.20.03:921][882]LogFileHelpers: Saving map 'Vid_Warm' took 3.398
+[2018.02.07-00.20.03:955][882]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.02.07-00.20.03:955][882]PIE: New page: PIE session: Vid_Warm (Feb 6, 2018, 12:20:03 PM)
+[2018.02.07-00.20.03:955][882]LogPlayLevel: Creating play world package: /Game/TempVideo/UEDPIE_0_Vid_Warm
+[2018.02.07-00.20.04:075][882]LogPlayLevel: PIE: StaticDuplicateObject took: (0.119928s)
+[2018.02.07-00.20.04:076][882]LogAIModule: Creating AISystem for world Vid_Warm
+[2018.02.07-00.20.04:076][882]LogPlayLevel: PIE: World Init took: (0.000869s)
+[2018.02.07-00.20.04:077][882]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/TempVideo/Vid_Warm.Vid_Warm to /Game/TempVideo/UEDPIE_0_Vid_Warm.Vid_Warm (0.121634s)
+[2018.02.07-00.20.04:095][882]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.02.07-00.20.04:114][882]LogInit: FAudioDevice initialized.
+[2018.02.07-00.20.04:924][882]LogLoad: Game class is 'GameModeBase'
+[2018.02.07-00.20.04:986][882]LogWorld: Bringing World /Game/TempVideo/UEDPIE_0_Vid_Warm.Vid_Warm up for play (max tick rate 0) at 2018.02.06-18.20.04
+[2018.02.07-00.20.04:996][882]LogWorld: Bringing up level for play took: 0.070809
+[2018.02.07-00.20.04:997][882]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2018.02.07-00.20.05:031][882]PIE: Info Play in editor start time for /Game/TempVideo/UEDPIE_0_Vid_Warm 1.193
+[2018.02.07-00.20.05:199][883]LogRenderer: Reallocating scene render targets to support 5760x3240 NumSamples 1 (Frame:1).

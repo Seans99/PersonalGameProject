@@ -3,6 +3,7 @@
 #include "../UI/MainMenu.h"
 #include "../UI/Settings.h"
 #include "../UI/PauseMenu.h"
+#include "../UI/PlayerHUD.h"
 #include "PrimaryPlayerController.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Kismet/GameplayStatics.h"
@@ -158,6 +159,12 @@ void APrimaryGameMode::InGameSetup()
 		PauseMenuWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 
+	PlayerHudWidget = CreateWidget<UPlayerHUD>(GetWorld(), PlayerHudWidgetClass);
+	if (PlayerHudWidget)
+	{
+		PlayerHudWidget->AddToViewport();
+	}
+
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
@@ -174,6 +181,11 @@ void APrimaryGameMode::PauseSetup()
 	if (SettingsWidget)
 	{
 		SettingsWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+
+	if (PlayerHudWidget)
+	{
+		PlayerHudWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
