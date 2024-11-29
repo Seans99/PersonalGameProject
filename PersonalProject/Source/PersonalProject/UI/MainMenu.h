@@ -5,7 +5,6 @@
 #include "MainMenu.generated.h"
 
 class UButton;
-class UHorizontalBox;
 
 UCLASS()
 class PERSONALPROJECT_API UMainMenu : public UGUIBase
@@ -26,9 +25,6 @@ public:
 	void QuitGame();
 
 public:
-	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UHorizontalBox* MenuButtonsBox;
-
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UButton* PlayGameBtn;
 

@@ -14,7 +14,6 @@ PERSONALPROJECT_API UClass* Z_Construct_UClass_UGUIBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UMainMenu();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UMainMenu_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
-UMG_API UClass* Z_Construct_UClass_UHorizontalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
 // End Cross Module References
 
@@ -128,12 +127,6 @@ struct Z_Construct_UClass_UMainMenu_Statics
 		{ "IncludePath", "UI/MainMenu.h" },
 		{ "ModuleRelativePath", "UI/MainMenu.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MenuButtonsBox_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "Category", "MainMenu" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "UI/MainMenu.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlayGameBtn_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "MainMenu" },
@@ -153,7 +146,6 @@ struct Z_Construct_UClass_UMainMenu_Statics
 		{ "ModuleRelativePath", "UI/MainMenu.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MenuButtonsBox;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayGameBtn;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsBtn;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_QuitGameBtn;
@@ -170,12 +162,10 @@ struct Z_Construct_UClass_UMainMenu_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenu_Statics::NewProp_MenuButtonsBox = { "MenuButtonsBox", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMainMenu, MenuButtonsBox), Z_Construct_UClass_UHorizontalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MenuButtonsBox_MetaData), NewProp_MenuButtonsBox_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenu_Statics::NewProp_PlayGameBtn = { "PlayGameBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMainMenu, PlayGameBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayGameBtn_MetaData), NewProp_PlayGameBtn_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenu_Statics::NewProp_SettingsBtn = { "SettingsBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMainMenu, SettingsBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsBtn_MetaData), NewProp_SettingsBtn_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenu_Statics::NewProp_QuitGameBtn = { "QuitGameBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMainMenu, QuitGameBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitGameBtn_MetaData), NewProp_QuitGameBtn_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMainMenu_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenu_Statics::NewProp_MenuButtonsBox,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenu_Statics::NewProp_PlayGameBtn,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenu_Statics::NewProp_SettingsBtn,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenu_Statics::NewProp_QuitGameBtn,
@@ -222,10 +212,10 @@ UMainMenu::~UMainMenu() {}
 struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_MainMenu_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMainMenu, UMainMenu::StaticClass, TEXT("UMainMenu"), &Z_Registration_Info_UClass_UMainMenu, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMainMenu), 1109735580U) },
+		{ Z_Construct_UClass_UMainMenu, UMainMenu::StaticClass, TEXT("UMainMenu"), &Z_Registration_Info_UClass_UMainMenu, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMainMenu), 2430115498U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_MainMenu_h_2535615883(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_MainMenu_h_13399465(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_MainMenu_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_MainMenu_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
