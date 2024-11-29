@@ -74,7 +74,7 @@ void APrimaryGameMode::TitleScreenSetup()
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{
-		Controller->DisableMouse();
+		Controller->EnableMouse();
 	}
 
 	TitleScreenWidget = CreateWidget<UTitleScreen>(GetWorld(), TitleScreenWidgetClass);

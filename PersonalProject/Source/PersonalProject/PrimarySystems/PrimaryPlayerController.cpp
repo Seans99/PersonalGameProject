@@ -14,10 +14,7 @@ void APrimaryPlayerController::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if (GameMode->GetCurrentState() == EGameState::ETitleScreen)
 	{
-		if (IsInputKeyDown(EKeys::SpaceBar))
-		{
-			GameMode->SetState(EGameState::EMainMenu);
-		}
+		DisableInput(this);
 	}
 	if (GameMode->GetCurrentState() == EGameState::EInGame)
 	{

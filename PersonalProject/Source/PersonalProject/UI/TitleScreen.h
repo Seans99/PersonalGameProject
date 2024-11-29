@@ -4,6 +4,7 @@
 #include "TitleScreen.generated.h"
 
 class UTextBlock;
+class UButton;
 
 UCLASS(Abstract)
 class PERSONALPROJECT_API UTitleScreen : public UGUIBase
@@ -15,5 +16,9 @@ protected:
 
 public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UTextBlock* StartGameText;
+	UButton* StartGameBtn;
+
+public:
+	UFUNCTION()
+	void StartGame();
 };
