@@ -75,6 +75,7 @@ void APrimaryGameMode::TitleScreenSetup()
 	if (Controller)
 	{
 		Controller->EnableMouse();
+		Controller->DisableInput(Controller);
 	}
 
 	TitleScreenWidget = CreateWidget<UTitleScreen>(GetWorld(), TitleScreenWidgetClass);
@@ -105,6 +106,7 @@ void APrimaryGameMode::MainMenuSetup()
 	if (Controller)
 	{
 		Controller->EnableMouse();
+		Controller->DisableInput(Controller);
 	}
 
 	MainMenuWidget = CreateWidget<UMainMenu>(GetWorld(), MainMenuWidgetClass);
@@ -134,6 +136,7 @@ void APrimaryGameMode::SettingsSetup()
 	if (Controller)
 	{
 		Controller->EnableMouse();
+		Controller->DisableInput(Controller);
 	}
 
 	SettingsWidget = CreateWidget<USettings>(GetWorld(), SettingsWidgetClass);
@@ -169,6 +172,7 @@ void APrimaryGameMode::InGameSetup()
 	if (Controller)
 	{
 		Controller->DisableMouse();
+		Controller->EnableInput(Controller);
 	}
 }
 

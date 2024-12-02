@@ -7,23 +7,27 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePersonalProject_init() {}
+	PERSONALPROJECT_API UFunction* Z_Construct_UDelegateFunction_PersonalProject_HealthCompSignature__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_PersonalProject;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_PersonalProject()
 	{
 		if (!Z_Registration_Info_UPackage__Script_PersonalProject.OuterSingleton)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_PersonalProject_HealthCompSignature__DelegateSignature,
+			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
 				"/Script/PersonalProject",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x1A8E51D6,
-				0xAE749417,
+				0x4E420A64,
+				0xF98F2D5C,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_PersonalProject.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_PersonalProject.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_PersonalProject(Z_Construct_UPackage__Script_PersonalProject, TEXT("/Script/PersonalProject"), Z_Registration_Info_UPackage__Script_PersonalProject, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x1A8E51D6, 0xAE749417));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_PersonalProject(Z_Construct_UPackage__Script_PersonalProject, TEXT("/Script/PersonalProject"), Z_Registration_Info_UPackage__Script_PersonalProject, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x4E420A64, 0xF98F2D5C));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

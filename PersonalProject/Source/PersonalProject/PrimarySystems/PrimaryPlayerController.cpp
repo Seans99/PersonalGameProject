@@ -12,16 +12,9 @@ APrimaryPlayerController::APrimaryPlayerController()
 void APrimaryPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (GameMode->GetCurrentState() == EGameState::ETitleScreen)
+	if (IsInputKeyDown(EKeys::Escape) && GameMode->GetCurrentState() == EGameState::EInGame)
 	{
-		DisableInput(this);
-	}
-	if (GameMode->GetCurrentState() == EGameState::EInGame)
-	{
-		if (IsInputKeyDown(EKeys::Escape))
-		{
-			GameMode->SetState(EGameState::EPause);
-		}
+		GameMode->SetState(EGameState::EPause);
 	}
 }
 

@@ -81,7 +81,7 @@ public:
 	UPROPERTY()
 	UPlayerHUD* PlayerHudWidget;
 
-private:
+public:
 	APrimaryPlayerController* Controller;
 
 private:

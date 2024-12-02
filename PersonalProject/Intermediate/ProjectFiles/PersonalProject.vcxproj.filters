@@ -39,6 +39,15 @@
     <ClInclude Include="..\..\Source\PersonalProject\PersonalProject.h">
       <Filter>Source\PersonalProject</Filter>
     </ClInclude>
+    <Filter Include="Source\PersonalProject\Components">
+      <UniqueIdentifier>{50075FD4-36A6-35CA-8672-BE7CA40D5671}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\Components\HealthComponent.cpp">
+      <Filter>Source\PersonalProject\Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\Components\HealthComponent.h">
+      <Filter>Source\PersonalProject\Components</Filter>
+    </ClInclude>
     <Filter Include="Source\PersonalProject\PrimarySystems">
       <UniqueIdentifier>{3FD8BCC3-A5CF-3EC9-9252-EFB7E7B897AF}</UniqueIdentifier>
     </Filter>
