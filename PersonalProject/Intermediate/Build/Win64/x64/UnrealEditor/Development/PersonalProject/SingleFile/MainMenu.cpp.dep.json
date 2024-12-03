@@ -948,7 +948,17 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slatecore\\public\\layout\\children.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slatecore\\public\\widgets\\spanel.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slatecore\\public\\layout\\arrangedchildren.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\horizontalbox.generated.h"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\horizontalbox.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\umg\\public\\components\\textblock.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\umg\\public\\components\\textwidgettypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slate\\public\\framework\\text\\textlayout.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slate\\public\\framework\\text\\textrunrenderer.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slate\\public\\framework\\text\\textlinehighlight.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slate\\public\\framework\\text\\irun.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slate\\public\\framework\\text\\shapedtextcachefwd.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\slate\\uht\\textlayout.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textwidgettypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textblock.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

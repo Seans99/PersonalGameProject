@@ -15,6 +15,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define PERSONALPROJECT_TitleScreen_generated_h
 
 #define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_TitleScreen_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUnHoveredEffect); \
+	DECLARE_FUNCTION(execHoveredEffect); \
 	DECLARE_FUNCTION(execStartGame);
 
 
