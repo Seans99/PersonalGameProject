@@ -2,12 +2,15 @@
 #include "../PrimarySystems/PrimaryGameMode.h"
 #include "Components/Button.h"
 #include "Components/HorizontalBox.h"
+#include "Components/VerticalBox.h"
+#include "Components/Image.h"
 #include <Kismet/GameplayStatics.h>
 
 void USettings::NativeConstruct()
 {
 	Super::NativeConstruct();
 
+	DisplayBtn->OnClicked.AddDynamic(this, &USettings::ShowDisplaySettings);
 	BackBtn->OnClicked.AddDynamic(this, &USettings::Back);
 	ApplyBtn->OnClicked.AddDynamic(this, &USettings::Apply);
 }
@@ -23,4 +26,9 @@ void USettings::Back()
 void USettings::Apply()
 {
 	// Apply settings
+}
+
+void USettings::ShowDisplaySettings()
+{
+	
 }
