@@ -72,6 +72,12 @@
     <Filter Include="Source\PersonalProject\UI">
       <UniqueIdentifier>{8A102ED0-A86A-3244-87B3-BB482EEDEAA9}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\CustomButtonV1.cpp">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\CustomButtonV1.h">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\UI\GUIBase.cpp">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClCompile>
