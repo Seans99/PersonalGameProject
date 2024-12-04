@@ -14,6 +14,7 @@ PERSONALPROJECT_API UClass* Z_Construct_UClass_UGUIBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UPauseMenu();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UPauseMenu_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
 // End Cross Module References
 
@@ -46,6 +47,93 @@ DEFINE_FUNCTION(UPauseMenu::execQuit)
 }
 // End Class UPauseMenu Function Quit
 
+// Begin Class UPauseMenu Function QuitHoverEffect
+struct Z_Construct_UFunction_UPauseMenu_QuitHoverEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_QuitHoverEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "QuitHoverEffect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_QuitHoverEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_QuitHoverEffect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_QuitHoverEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_QuitHoverEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execQuitHoverEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->QuitHoverEffect();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function QuitHoverEffect
+
+// Begin Class UPauseMenu Function QuitTitleHoverEffect
+struct Z_Construct_UFunction_UPauseMenu_QuitTitleHoverEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_QuitTitleHoverEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "QuitTitleHoverEffect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_QuitTitleHoverEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_QuitTitleHoverEffect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_QuitTitleHoverEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_QuitTitleHoverEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execQuitTitleHoverEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->QuitTitleHoverEffect();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function QuitTitleHoverEffect
+
+// Begin Class UPauseMenu Function QuitTitleUnHoveredEffect
+struct Z_Construct_UFunction_UPauseMenu_QuitTitleUnHoveredEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_QuitTitleUnHoveredEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "QuitTitleUnHoveredEffect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_QuitTitleUnHoveredEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_QuitTitleUnHoveredEffect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_QuitTitleUnHoveredEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_QuitTitleUnHoveredEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execQuitTitleUnHoveredEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->QuitTitleUnHoveredEffect();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function QuitTitleUnHoveredEffect
+
 // Begin Class UPauseMenu Function QuitToTitle
 struct Z_Construct_UFunction_UPauseMenu_QuitToTitle_Statics
 {
@@ -74,6 +162,35 @@ DEFINE_FUNCTION(UPauseMenu::execQuitToTitle)
 	P_NATIVE_END;
 }
 // End Class UPauseMenu Function QuitToTitle
+
+// Begin Class UPauseMenu Function QuitUnHoveredEffect
+struct Z_Construct_UFunction_UPauseMenu_QuitUnHoveredEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_QuitUnHoveredEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "QuitUnHoveredEffect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_QuitUnHoveredEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_QuitUnHoveredEffect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_QuitUnHoveredEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_QuitUnHoveredEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execQuitUnHoveredEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->QuitUnHoveredEffect();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function QuitUnHoveredEffect
 
 // Begin Class UPauseMenu Function ResumeGame
 struct Z_Construct_UFunction_UPauseMenu_ResumeGame_Statics
@@ -104,6 +221,64 @@ DEFINE_FUNCTION(UPauseMenu::execResumeGame)
 }
 // End Class UPauseMenu Function ResumeGame
 
+// Begin Class UPauseMenu Function ResumeHoverEffect
+struct Z_Construct_UFunction_UPauseMenu_ResumeHoverEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_ResumeHoverEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "ResumeHoverEffect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_ResumeHoverEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_ResumeHoverEffect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_ResumeHoverEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_ResumeHoverEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execResumeHoverEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResumeHoverEffect();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function ResumeHoverEffect
+
+// Begin Class UPauseMenu Function ResumeUnHoveredEffect
+struct Z_Construct_UFunction_UPauseMenu_ResumeUnHoveredEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_ResumeUnHoveredEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "ResumeUnHoveredEffect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_ResumeUnHoveredEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_ResumeUnHoveredEffect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_ResumeUnHoveredEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_ResumeUnHoveredEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execResumeUnHoveredEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResumeUnHoveredEffect();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function ResumeUnHoveredEffect
+
 // Begin Class UPauseMenu Function Settings
 struct Z_Construct_UFunction_UPauseMenu_Settings_Statics
 {
@@ -133,15 +308,81 @@ DEFINE_FUNCTION(UPauseMenu::execSettings)
 }
 // End Class UPauseMenu Function Settings
 
+// Begin Class UPauseMenu Function SettingsHoverEffect
+struct Z_Construct_UFunction_UPauseMenu_SettingsHoverEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_SettingsHoverEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "SettingsHoverEffect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_SettingsHoverEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_SettingsHoverEffect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_SettingsHoverEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_SettingsHoverEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execSettingsHoverEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SettingsHoverEffect();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function SettingsHoverEffect
+
+// Begin Class UPauseMenu Function SettingsUnHoveredEffect
+struct Z_Construct_UFunction_UPauseMenu_SettingsUnHoveredEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseMenu_SettingsUnHoveredEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseMenu, nullptr, "SettingsUnHoveredEffect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseMenu_SettingsUnHoveredEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseMenu_SettingsUnHoveredEffect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPauseMenu_SettingsUnHoveredEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseMenu_SettingsUnHoveredEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPauseMenu::execSettingsUnHoveredEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SettingsUnHoveredEffect();
+	P_NATIVE_END;
+}
+// End Class UPauseMenu Function SettingsUnHoveredEffect
+
 // Begin Class UPauseMenu
 void UPauseMenu::StaticRegisterNativesUPauseMenu()
 {
 	UClass* Class = UPauseMenu::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "Quit", &UPauseMenu::execQuit },
+		{ "QuitHoverEffect", &UPauseMenu::execQuitHoverEffect },
+		{ "QuitTitleHoverEffect", &UPauseMenu::execQuitTitleHoverEffect },
+		{ "QuitTitleUnHoveredEffect", &UPauseMenu::execQuitTitleUnHoveredEffect },
 		{ "QuitToTitle", &UPauseMenu::execQuitToTitle },
+		{ "QuitUnHoveredEffect", &UPauseMenu::execQuitUnHoveredEffect },
 		{ "ResumeGame", &UPauseMenu::execResumeGame },
+		{ "ResumeHoverEffect", &UPauseMenu::execResumeHoverEffect },
+		{ "ResumeUnHoveredEffect", &UPauseMenu::execResumeUnHoveredEffect },
 		{ "Settings", &UPauseMenu::execSettings },
+		{ "SettingsHoverEffect", &UPauseMenu::execSettingsHoverEffect },
+		{ "SettingsUnHoveredEffect", &UPauseMenu::execSettingsUnHoveredEffect },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -163,7 +404,19 @@ struct Z_Construct_UClass_UPauseMenu_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/PauseMenu.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ResumeText_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "PauseMenu" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SettingsBtn_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "PauseMenu" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SettingsText_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "PauseMenu" },
 		{ "EditInline", "true" },
@@ -175,7 +428,19 @@ struct Z_Construct_UClass_UPauseMenu_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/PauseMenu.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_QuitToTitleText_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "PauseMenu" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_QuitBtn_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "PauseMenu" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/PauseMenu.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_QuitText_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "PauseMenu" },
 		{ "EditInline", "true" },
@@ -183,16 +448,28 @@ struct Z_Construct_UClass_UPauseMenu_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResumeGameBtn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResumeText;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsBtn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsText;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_QuitToTitleBtn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_QuitToTitleText;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_QuitBtn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_QuitText;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPauseMenu_Quit, "Quit" }, // 4014879432
+		{ &Z_Construct_UFunction_UPauseMenu_QuitHoverEffect, "QuitHoverEffect" }, // 2418720474
+		{ &Z_Construct_UFunction_UPauseMenu_QuitTitleHoverEffect, "QuitTitleHoverEffect" }, // 2496627821
+		{ &Z_Construct_UFunction_UPauseMenu_QuitTitleUnHoveredEffect, "QuitTitleUnHoveredEffect" }, // 1421561827
 		{ &Z_Construct_UFunction_UPauseMenu_QuitToTitle, "QuitToTitle" }, // 2970971945
+		{ &Z_Construct_UFunction_UPauseMenu_QuitUnHoveredEffect, "QuitUnHoveredEffect" }, // 364798611
 		{ &Z_Construct_UFunction_UPauseMenu_ResumeGame, "ResumeGame" }, // 660793992
+		{ &Z_Construct_UFunction_UPauseMenu_ResumeHoverEffect, "ResumeHoverEffect" }, // 2944016959
+		{ &Z_Construct_UFunction_UPauseMenu_ResumeUnHoveredEffect, "ResumeUnHoveredEffect" }, // 4242059823
 		{ &Z_Construct_UFunction_UPauseMenu_Settings, "Settings" }, // 200928094
+		{ &Z_Construct_UFunction_UPauseMenu_SettingsHoverEffect, "SettingsHoverEffect" }, // 378965481
+		{ &Z_Construct_UFunction_UPauseMenu_SettingsUnHoveredEffect, "SettingsUnHoveredEffect" }, // 1854407455
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -201,14 +478,22 @@ struct Z_Construct_UClass_UPauseMenu_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_ResumeGameBtn = { "ResumeGameBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, ResumeGameBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResumeGameBtn_MetaData), NewProp_ResumeGameBtn_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_ResumeText = { "ResumeText", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, ResumeText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResumeText_MetaData), NewProp_ResumeText_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_SettingsBtn = { "SettingsBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, SettingsBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsBtn_MetaData), NewProp_SettingsBtn_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_SettingsText = { "SettingsText", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, SettingsText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsText_MetaData), NewProp_SettingsText_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitToTitleBtn = { "QuitToTitleBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, QuitToTitleBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitToTitleBtn_MetaData), NewProp_QuitToTitleBtn_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitToTitleText = { "QuitToTitleText", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, QuitToTitleText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitToTitleText_MetaData), NewProp_QuitToTitleText_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitBtn = { "QuitBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, QuitBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitBtn_MetaData), NewProp_QuitBtn_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitText = { "QuitText", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPauseMenu, QuitText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitText_MetaData), NewProp_QuitText_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPauseMenu_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_ResumeGameBtn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_ResumeText,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_SettingsBtn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_SettingsText,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitToTitleBtn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitToTitleText,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitBtn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPauseMenu_Statics::NewProp_QuitText,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPauseMenu_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPauseMenu_Statics::DependentSingletons[])() = {
@@ -249,14 +534,14 @@ UPauseMenu::~UPauseMenu() {}
 // End Class UPauseMenu
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPauseMenu, UPauseMenu::StaticClass, TEXT("UPauseMenu"), &Z_Registration_Info_UClass_UPauseMenu, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPauseMenu), 1179506537U) },
+		{ Z_Construct_UClass_UPauseMenu, UPauseMenu::StaticClass, TEXT("UPauseMenu"), &Z_Registration_Info_UClass_UPauseMenu, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPauseMenu), 1206441367U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_368205868(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_2266685645(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PauseMenu_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

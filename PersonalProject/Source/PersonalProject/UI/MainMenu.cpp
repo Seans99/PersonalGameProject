@@ -41,6 +41,8 @@ void UMainMenu::QuitGame()
 	UKismetSystemLibrary::QuitGame(GetWorld(), 0, EQuitPreference::Quit, true);
 }
 
+#pragma region HoverEffects
+
 void UMainMenu::PlayHoverEffect()
 {
 	PlayGameText->SetColorAndOpacity(HoveredTextColor);
@@ -71,4 +73,5 @@ void UMainMenu::QuitUnHoveredEffect()
 	QuitGameText->SetColorAndOpacity(DefaultTextColor);
 }
 
+#pragma endregion
 

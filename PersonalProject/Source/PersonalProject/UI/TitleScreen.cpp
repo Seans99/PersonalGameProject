@@ -19,6 +19,8 @@ void UTitleScreen::StartGame()
 	GameMode->SetState(EGameState::EMainMenu);
 }
 
+#pragma region HoverEffects
+
 void UTitleScreen::HoveredEffect()
 {
 	StartGametext->SetColorAndOpacity(HoveredTextColor);
@@ -29,4 +31,5 @@ void UTitleScreen::UnHoveredEffect()
 	StartGametext->SetColorAndOpacity(DefaultTextColor);
 }
 
+#pragma endregion
 
