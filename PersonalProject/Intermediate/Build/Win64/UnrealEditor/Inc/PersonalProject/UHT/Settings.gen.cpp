@@ -10,10 +10,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSettings() {}
 
 // Begin Cross Module References
+PERSONALPROJECT_API UClass* Z_Construct_UClass_UCustomButtonV1_NoRegister();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UGUIBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UHorizontalBox_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
@@ -77,6 +79,122 @@ DEFINE_FUNCTION(USettings::execBack)
 }
 // End Class USettings Function Back
 
+// Begin Class USettings Function Close
+struct Z_Construct_UFunction_USettings_Close_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_Close_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "Close", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_Close_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_Close_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_USettings_Close()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_Close_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execClose)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Close();
+	P_NATIVE_END;
+}
+// End Class USettings Function Close
+
+// Begin Class USettings Function ShowAccessibilitySettings
+struct Z_Construct_UFunction_USettings_ShowAccessibilitySettings_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_ShowAccessibilitySettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "ShowAccessibilitySettings", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_ShowAccessibilitySettings_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_ShowAccessibilitySettings_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_USettings_ShowAccessibilitySettings()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_ShowAccessibilitySettings_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execShowAccessibilitySettings)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowAccessibilitySettings();
+	P_NATIVE_END;
+}
+// End Class USettings Function ShowAccessibilitySettings
+
+// Begin Class USettings Function ShowAudioSettings
+struct Z_Construct_UFunction_USettings_ShowAudioSettings_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_ShowAudioSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "ShowAudioSettings", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_ShowAudioSettings_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_ShowAudioSettings_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_USettings_ShowAudioSettings()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_ShowAudioSettings_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execShowAudioSettings)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowAudioSettings();
+	P_NATIVE_END;
+}
+// End Class USettings Function ShowAudioSettings
+
+// Begin Class USettings Function ShowControlsSettings
+struct Z_Construct_UFunction_USettings_ShowControlsSettings_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_ShowControlsSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "ShowControlsSettings", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_ShowControlsSettings_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_ShowControlsSettings_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_USettings_ShowControlsSettings()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_ShowControlsSettings_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execShowControlsSettings)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowControlsSettings();
+	P_NATIVE_END;
+}
+// End Class USettings Function ShowControlsSettings
+
 // Begin Class USettings Function ShowDisplaySettings
 struct Z_Construct_UFunction_USettings_ShowDisplaySettings_Statics
 {
@@ -113,6 +231,10 @@ void USettings::StaticRegisterNativesUSettings()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "Apply", &USettings::execApply },
 		{ "Back", &USettings::execBack },
+		{ "Close", &USettings::execClose },
+		{ "ShowAccessibilitySettings", &USettings::execShowAccessibilitySettings },
+		{ "ShowAudioSettings", &USettings::execShowAudioSettings },
+		{ "ShowControlsSettings", &USettings::execShowControlsSettings },
 		{ "ShowDisplaySettings", &USettings::execShowDisplaySettings },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -135,31 +257,37 @@ struct Z_Construct_UClass_USettings_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DisplayBtn_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SettingsBackgroundImg_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "Settings" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AudioBtn_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DisplayButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "Settings" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ControlsBtn_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AudioButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "Settings" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AccessibilityBtn_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ControlsButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "Settings" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BackBtn_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AccessibilityButton_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BackButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "Settings" },
 		{ "EditInline", "true" },
@@ -177,7 +305,37 @@ struct Z_Construct_UClass_USettings_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Settings_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DisplaySettings_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AudioSettings_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ControlsSettings_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AccessibilitySettings_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SettingsButtons_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "Settings" },
 		{ "EditInline", "true" },
@@ -185,19 +343,29 @@ struct Z_Construct_UClass_USettings_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BackgroundImg;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_DisplayBtn;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_AudioBtn;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ControlsBtn;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_AccessibilityBtn;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_BackBtn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsBackgroundImg;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DisplayButton;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AudioButton;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ControlsButton;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AccessibilityButton;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BackButton;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CloseBtn;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ApplyBtn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Settings;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DisplaySettings;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AudioSettings;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ControlsSettings;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AccessibilitySettings;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsButtons;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USettings_Apply, "Apply" }, // 487313601
 		{ &Z_Construct_UFunction_USettings_Back, "Back" }, // 1190003293
+		{ &Z_Construct_UFunction_USettings_Close, "Close" }, // 249359394
+		{ &Z_Construct_UFunction_USettings_ShowAccessibilitySettings, "ShowAccessibilitySettings" }, // 2928490662
+		{ &Z_Construct_UFunction_USettings_ShowAudioSettings, "ShowAudioSettings" }, // 3036620564
+		{ &Z_Construct_UFunction_USettings_ShowControlsSettings, "ShowControlsSettings" }, // 3163461455
 		{ &Z_Construct_UFunction_USettings_ShowDisplaySettings, "ShowDisplaySettings" }, // 2872304857
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -207,24 +375,36 @@ struct Z_Construct_UClass_USettings_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_BackgroundImg = { "BackgroundImg", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, BackgroundImg), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BackgroundImg_MetaData), NewProp_BackgroundImg_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_DisplayBtn = { "DisplayBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, DisplayBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DisplayBtn_MetaData), NewProp_DisplayBtn_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_AudioBtn = { "AudioBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, AudioBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AudioBtn_MetaData), NewProp_AudioBtn_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_ControlsBtn = { "ControlsBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, ControlsBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ControlsBtn_MetaData), NewProp_ControlsBtn_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_AccessibilityBtn = { "AccessibilityBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, AccessibilityBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AccessibilityBtn_MetaData), NewProp_AccessibilityBtn_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_BackBtn = { "BackBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, BackBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BackBtn_MetaData), NewProp_BackBtn_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_SettingsBackgroundImg = { "SettingsBackgroundImg", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, SettingsBackgroundImg), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsBackgroundImg_MetaData), NewProp_SettingsBackgroundImg_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_DisplayButton = { "DisplayButton", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, DisplayButton), Z_Construct_UClass_UCustomButtonV1_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DisplayButton_MetaData), NewProp_DisplayButton_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_AudioButton = { "AudioButton", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, AudioButton), Z_Construct_UClass_UCustomButtonV1_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AudioButton_MetaData), NewProp_AudioButton_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_ControlsButton = { "ControlsButton", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, ControlsButton), Z_Construct_UClass_UCustomButtonV1_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ControlsButton_MetaData), NewProp_ControlsButton_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_AccessibilityButton = { "AccessibilityButton", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, AccessibilityButton), Z_Construct_UClass_UCustomButtonV1_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AccessibilityButton_MetaData), NewProp_AccessibilityButton_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_BackButton = { "BackButton", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, BackButton), Z_Construct_UClass_UCustomButtonV1_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BackButton_MetaData), NewProp_BackButton_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_CloseBtn = { "CloseBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, CloseBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CloseBtn_MetaData), NewProp_CloseBtn_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_ApplyBtn = { "ApplyBtn", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, ApplyBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ApplyBtn_MetaData), NewProp_ApplyBtn_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_Settings = { "Settings", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, Settings), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Settings_MetaData), NewProp_Settings_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_DisplaySettings = { "DisplaySettings", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, DisplaySettings), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DisplaySettings_MetaData), NewProp_DisplaySettings_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_AudioSettings = { "AudioSettings", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, AudioSettings), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AudioSettings_MetaData), NewProp_AudioSettings_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_ControlsSettings = { "ControlsSettings", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, ControlsSettings), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ControlsSettings_MetaData), NewProp_ControlsSettings_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_AccessibilitySettings = { "AccessibilitySettings", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, AccessibilitySettings), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AccessibilitySettings_MetaData), NewProp_AccessibilitySettings_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_SettingsButtons = { "SettingsButtons", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, SettingsButtons), Z_Construct_UClass_UHorizontalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsButtons_MetaData), NewProp_SettingsButtons_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USettings_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_BackgroundImg,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_DisplayBtn,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_AudioBtn,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_ControlsBtn,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_AccessibilityBtn,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_BackBtn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_SettingsBackgroundImg,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_DisplayButton,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_AudioButton,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_ControlsButton,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_AccessibilityButton,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_BackButton,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_CloseBtn,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_ApplyBtn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_Settings,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_DisplaySettings,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_AudioSettings,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_ControlsSettings,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_AccessibilitySettings,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_SettingsButtons,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_USettings_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_USettings_Statics::DependentSingletons[])() = {
@@ -265,14 +445,14 @@ USettings::~USettings() {}
 // End Class USettings
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USettings, USettings::StaticClass, TEXT("USettings"), &Z_Registration_Info_UClass_USettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettings), 2144696081U) },
+		{ Z_Construct_UClass_USettings, USettings::StaticClass, TEXT("USettings"), &Z_Registration_Info_UClass_USettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettings), 782470491U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_1539383873(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_591693870(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

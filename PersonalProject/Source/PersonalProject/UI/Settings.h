@@ -5,6 +5,7 @@
 #include "Settings.generated.h"
 
 class UButton;
+class UCustomButtonV1;
 class UHorizontalBox;
 class UVerticalBox;
 class UImage;
@@ -22,19 +23,22 @@ public:
 	UImage* BackgroundImg;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UButton* DisplayBtn;
+	UImage* SettingsBackgroundImg;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UButton* AudioBtn;
+	UCustomButtonV1* DisplayButton;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UButton* ControlsBtn;
+	UCustomButtonV1* AudioButton;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UButton* AccessibilityBtn;
+	UCustomButtonV1* ControlsButton;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UButton* BackBtn;
+	UCustomButtonV1* AccessibilityButton;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UCustomButtonV1* BackButton;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UButton* CloseBtn;
@@ -44,11 +48,35 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UVerticalBox* Settings;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UVerticalBox* DisplaySettings;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UVerticalBox* AudioSettings;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UVerticalBox* ControlsSettings;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UVerticalBox* AccessibilitySettings;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UHorizontalBox* SettingsButtons;
 
 public:
 	UFUNCTION()
 	void ShowDisplaySettings();
+
+	UFUNCTION()
+	void ShowAudioSettings();
+
+	UFUNCTION()
+	void ShowControlsSettings();
+
+	UFUNCTION()
+	void ShowAccessibilitySettings();
 
 public:
 
@@ -57,4 +85,7 @@ public:
 
 	UFUNCTION()
 	void Apply();
+
+	UFUNCTION()
+	void Close();
 };
