@@ -48,9 +48,6 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UVerticalBox* Settings;
-
-	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UVerticalBox* DisplaySettings;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))

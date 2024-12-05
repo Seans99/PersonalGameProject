@@ -109,10 +109,13 @@ void APrimaryGameMode::MainMenuSetup()
 		Controller->DisableInput(Controller);
 	}
 
-	MainMenuWidget = CreateWidget<UMainMenu>(GetWorld(), MainMenuWidgetClass);
-	if (MainMenuWidget)
+	if (!MainMenuWidget)
 	{
-		MainMenuWidget->AddToViewport();
+		MainMenuWidget = CreateWidget<UMainMenu>(GetWorld(), MainMenuWidgetClass);
+		if (MainMenuWidget)
+		{
+			MainMenuWidget->AddToViewport();
+		}
 	}
 }
 
@@ -121,16 +124,6 @@ void APrimaryGameMode::SettingsSetup()
 	if (Level1 == "" || MainLevel == "") return;
 
 	CurrentState = EGameState::ESettings;
-
-	if (MainMenuWidget)
-	{
-		MainMenuWidget->SetVisibility(ESlateVisibility::Hidden);
-	}
-
-	if (PauseMenuWidget)
-	{
-		PauseMenuWidget->SetVisibility(ESlateVisibility::Hidden);
-	}
 
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
@@ -198,10 +191,13 @@ void APrimaryGameMode::PauseSetup()
 		Controller->EnableMouse();
 	}
 
-	PauseMenuWidget = CreateWidget<UPauseMenu>(GetWorld(), PauseMenuWidgetClass);
-	if (PauseMenuWidget)
+	if (!PauseMenuWidget)
 	{
-		PauseMenuWidget->AddToViewport();
+		PauseMenuWidget = CreateWidget<UPauseMenu>(GetWorld(), PauseMenuWidgetClass);
+		if (PauseMenuWidget)
+		{
+			PauseMenuWidget->AddToViewport();
+		}
 	}
 }
 

@@ -36,7 +36,6 @@ void USettings::Apply()
 
 void USettings::Close()
 {
-	Settings->SetVisibility(ESlateVisibility::Hidden);
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Hidden);
 	SettingsButtons->SetVisibility(ESlateVisibility::Hidden);
 
@@ -49,32 +48,44 @@ void USettings::Close()
 
 void USettings::ShowDisplaySettings()
 {
+	AudioSettings->SetVisibility(ESlateVisibility::Hidden);
+	ControlsSettings->SetVisibility(ESlateVisibility::Hidden);
+	AccessibilitySettings->SetVisibility(ESlateVisibility::Hidden);
+
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Visible);
-	Settings->SetVisibility(ESlateVisibility::Visible);
 	DisplaySettings->SetVisibility(ESlateVisibility::Visible);
 	SettingsButtons->SetVisibility(ESlateVisibility::Visible);
 }
 
 void USettings::ShowAudioSettings()
 {
+	DisplaySettings->SetVisibility(ESlateVisibility::Hidden);
+	ControlsSettings->SetVisibility(ESlateVisibility::Hidden);
+	AccessibilitySettings->SetVisibility(ESlateVisibility::Hidden);
+
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Visible);
-	Settings->SetVisibility(ESlateVisibility::Visible);
 	AudioSettings->SetVisibility(ESlateVisibility::Visible);
 	SettingsButtons->SetVisibility(ESlateVisibility::Visible);
 }
 
 void USettings::ShowControlsSettings()
 {
+	DisplaySettings->SetVisibility(ESlateVisibility::Hidden);
+	AudioSettings->SetVisibility(ESlateVisibility::Hidden);
+	AccessibilitySettings->SetVisibility(ESlateVisibility::Hidden);
+
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Visible);
-	Settings->SetVisibility(ESlateVisibility::Visible);
 	ControlsSettings->SetVisibility(ESlateVisibility::Visible);
 	SettingsButtons->SetVisibility(ESlateVisibility::Visible);
 }
 
 void USettings::ShowAccessibilitySettings()
 {
+	DisplaySettings->SetVisibility(ESlateVisibility::Hidden);
+	AudioSettings->SetVisibility(ESlateVisibility::Hidden);
+	ControlsSettings->SetVisibility(ESlateVisibility::Hidden);
+
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Visible);
-	Settings->SetVisibility(ESlateVisibility::Visible);
 	AccessibilitySettings->SetVisibility(ESlateVisibility::Visible);
 	SettingsButtons->SetVisibility(ESlateVisibility::Visible);
 }
