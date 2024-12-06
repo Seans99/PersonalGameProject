@@ -35,6 +35,9 @@ public:
 	void SetButtonText(FString Text);
 
 	UFUNCTION()
+	void IsActiveButton(bool state);
+
+	UFUNCTION()
 	void BroadcastOnClicked();
 
 	UPROPERTY()
@@ -43,6 +46,9 @@ public:
 private:
 	FSlateColor DefaultTextColor = FSlateColor(FLinearColor(0.47451, 0.596078, 0.596078, 0.8));
 	FSlateColor HoveredTextColor = FSlateColor(FLinearColor(0.002732, 0.005182, 0.008023, 1.0));
+
+	FSlateColor DefaultButtonColor = FSlateColor(FLinearColor(0.0, 0.0, 0.0, 0.0));
+	FSlateColor ActiveButtonColor = FSlateColor(FLinearColor(0.47451, 0.596078, 0.596078, 0.14902));
 
 public:
 	UPROPERTY(EditAnywhere)

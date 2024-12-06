@@ -4,6 +4,7 @@
 #include "../UI/Settings.h"
 #include "../UI/PauseMenu.h"
 #include "../UI/PlayerHUD.h"
+#include "../UI/UIComponents/CustomButtonV1.h"
 #include "PrimaryPlayerController.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Kismet/GameplayStatics.h"
@@ -109,6 +110,11 @@ void APrimaryGameMode::MainMenuSetup()
 		Controller->DisableInput(Controller);
 	}
 
+	if (MainMenuWidget)
+	{
+		MainMenuWidget->SettingsButton->IsActiveButton(false);
+	}
+
 	if (!MainMenuWidget)
 	{
 		MainMenuWidget = CreateWidget<UMainMenu>(GetWorld(), MainMenuWidgetClass);
@@ -189,6 +195,12 @@ void APrimaryGameMode::PauseSetup()
 	if (Controller)
 	{
 		Controller->EnableMouse();
+	}
+
+	if (PauseMenuWidget)
+	{
+		PauseMenuWidget->SettingsButton->IsActiveButton(false);
+		PauseMenuWidget->SetVisibility(ESlateVisibility::Visible);
 	}
 
 	if (!PauseMenuWidget)

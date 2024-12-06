@@ -17,6 +17,11 @@ void UPauseMenu::NativeConstruct()
 	QuitButton->OnClicked.AddDynamic(this, &UPauseMenu::Quit);
 }
 
+void UPauseMenu::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
+{
+	Super::NativeTick(MyGeometry, InDeltaTime);
+}
+
 void UPauseMenu::ResumeGame()
 {
 	GameMode->SetState(EGameState::EInGame);
@@ -25,6 +30,7 @@ void UPauseMenu::ResumeGame()
 void UPauseMenu::Settings()
 {
 	GameMode->SetState(EGameState::ESettings);
+	SettingsButton->IsActiveButton(true);
 }
 
 void UPauseMenu::QuitToTitle()
