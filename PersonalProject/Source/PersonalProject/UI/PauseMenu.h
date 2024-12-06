@@ -14,6 +14,7 @@ class PERSONALPROJECT_API UPauseMenu : public UGUIBase
 	
 protected: 
 	virtual void NativeConstruct() override;
+	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 
 public:
 	UFUNCTION()

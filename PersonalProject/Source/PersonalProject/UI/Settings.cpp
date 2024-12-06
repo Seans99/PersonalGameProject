@@ -44,10 +44,17 @@ void USettings::Close()
 	AudioSettings->SetVisibility(ESlateVisibility::Hidden);
 	ControlsSettings->SetVisibility(ESlateVisibility::Hidden);
 	AccessibilitySettings->SetVisibility(ESlateVisibility::Hidden);
+
+	DisplayButton->IsActiveButton(false);
+	AudioButton->IsActiveButton(false);
+	ControlsButton->IsActiveButton(false);
+	AccessibilityButton->IsActiveButton(false);
 }
 
 void USettings::ShowDisplaySettings()
 {
+	DisplayButton->IsActiveButton(true);
+
 	AudioSettings->SetVisibility(ESlateVisibility::Hidden);
 	ControlsSettings->SetVisibility(ESlateVisibility::Hidden);
 	AccessibilitySettings->SetVisibility(ESlateVisibility::Hidden);
@@ -55,10 +62,16 @@ void USettings::ShowDisplaySettings()
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Visible);
 	DisplaySettings->SetVisibility(ESlateVisibility::Visible);
 	SettingsButtons->SetVisibility(ESlateVisibility::Visible);
+
+	AudioButton->IsActiveButton(false);
+	ControlsButton->IsActiveButton(false);
+	AccessibilityButton->IsActiveButton(false);
 }
 
 void USettings::ShowAudioSettings()
 {
+	AudioButton->IsActiveButton(true);
+
 	DisplaySettings->SetVisibility(ESlateVisibility::Hidden);
 	ControlsSettings->SetVisibility(ESlateVisibility::Hidden);
 	AccessibilitySettings->SetVisibility(ESlateVisibility::Hidden);
@@ -66,10 +79,17 @@ void USettings::ShowAudioSettings()
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Visible);
 	AudioSettings->SetVisibility(ESlateVisibility::Visible);
 	SettingsButtons->SetVisibility(ESlateVisibility::Visible);
+
+	DisplayButton->IsActiveButton(false);
+	ControlsButton->IsActiveButton(false);
+	AccessibilityButton->IsActiveButton(false);
+
 }
 
 void USettings::ShowControlsSettings()
 {
+	ControlsButton->IsActiveButton(true);
+
 	DisplaySettings->SetVisibility(ESlateVisibility::Hidden);
 	AudioSettings->SetVisibility(ESlateVisibility::Hidden);
 	AccessibilitySettings->SetVisibility(ESlateVisibility::Hidden);
@@ -77,10 +97,16 @@ void USettings::ShowControlsSettings()
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Visible);
 	ControlsSettings->SetVisibility(ESlateVisibility::Visible);
 	SettingsButtons->SetVisibility(ESlateVisibility::Visible);
+
+	DisplayButton->IsActiveButton(false);
+	AudioButton->IsActiveButton(false);
+	AccessibilityButton->IsActiveButton(false);
 }
 
 void USettings::ShowAccessibilitySettings()
 {
+	AccessibilityButton->IsActiveButton(true);
+
 	DisplaySettings->SetVisibility(ESlateVisibility::Hidden);
 	AudioSettings->SetVisibility(ESlateVisibility::Hidden);
 	ControlsSettings->SetVisibility(ESlateVisibility::Hidden);
@@ -88,4 +114,8 @@ void USettings::ShowAccessibilitySettings()
 	SettingsBackgroundImg->SetVisibility(ESlateVisibility::Visible);
 	AccessibilitySettings->SetVisibility(ESlateVisibility::Visible);
 	SettingsButtons->SetVisibility(ESlateVisibility::Visible);
+
+	DisplayButton->IsActiveButton(false);
+	AudioButton->IsActiveButton(false);
+	ControlsButton->IsActiveButton(false);
 }

@@ -15,6 +15,11 @@ void UMainMenu::NativeConstruct()
 	QuitGameButton->OnClicked.AddDynamic(this, &UMainMenu::QuitGame);
 }
 
+void UMainMenu::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
+{
+	Super::NativeTick(MyGeometry, InDeltaTime);
+}
+
 void UMainMenu::PlayGame()
 {
 	// Play game
@@ -25,6 +30,7 @@ void UMainMenu::Settings()
 {
 	// Open settings menu
 	GameMode->SetState(EGameState::ESettings);
+	SettingsButton->IsActiveButton(true);
 }
 
 void UMainMenu::QuitGame()

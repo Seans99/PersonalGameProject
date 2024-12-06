@@ -103,6 +103,53 @@ DEFINE_FUNCTION(UCustomButtonV1::execHoverEffect)
 }
 // End Class UCustomButtonV1 Function HoverEffect
 
+// Begin Class UCustomButtonV1 Function IsActiveButton
+struct Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics
+{
+	struct CustomButtonV1_eventIsActiveButton_Parms
+	{
+		bool state;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/UIComponents/CustomButtonV1.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_state_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_state;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::NewProp_state_SetBit(void* Obj)
+{
+	((CustomButtonV1_eventIsActiveButton_Parms*)Obj)->state = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::NewProp_state = { "state", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CustomButtonV1_eventIsActiveButton_Parms), &Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::NewProp_state_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::NewProp_state,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomButtonV1, nullptr, "IsActiveButton", nullptr, nullptr, Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::CustomButtonV1_eventIsActiveButton_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::CustomButtonV1_eventIsActiveButton_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UCustomButtonV1_IsActiveButton()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCustomButtonV1_IsActiveButton_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCustomButtonV1::execIsActiveButton)
+{
+	P_GET_UBOOL(Z_Param_state);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->IsActiveButton(Z_Param_state);
+	P_NATIVE_END;
+}
+// End Class UCustomButtonV1 Function IsActiveButton
+
 // Begin Class UCustomButtonV1 Function SetButtonText
 struct Z_Construct_UFunction_UCustomButtonV1_SetButtonText_Statics
 {
@@ -181,6 +228,7 @@ void UCustomButtonV1::StaticRegisterNativesUCustomButtonV1()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "BroadcastOnClicked", &UCustomButtonV1::execBroadcastOnClicked },
 		{ "HoverEffect", &UCustomButtonV1::execHoverEffect },
+		{ "IsActiveButton", &UCustomButtonV1::execIsActiveButton },
 		{ "SetButtonText", &UCustomButtonV1::execSetButtonText },
 		{ "UnHoverEffect", &UCustomButtonV1::execUnHoverEffect },
 	};
@@ -227,6 +275,7 @@ struct Z_Construct_UClass_UCustomButtonV1_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UCustomButtonV1_BroadcastOnClicked, "BroadcastOnClicked" }, // 2007440075
 		{ &Z_Construct_UFunction_UCustomButtonV1_HoverEffect, "HoverEffect" }, // 2854146560
+		{ &Z_Construct_UFunction_UCustomButtonV1_IsActiveButton, "IsActiveButton" }, // 3890871414
 		{ &Z_Construct_UFunction_UCustomButtonV1_SetButtonText, "SetButtonText" }, // 329403991
 		{ &Z_Construct_UFunction_UCustomButtonV1_UnHoverEffect, "UnHoverEffect" }, // 953233569
 	};
@@ -285,14 +334,14 @@ UCustomButtonV1::~UCustomButtonV1() {}
 // End Class UCustomButtonV1
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_UIComponents_CustomButtonV1_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_UIComponents_CustomButtonV1_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCustomButtonV1, UCustomButtonV1::StaticClass, TEXT("UCustomButtonV1"), &Z_Registration_Info_UClass_UCustomButtonV1, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomButtonV1), 4046427773U) },
+		{ Z_Construct_UClass_UCustomButtonV1, UCustomButtonV1::StaticClass, TEXT("UCustomButtonV1"), &Z_Registration_Info_UClass_UCustomButtonV1, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomButtonV1), 3227398528U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_UIComponents_CustomButtonV1_h_325683609(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_UIComponents_CustomButtonV1_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_UIComponents_CustomButtonV1_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_UIComponents_CustomButtonV1_h_4282112922(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_UIComponents_CustomButtonV1_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_UIComponents_CustomButtonV1_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

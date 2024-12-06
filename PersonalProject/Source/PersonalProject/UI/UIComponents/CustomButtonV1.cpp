@@ -29,6 +29,21 @@ void UCustomButtonV1::SetButtonText(FString Text)
 	ButtonText->SetText(newText);
 }
 
+void UCustomButtonV1::IsActiveButton(bool Active)
+{
+	if (Active)
+	{
+		Button->WidgetStyle.Normal.TintColor = ActiveButtonColor;
+		ButtonText->SetColorAndOpacity(HoveredTextColor);
+	}
+
+	if (!Active)
+	{
+		Button->WidgetStyle.Normal.TintColor = DefaultButtonColor;
+		ButtonText->SetColorAndOpacity(DefaultTextColor);
+	}
+}
+
 void UCustomButtonV1::BroadcastOnClicked()
 {
 	OnClicked.Broadcast();
