@@ -51,6 +51,12 @@
     <Filter Include="Source\PersonalProject\PrimarySystems">
       <UniqueIdentifier>{3FD8BCC3-A5CF-3EC9-9252-EFB7E7B897AF}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameInstance.cpp">
+      <Filter>Source\PersonalProject\PrimarySystems</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameInstance.h">
+      <Filter>Source\PersonalProject\PrimarySystems</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameMode.cpp">
       <Filter>Source\PersonalProject\PrimarySystems</Filter>
     </ClCompile>
