@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\singlefile\\playerhud.h",
+        "Source": "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\singlefile\\playerhud.h",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\ui\\playerhud.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\ui\\playerhud.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -434,7 +434,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\algo\\impl\\rangepointertype.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\ray.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\vector2dhalf.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\ui\\guibase.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\ui\\guibase.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\umg\\public\\blueprint\\userwidget.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\umg\\public\\blueprint\\widgetchild.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectmacros.h",
@@ -891,8 +891,8 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\umg\\public\\animation\\widgetanimationevents.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetanimationevents.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\guibase.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\playerhud.generated.h"
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\guibase.generated.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\playerhud.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

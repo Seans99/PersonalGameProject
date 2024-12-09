@@ -13,7 +13,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerHUD() {}
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UGUIBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UPlayerHUD();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UPlayerHUD_NoRegister();
-UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UProgressBar_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
@@ -69,12 +68,6 @@ struct Z_Construct_UClass_UPlayerHUD_Statics
 		{ "IncludePath", "UI/PlayerHUD.h" },
 		{ "ModuleRelativePath", "UI/PlayerHUD.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HeartImg_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "Category", "PlayerHUD" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "UI/PlayerHUD.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HealthBar_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "PlayerHUD" },
@@ -87,17 +80,9 @@ struct Z_Construct_UClass_UPlayerHUD_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/PlayerHUD.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NavigationArrow_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "Category", "PlayerHUD" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "UI/PlayerHUD.h" },
-	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_HeartImg;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthBar;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthText;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_NavigationArrow;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -109,15 +94,11 @@ struct Z_Construct_UClass_UPlayerHUD_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_HeartImg = { "HeartImg", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, HeartImg), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HeartImg_MetaData), NewProp_HeartImg_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_HealthBar = { "HealthBar", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, HealthBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HealthBar_MetaData), NewProp_HealthBar_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_HealthText = { "HealthText", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, HealthText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HealthText_MetaData), NewProp_HealthText_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_NavigationArrow = { "NavigationArrow", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, NavigationArrow), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NavigationArrow_MetaData), NewProp_NavigationArrow_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerHUD_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_HeartImg,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_HealthBar,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_HealthText,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_NavigationArrow,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerHUD_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerHUD_Statics::DependentSingletons[])() = {
@@ -161,10 +142,10 @@ UPlayerHUD::~UPlayerHUD() {}
 struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PlayerHUD_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerHUD, UPlayerHUD::StaticClass, TEXT("UPlayerHUD"), &Z_Registration_Info_UClass_UPlayerHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerHUD), 823089298U) },
+		{ Z_Construct_UClass_UPlayerHUD, UPlayerHUD::StaticClass, TEXT("UPlayerHUD"), &Z_Registration_Info_UClass_UPlayerHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerHUD), 2147711374U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PlayerHUD_h_2798384388(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PlayerHUD_h_4078247461(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PlayerHUD_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_PlayerHUD_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -22,16 +22,10 @@ protected:
 
 public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UImage* HeartImg;
-
-	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UProgressBar* HealthBar;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UTextBlock* HealthText;
-
-	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UImage* NavigationArrow;
 
 private:
 	UFUNCTION()
