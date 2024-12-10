@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "TimerManager.h"
 #include "StaminaComponent.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FStaminaCompSignature);
@@ -17,6 +18,7 @@ public:
 public:
 	void LoseStamina();
 	void RegainStamina();
+	void StopUsingStamina();
 
 public:
 	UPROPERTY(EditDefaultsOnly)
@@ -25,9 +27,18 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	int CurrentStamina;
 
+	UPROPERTY(VisibleAnywhere)
+	bool bIsUsingStamina = false;
+
 	UPROPERTY()
 	FStaminaCompSignature OnStaminaLoss;
 
 	UPROPERTY()
 	FStaminaCompSignature OnStaminaRegain;
+
+	UPROPERTY()
+	FStaminaCompSignature OnStaminaDepleted;
+
+private:
+	FTimerHandle StaminaTimerHandle;
 };

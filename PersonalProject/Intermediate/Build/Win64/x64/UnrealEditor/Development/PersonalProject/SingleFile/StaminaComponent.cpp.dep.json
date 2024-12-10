@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\components\\staminacomponent.cpp",
+        "Source": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\components\\staminacomponent.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
-            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\components\\staminacomponent.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\components\\staminacomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -561,7 +561,8 @@
             "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.36.32532\\include\\sanitizer\\common_interface_defs.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\actorcomponent.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\net\\core\\public\\net\\core\\pushmodel\\pushmodelmacros.h",
-            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\staminacomponent.generated.h"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\timermanager.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\staminacomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

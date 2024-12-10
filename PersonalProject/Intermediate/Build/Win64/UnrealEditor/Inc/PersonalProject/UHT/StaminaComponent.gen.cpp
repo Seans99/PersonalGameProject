@@ -69,17 +69,27 @@ struct Z_Construct_UClass_UStaminaComponent_Statics
 		{ "Category", "StaminaComponent" },
 		{ "ModuleRelativePath", "Components/StaminaComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsUsingStamina_MetaData[] = {
+		{ "Category", "StaminaComponent" },
+		{ "ModuleRelativePath", "Components/StaminaComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnStaminaLoss_MetaData[] = {
 		{ "ModuleRelativePath", "Components/StaminaComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnStaminaRegain_MetaData[] = {
 		{ "ModuleRelativePath", "Components/StaminaComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnStaminaDepleted_MetaData[] = {
+		{ "ModuleRelativePath", "Components/StaminaComponent.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_MaxStamina;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_CurrentStamina;
+	static void NewProp_bIsUsingStamina_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsUsingStamina;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnStaminaLoss;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnStaminaRegain;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnStaminaDepleted;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -89,13 +99,21 @@ struct Z_Construct_UClass_UStaminaComponent_Statics
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UStaminaComponent_Statics::NewProp_MaxStamina = { "MaxStamina", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaminaComponent, MaxStamina), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxStamina_MetaData), NewProp_MaxStamina_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UStaminaComponent_Statics::NewProp_CurrentStamina = { "CurrentStamina", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaminaComponent, CurrentStamina), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentStamina_MetaData), NewProp_CurrentStamina_MetaData) };
+void Z_Construct_UClass_UStaminaComponent_Statics::NewProp_bIsUsingStamina_SetBit(void* Obj)
+{
+	((UStaminaComponent*)Obj)->bIsUsingStamina = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UStaminaComponent_Statics::NewProp_bIsUsingStamina = { "bIsUsingStamina", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UStaminaComponent), &Z_Construct_UClass_UStaminaComponent_Statics::NewProp_bIsUsingStamina_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsUsingStamina_MetaData), NewProp_bIsUsingStamina_MetaData) };
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaminaComponent_Statics::NewProp_OnStaminaLoss = { "OnStaminaLoss", nullptr, (EPropertyFlags)0x0010000000080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaminaComponent, OnStaminaLoss), Z_Construct_UDelegateFunction_PersonalProject_StaminaCompSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnStaminaLoss_MetaData), NewProp_OnStaminaLoss_MetaData) }; // 4248527717
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaminaComponent_Statics::NewProp_OnStaminaRegain = { "OnStaminaRegain", nullptr, (EPropertyFlags)0x0010000000080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaminaComponent, OnStaminaRegain), Z_Construct_UDelegateFunction_PersonalProject_StaminaCompSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnStaminaRegain_MetaData), NewProp_OnStaminaRegain_MetaData) }; // 4248527717
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaminaComponent_Statics::NewProp_OnStaminaDepleted = { "OnStaminaDepleted", nullptr, (EPropertyFlags)0x0010000000080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaminaComponent, OnStaminaDepleted), Z_Construct_UDelegateFunction_PersonalProject_StaminaCompSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnStaminaDepleted_MetaData), NewProp_OnStaminaDepleted_MetaData) }; // 4248527717
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStaminaComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaminaComponent_Statics::NewProp_MaxStamina,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaminaComponent_Statics::NewProp_CurrentStamina,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaminaComponent_Statics::NewProp_bIsUsingStamina,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaminaComponent_Statics::NewProp_OnStaminaLoss,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaminaComponent_Statics::NewProp_OnStaminaRegain,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaminaComponent_Statics::NewProp_OnStaminaDepleted,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UStaminaComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UStaminaComponent_Statics::DependentSingletons[])() = {
@@ -135,14 +153,14 @@ UStaminaComponent::~UStaminaComponent() {}
 // End Class UStaminaComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Components_StaminaComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Components_StaminaComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UStaminaComponent, UStaminaComponent::StaticClass, TEXT("UStaminaComponent"), &Z_Registration_Info_UClass_UStaminaComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStaminaComponent), 1287699474U) },
+		{ Z_Construct_UClass_UStaminaComponent, UStaminaComponent::StaticClass, TEXT("UStaminaComponent"), &Z_Registration_Info_UClass_UStaminaComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStaminaComponent), 3459777232U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Components_StaminaComponent_h_1289270953(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Components_StaminaComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Components_StaminaComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Components_StaminaComponent_h_1321745229(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Components_StaminaComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Components_StaminaComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

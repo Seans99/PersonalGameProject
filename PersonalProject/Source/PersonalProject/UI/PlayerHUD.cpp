@@ -1,6 +1,7 @@
 #include "PlayerHUD.h"
 #include "../PrimarySystems/PrimaryPlayerCharacter.h"
 #include "../Components/HealthComponent.h"
+#include "../Components/StaminaComponent.h"
 #include "Components/Image.h"
 #include "Components/ProgressBar.h"
 #include "Components/TextBlock.h"
@@ -13,18 +14,27 @@ void UPlayerHUD::NativeConstruct()
 	if (Player)
 	{
 		PlayerHC = Player->FindComponentByClass<UHealthComponent>();
+		PlayerSTAM = Player->FindComponentByClass<UStaminaComponent>();
 		if (PlayerHC)
 		{
 			// Set the health bar percentage and health text values
-			HealthBar->SetPercent(PlayerHC->CurrentHealth);
-			FString Text = FString::Printf(TEXT("%d / %d"), PlayerHC->CurrentHealth, PlayerHC->MaxHealth);
-			FText NewText = FText::FromString(Text);
-			HealthText->SetText(NewText);
+			HealthBar->SetPercent(PlayerHC->CurrentHealth * 0.01f);
 			PlayerHC->OnDamage.AddDynamic(this, &UPlayerHUD::HealthChange);
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Health component not found"));
+			UE_LOG(LogTemp, Error, TEXT("Health component not found"));
+		}
+
+		if (PlayerSTAM)
+		{
+			StaminaBar->SetPercent(PlayerSTAM->CurrentStamina * 0.01f);
+			PlayerSTAM->OnStaminaLoss.AddDynamic(this, &UPlayerHUD::StaminaChange);
+			PlayerSTAM->OnStaminaRegain.AddDynamic(this, &UPlayerHUD::StaminaChange);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Stamina component not found"));
 		}
 	}
 	else
@@ -41,8 +51,10 @@ void UPlayerHUD::NativeTick(const FGeometry& Geometry, float DeltaTime)
 
 void UPlayerHUD::HealthChange()
 {
-	HealthBar->SetPercent(PlayerHC->CurrentHealth);
-	FString Text = FString::Printf(TEXT("%d / %d"), PlayerHC->CurrentHealth, PlayerHC->MaxHealth);
-	FText NewText = FText::FromString(Text);
-	HealthText->SetText(NewText);
+	HealthBar->SetPercent(PlayerHC->CurrentHealth * 0.01f);
+}
+
+void UPlayerHUD::StaminaChange()
+{
+	StaminaBar->SetPercent(PlayerSTAM->CurrentStamina * 0.01f);
 }

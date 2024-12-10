@@ -6,6 +6,7 @@
 
 class APrimaryPlayerCharacter;
 class UHealthComponent;
+class UStaminaComponent;
 
 class UProgressBar;
 class UTextBlock;
@@ -25,13 +26,17 @@ public:
 	UProgressBar* HealthBar;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UTextBlock* HealthText;
+	UProgressBar* StaminaBar;
 
 private:
 	UFUNCTION()
 	void HealthChange();
 
+	UFUNCTION()
+	void StaminaChange();
+
 private:
 	APrimaryPlayerCharacter* Player;
 	UHealthComponent* PlayerHC;
+	UStaminaComponent* PlayerSTAM;
 };

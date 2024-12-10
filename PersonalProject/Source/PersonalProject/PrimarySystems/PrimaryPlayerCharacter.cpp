@@ -3,8 +3,10 @@
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "../PrimarySystems/PrimaryGameMode.h"
 #include "../PrimarySystems/PrimaryPlayerController.h"
+#include "../Components/StaminaComponent.h"
 
 // Sets default values
 APrimaryPlayerCharacter::APrimaryPlayerCharacter()
@@ -20,6 +22,16 @@ APrimaryPlayerCharacter::APrimaryPlayerCharacter()
 void APrimaryPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if (UCharacterMovementComponent* MovementComponent = GetCharacterMovement())
+	{
+		MovementComponent->MaxWalkSpeed = WalkSpeed;
+	}
+
+	if (UStaminaComponent* Stamina = FindComponentByClass<UStaminaComponent>())
+	{
+		Stamina->OnStaminaDepleted.AddDynamic(this, &APrimaryPlayerCharacter::HandleStaminaDepleted);
+	}
 }
 
 // Called every frame
@@ -48,6 +60,8 @@ void APrimaryPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 		Input->BindAction(JumpAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Jump);
 		Input->BindAction(LookAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Look);
 		Input->BindAction(AttackAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Attack);
+		Input->BindAction(SprintAction, ETriggerEvent::Started, this, &APrimaryPlayerCharacter::StartSprint);
+		Input->BindAction(SprintAction, ETriggerEvent::Completed, this, &APrimaryPlayerCharacter::StopSprint);
 	}
 }
 
@@ -81,5 +95,38 @@ void APrimaryPlayerCharacter::Look(const FInputActionValue& InputValue)
 void APrimaryPlayerCharacter::Attack()
 {
 	
+}
+
+void APrimaryPlayerCharacter::StartSprint()
+{
+	if (UStaminaComponent* Stamina = FindComponentByClass<UStaminaComponent>())
+	{
+		if (Stamina->CurrentStamina > 0)
+		{
+			Stamina->LoseStamina();
+			if (UCharacterMovementComponent* MovementComponent = GetCharacterMovement())
+			{
+				MovementComponent->MaxWalkSpeed = SprintSpeed;
+			}
+		}
+	}
+}
+
+void APrimaryPlayerCharacter::StopSprint()
+{
+	if (UStaminaComponent* Stamina = FindComponentByClass<UStaminaComponent>())
+	{
+		Stamina->StopUsingStamina();
+		Stamina->RegainStamina();
+		if (UCharacterMovementComponent* MovementComponent = GetCharacterMovement())
+		{
+			MovementComponent->MaxWalkSpeed = WalkSpeed;
+		}
+	}
+}
+
+void APrimaryPlayerCharacter::HandleStaminaDepleted()
+{
+	StopSprint();
 }
 

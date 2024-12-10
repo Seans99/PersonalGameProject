@@ -49,11 +49,26 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
 	class UInputAction* AttackAction;
 
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	class UInputAction* SprintAction;
+
 protected:
 	void Move(const FInputActionValue& InputValue);
 	void Jump();
 	void Look(const FInputActionValue& InputValue);
 	void Attack();
+	void StartSprint();
+	void StopSprint();
+
+	UFUNCTION()
+	void HandleStaminaDepleted();
+
+public:
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float WalkSpeed = 600;
+
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float SprintSpeed = 1200;
 
 private:
 	APrimaryGameMode* GameMode;
