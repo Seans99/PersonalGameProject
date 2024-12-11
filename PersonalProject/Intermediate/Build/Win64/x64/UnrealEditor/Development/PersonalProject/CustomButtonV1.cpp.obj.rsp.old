@@ -1,11 +1,11 @@
-"C:\Users\sean9\Documents\GitHub\PersonalGameProject\PersonalProject\Source\PersonalProject\UI\UIComponents\CustomButtonV1.cpp"
-/FI"C:\Users\sean9\Documents\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\PersonalProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"C:\Users\sean9\Documents\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\PersonalProject\Definitions.PersonalProject.h"
-/Yu"C:\Users\sean9\Documents\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\PersonalProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"C:\Users\sean9\Documents\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\PersonalProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"C:\Users\sean9\Documents\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\PersonalProject\CustomButtonV1.cpp.obj"
-/sourceDependencies "C:\Users\sean9\Documents\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\PersonalProject\CustomButtonV1.cpp.dep.json"
-@"C:\Users\sean9\Documents\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\PersonalProject\PersonalProject.Shared.rsp"
+"C:\Users\sean.schelvis\GitHub\PersonalGameProject\PersonalProject\Source\PersonalProject\UI\UIComponents\CustomButtonV1.cpp"
+/FI"C:\Users\sean.schelvis\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\PersonalProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"C:\Users\sean.schelvis\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\PersonalProject\Definitions.PersonalProject.h"
+/Yu"C:\Users\sean.schelvis\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\PersonalProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"C:\Users\sean.schelvis\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\PersonalProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"C:\Users\sean.schelvis\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\PersonalProject\CustomButtonV1.cpp.obj"
+/sourceDependencies "C:\Users\sean.schelvis\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\PersonalProject\CustomButtonV1.cpp.dep.json"
+@"C:\Users\sean.schelvis\GitHub\PersonalGameProject\PersonalProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\PersonalProject\PersonalProject.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
