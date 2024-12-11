@@ -72,4 +72,7 @@ public:
 
 private:
 	APrimaryGameMode* GameMode;
+
+	bool bIsMoving = false;
+	void StoppedMoving();
 };

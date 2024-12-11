@@ -57,6 +57,7 @@ void APrimaryPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 	if (UEnhancedInputComponent* Input = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		Input->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Move);
+		Input->BindAction(MoveAction, ETriggerEvent::Completed, this, &APrimaryPlayerCharacter::StoppedMoving);
 		Input->BindAction(JumpAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Jump);
 		Input->BindAction(LookAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Look);
 		Input->BindAction(AttackAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Attack);
@@ -67,6 +68,7 @@ void APrimaryPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 void APrimaryPlayerCharacter::Move(const FInputActionValue& InputValue)
 {
+	bIsMoving = true;
 	FVector2D InputVector = InputValue.Get<FVector2D>();
 
 	const FVector ForwardDirection = GetActorForwardVector();
@@ -74,6 +76,11 @@ void APrimaryPlayerCharacter::Move(const FInputActionValue& InputValue)
 
 	AddMovementInput(ForwardDirection, InputVector.Y);
 	AddMovementInput(RightDirection, InputVector.X);
+}
+
+void APrimaryPlayerCharacter::StoppedMoving()
+{
+	bIsMoving = false;
 }
 
 void APrimaryPlayerCharacter::Jump()
@@ -99,14 +106,17 @@ void APrimaryPlayerCharacter::Attack()
 
 void APrimaryPlayerCharacter::StartSprint()
 {
-	if (UStaminaComponent* Stamina = FindComponentByClass<UStaminaComponent>())
+	if (bIsMoving)
 	{
-		if (Stamina->CurrentStamina > 0)
+		if (UStaminaComponent* Stamina = FindComponentByClass<UStaminaComponent>())
 		{
-			Stamina->LoseStamina();
-			if (UCharacterMovementComponent* MovementComponent = GetCharacterMovement())
+			if (Stamina->CurrentStamina > 0)
 			{
-				MovementComponent->MaxWalkSpeed = SprintSpeed;
+				Stamina->LoseStamina();
+				if (UCharacterMovementComponent* MovementComponent = GetCharacterMovement())
+				{
+					MovementComponent->MaxWalkSpeed = SprintSpeed;
+				}
 			}
 		}
 	}
@@ -129,4 +139,6 @@ void APrimaryPlayerCharacter::HandleStaminaDepleted()
 {
 	StopSprint();
 }
+
+
 
