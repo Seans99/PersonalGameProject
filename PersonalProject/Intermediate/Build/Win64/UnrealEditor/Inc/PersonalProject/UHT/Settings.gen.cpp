@@ -10,11 +10,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSettings() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UCustomButtonV1_NoRegister();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UGUIBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UComboBoxString_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UHorizontalBox_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
@@ -335,6 +337,21 @@ struct Z_Construct_UClass_USettings_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DisplayModeComboBox_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ResolutionComboBox_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Resolutions_MetaData[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BackgroundImg;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsBackgroundImg;
@@ -350,6 +367,10 @@ struct Z_Construct_UClass_USettings_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ControlsSettings;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AccessibilitySettings;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsButtons;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DisplayModeComboBox;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResolutionComboBox;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Resolutions_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_Resolutions;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -381,6 +402,10 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Stat
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_ControlsSettings = { "ControlsSettings", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, ControlsSettings), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ControlsSettings_MetaData), NewProp_ControlsSettings_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_AccessibilitySettings = { "AccessibilitySettings", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, AccessibilitySettings), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AccessibilitySettings_MetaData), NewProp_AccessibilitySettings_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_SettingsButtons = { "SettingsButtons", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, SettingsButtons), Z_Construct_UClass_UHorizontalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsButtons_MetaData), NewProp_SettingsButtons_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_DisplayModeComboBox = { "DisplayModeComboBox", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, DisplayModeComboBox), Z_Construct_UClass_UComboBoxString_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DisplayModeComboBox_MetaData), NewProp_DisplayModeComboBox_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_ResolutionComboBox = { "ResolutionComboBox", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, ResolutionComboBox), Z_Construct_UClass_UComboBoxString_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResolutionComboBox_MetaData), NewProp_ResolutionComboBox_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_Resolutions_Inner = { "Resolutions", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_Resolutions = { "Resolutions", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, Resolutions), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Resolutions_MetaData), NewProp_Resolutions_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USettings_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_BackgroundImg,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_SettingsBackgroundImg,
@@ -396,6 +421,10 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USettings
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_ControlsSettings,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_AccessibilitySettings,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_SettingsButtons,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_DisplayModeComboBox,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_ResolutionComboBox,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_Resolutions_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_Resolutions,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_USettings_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_USettings_Statics::DependentSingletons[])() = {
@@ -439,10 +468,10 @@ USettings::~USettings() {}
 struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USettings, USettings::StaticClass, TEXT("USettings"), &Z_Registration_Info_UClass_USettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettings), 3740800481U) },
+		{ Z_Construct_UClass_USettings, USettings::StaticClass, TEXT("USettings"), &Z_Registration_Info_UClass_USettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettings), 1782349040U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_3377414776(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_382799984(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

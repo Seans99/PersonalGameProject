@@ -40,30 +40,6 @@ void APrimaryGameMode::BeginPlay()
 void APrimaryGameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	switch (CurrentState)
-	{
-	case EGameState::ETitleScreen:
-		// Logic for Title screen state
-		break;
-	case EGameState::EMainMenu:
-		// Logic for Main Menu state
-		break;
-	case EGameState::ESettings:
-		// Logic for Settings state
-		break;
-	case EGameState::EInGame:
-		// Logic for In-Game state
-		break;
-	case EGameState::EPause:
-		// Logic for Pause state
-		break;
-	case EGameState::EGameOver:
-		// Logic for Game Over state
-		break;
-	default:
-		break;
-	}
 }
 
 void APrimaryGameMode::TitleScreenSetup()
@@ -184,11 +160,6 @@ void APrimaryGameMode::PauseSetup()
 	if (SettingsWidget)
 	{
 		SettingsWidget->SetVisibility(ESlateVisibility::Hidden);
-	}
-
-	if (PlayerHudWidget)
-	{
-		PlayerHudWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());

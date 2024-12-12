@@ -19,6 +19,9 @@ void USettings::NativeConstruct()
 	BackButton->OnClicked.AddDynamic(this, &USettings::Back);
 	ApplyBtn->OnClicked.AddDynamic(this, &USettings::Apply);
 	CloseBtn->OnClicked.AddDynamic(this, &USettings::Close);
+
+	InitializeDisplayModeBox();
+	InitializeResolutionBox();
 }
 
 void USettings::Back()
@@ -118,4 +121,14 @@ void USettings::ShowAccessibilitySettings()
 	DisplayButton->IsActiveButton(false);
 	AudioButton->IsActiveButton(false);
 	ControlsButton->IsActiveButton(false);
+}
+
+void USettings::InitializeDisplayModeBox()
+{
+
+}
+
+void USettings::InitializeResolutionBox()
+{
+
 }

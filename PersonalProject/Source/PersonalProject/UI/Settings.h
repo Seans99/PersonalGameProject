@@ -9,6 +9,7 @@ class UCustomButtonV1;
 class UHorizontalBox;
 class UVerticalBox;
 class UImage;
+class UComboBoxString;
 
 UCLASS()
 class PERSONALPROJECT_API USettings : public UGUIBase
@@ -85,4 +86,17 @@ public:
 
 	UFUNCTION()
 	void Close();
+
+protected:
+	void InitializeDisplayModeBox();
+	void InitializeResolutionBox();
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UComboBoxString* DisplayModeComboBox;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UComboBoxString* ResolutionComboBox;
+
+	UPROPERTY()
+	TArray<FIntPoint> Resolutions;
 };
