@@ -156,6 +156,7 @@ void APrimaryGameMode::PauseSetup()
 	if (Level1 == "") return;
 
 	CurrentState = EGameState::EPause;
+	UGameplayStatics::SetGamePaused(GetWorld(), true);
 
 	if (SettingsWidget)
 	{

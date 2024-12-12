@@ -24,6 +24,7 @@ void UPauseMenu::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 
 void UPauseMenu::ResumeGame()
 {
+	UGameplayStatics::SetGamePaused(GetWorld(), false);
 	GameMode->SetState(EGameState::EInGame);
 }
 
