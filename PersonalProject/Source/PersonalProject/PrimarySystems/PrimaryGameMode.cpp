@@ -163,6 +163,11 @@ void APrimaryGameMode::PauseSetup()
 		SettingsWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 
+	if (PlayerHudWidget)
+	{
+		PlayerHudWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+
 	Controller = Cast<APrimaryPlayerController>(GetWorld()->GetFirstPlayerController());
 	if (Controller)
 	{

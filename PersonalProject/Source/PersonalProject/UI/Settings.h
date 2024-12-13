@@ -4,6 +4,8 @@
 #include "GUIBase.h"
 #include "Settings.generated.h"
 
+class UGameUserSettings;
+
 class UButton;
 class UCustomButtonV1;
 class UHorizontalBox;
@@ -91,6 +93,8 @@ protected:
 	void InitializeDisplayModeBox();
 	void InitializeResolutionBox();
 
+	void OnResolutionChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType);
+
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UComboBoxString* DisplayModeComboBox;
 
@@ -99,4 +103,7 @@ protected:
 
 	UPROPERTY()
 	TArray<FIntPoint> Resolutions;
+
+private:
+	UGameUserSettings* GameUserSettings;
 };

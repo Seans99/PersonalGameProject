@@ -4,12 +4,16 @@
 #include "Components/HorizontalBox.h"
 #include "Components/VerticalBox.h"
 #include "Components/Image.h"
+#include "Components/ComboBoxString.h"
+#include "GameFramework/GameUserSettings.h"
 #include "../UI/UIComponents/CustomButtonV1.h"
 #include <Kismet/GameplayStatics.h>
 
 void USettings::NativeConstruct()
 {
 	Super::NativeConstruct();
+
+	GameUserSettings = UGameUserSettings::GetGameUserSettings();
 
 	DisplayButton->OnClicked.AddDynamic(this, &USettings::ShowDisplaySettings);
 	AudioButton->OnClicked.AddDynamic(this, &USettings::ShowAudioSettings);
@@ -34,7 +38,7 @@ void USettings::Back()
 
 void USettings::Apply()
 {
-	// Apply settings
+	GameUserSettings->ApplySettings(false);
 }
 
 void USettings::Close()
@@ -128,7 +132,43 @@ void USettings::InitializeDisplayModeBox()
 
 }
 
+// CRASHES WHEN OPENING SETTINGS IN EDITOR
 void USettings::InitializeResolutionBox()
 {
+	Resolutions.Reset();
 
+	UKismetSystemLibrary::GetSupportedFullscreenResolutions(Resolutions);
+
+	ResolutionComboBox->ClearOptions();
+
+	if (Resolutions.Num() == 0)
+	{
+		UE_LOG(LogTemp, Error, TEXT("No Supported Resolutions Found!"));
+		return;
+	}
+
+	for (const auto& Resolution : Resolutions)
+	{
+		const auto ResolutionString = FString::Printf(TEXT("%d x %d"), Resolution.X, Resolution.Y);
+		ResolutionComboBox->AddOption(ResolutionString);
+	}
+
+	const auto CurrentResolution = GameUserSettings->GetScreenResolution();
+	const auto SelectedIndex = Resolutions.IndexOfByPredicate(
+		[&CurrentResolution](const FIntPoint& InResolution)
+		{
+			return InResolution == CurrentResolution;
+		});
+	check(SelectedIndex >= 0);
+
+	ResolutionComboBox->SetSelectedIndex(SelectedIndex);
+
+	ResolutionComboBox->OnSelectionChanged.Clear();
+	ResolutionComboBox->OnSelectionChanged.AddDynamic(this, &USettings::OnResolutionChanged);
+}
+
+void USettings::OnResolutionChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType)
+{
+	const auto SelectedResolution = Resolutions[ResolutionComboBox->GetSelectedIndex()];
+	GameUserSettings->SetScreenResolution(SelectedResolution);
 }
