@@ -15,6 +15,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define PERSONALPROJECT_Settings_generated_h
 
 #define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnDisplayModeChanged); \
+	DECLARE_FUNCTION(execOnResolutionChanged); \
 	DECLARE_FUNCTION(execClose); \
 	DECLARE_FUNCTION(execApply); \
 	DECLARE_FUNCTION(execBack); \

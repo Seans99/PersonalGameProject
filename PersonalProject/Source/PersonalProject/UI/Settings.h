@@ -90,10 +90,14 @@ public:
 	void Close();
 
 protected:
+	UFUNCTION()
+	void OnResolutionChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType);
+
+	UFUNCTION()
+	void OnDisplayModeChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType);
+
 	void InitializeDisplayModeBox();
 	void InitializeResolutionBox();
-
-	void OnResolutionChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType);
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UComboBoxString* DisplayModeComboBox;
@@ -103,6 +107,9 @@ protected:
 
 	UPROPERTY()
 	TArray<FIntPoint> Resolutions;
+
+	UPROPERTY()
+	TArray<TEnumAsByte<EWindowMode::Type>> DisplayModes;
 
 private:
 	UGameUserSettings* GameUserSettings;

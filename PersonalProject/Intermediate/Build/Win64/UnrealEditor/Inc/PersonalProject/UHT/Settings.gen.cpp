@@ -11,10 +11,12 @@ void EmptyLinkFunctionForGeneratedCodeSettings() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
+ENGINE_API UEnum* Z_Construct_UEnum_Engine_EWindowMode();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UCustomButtonV1_NoRegister();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UGUIBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings_NoRegister();
+SLATECORE_API UEnum* Z_Construct_UEnum_SlateCore_ESelectInfo();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UComboBoxString_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UHorizontalBox_NoRegister();
@@ -109,6 +111,100 @@ DEFINE_FUNCTION(USettings::execClose)
 	P_NATIVE_END;
 }
 // End Class USettings Function Close
+
+// Begin Class USettings Function OnDisplayModeChanged
+struct Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics
+{
+	struct Settings_eventOnDisplayModeChanged_Parms
+	{
+		FString InSelectedItem;
+		TEnumAsByte<ESelectInfo::Type> InSelectionType;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStrPropertyParams NewProp_InSelectedItem;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_InSelectionType;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::NewProp_InSelectedItem = { "InSelectedItem", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Settings_eventOnDisplayModeChanged_Parms, InSelectedItem), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::NewProp_InSelectionType = { "InSelectionType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Settings_eventOnDisplayModeChanged_Parms, InSelectionType), Z_Construct_UEnum_SlateCore_ESelectInfo, METADATA_PARAMS(0, nullptr) }; // 4040429206
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::NewProp_InSelectedItem,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::NewProp_InSelectionType,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "OnDisplayModeChanged", nullptr, nullptr, Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::PropPointers), sizeof(Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::Settings_eventOnDisplayModeChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::Settings_eventOnDisplayModeChanged_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USettings_OnDisplayModeChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_OnDisplayModeChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execOnDisplayModeChanged)
+{
+	P_GET_PROPERTY(FStrProperty,Z_Param_InSelectedItem);
+	P_GET_PROPERTY(FByteProperty,Z_Param_InSelectionType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnDisplayModeChanged(Z_Param_InSelectedItem,ESelectInfo::Type(Z_Param_InSelectionType));
+	P_NATIVE_END;
+}
+// End Class USettings Function OnDisplayModeChanged
+
+// Begin Class USettings Function OnResolutionChanged
+struct Z_Construct_UFunction_USettings_OnResolutionChanged_Statics
+{
+	struct Settings_eventOnResolutionChanged_Parms
+	{
+		FString InSelectedItem;
+		TEnumAsByte<ESelectInfo::Type> InSelectionType;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStrPropertyParams NewProp_InSelectedItem;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_InSelectionType;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::NewProp_InSelectedItem = { "InSelectedItem", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Settings_eventOnResolutionChanged_Parms, InSelectedItem), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::NewProp_InSelectionType = { "InSelectionType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Settings_eventOnResolutionChanged_Parms, InSelectionType), Z_Construct_UEnum_SlateCore_ESelectInfo, METADATA_PARAMS(0, nullptr) }; // 4040429206
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::NewProp_InSelectedItem,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::NewProp_InSelectionType,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "OnResolutionChanged", nullptr, nullptr, Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::PropPointers), sizeof(Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::Settings_eventOnResolutionChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::Settings_eventOnResolutionChanged_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USettings_OnResolutionChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_OnResolutionChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execOnResolutionChanged)
+{
+	P_GET_PROPERTY(FStrProperty,Z_Param_InSelectedItem);
+	P_GET_PROPERTY(FByteProperty,Z_Param_InSelectionType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnResolutionChanged(Z_Param_InSelectedItem,ESelectInfo::Type(Z_Param_InSelectionType));
+	P_NATIVE_END;
+}
+// End Class USettings Function OnResolutionChanged
 
 // Begin Class USettings Function ShowAccessibilitySettings
 struct Z_Construct_UFunction_USettings_ShowAccessibilitySettings_Statics
@@ -234,6 +330,8 @@ void USettings::StaticRegisterNativesUSettings()
 		{ "Apply", &USettings::execApply },
 		{ "Back", &USettings::execBack },
 		{ "Close", &USettings::execClose },
+		{ "OnDisplayModeChanged", &USettings::execOnDisplayModeChanged },
+		{ "OnResolutionChanged", &USettings::execOnResolutionChanged },
 		{ "ShowAccessibilitySettings", &USettings::execShowAccessibilitySettings },
 		{ "ShowAudioSettings", &USettings::execShowAudioSettings },
 		{ "ShowControlsSettings", &USettings::execShowControlsSettings },
@@ -352,6 +450,9 @@ struct Z_Construct_UClass_USettings_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Resolutions_MetaData[] = {
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DisplayModes_MetaData[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BackgroundImg;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsBackgroundImg;
@@ -371,12 +472,16 @@ struct Z_Construct_UClass_USettings_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResolutionComboBox;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Resolutions_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Resolutions;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_DisplayModes_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_DisplayModes;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USettings_Apply, "Apply" }, // 487313601
 		{ &Z_Construct_UFunction_USettings_Back, "Back" }, // 1190003293
 		{ &Z_Construct_UFunction_USettings_Close, "Close" }, // 249359394
+		{ &Z_Construct_UFunction_USettings_OnDisplayModeChanged, "OnDisplayModeChanged" }, // 121858667
+		{ &Z_Construct_UFunction_USettings_OnResolutionChanged, "OnResolutionChanged" }, // 1075504879
 		{ &Z_Construct_UFunction_USettings_ShowAccessibilitySettings, "ShowAccessibilitySettings" }, // 2928490662
 		{ &Z_Construct_UFunction_USettings_ShowAudioSettings, "ShowAudioSettings" }, // 3036620564
 		{ &Z_Construct_UFunction_USettings_ShowControlsSettings, "ShowControlsSettings" }, // 3163461455
@@ -406,6 +511,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Stat
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_ResolutionComboBox = { "ResolutionComboBox", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, ResolutionComboBox), Z_Construct_UClass_UComboBoxString_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResolutionComboBox_MetaData), NewProp_ResolutionComboBox_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_Resolutions_Inner = { "Resolutions", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_Resolutions = { "Resolutions", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, Resolutions), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Resolutions_MetaData), NewProp_Resolutions_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_USettings_Statics::NewProp_DisplayModes_Inner = { "DisplayModes", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Engine_EWindowMode, METADATA_PARAMS(0, nullptr) }; // 3411615937
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_DisplayModes = { "DisplayModes", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, DisplayModes), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DisplayModes_MetaData), NewProp_DisplayModes_MetaData) }; // 3411615937
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USettings_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_BackgroundImg,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_SettingsBackgroundImg,
@@ -425,6 +532,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USettings
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_ResolutionComboBox,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_Resolutions_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_Resolutions,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_DisplayModes_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_DisplayModes,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_USettings_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_USettings_Statics::DependentSingletons[])() = {
@@ -468,10 +577,10 @@ USettings::~USettings() {}
 struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USettings, USettings::StaticClass, TEXT("USettings"), &Z_Registration_Info_UClass_USettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettings), 1782349040U) },
+		{ Z_Construct_UClass_USettings, USettings::StaticClass, TEXT("USettings"), &Z_Registration_Info_UClass_USettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettings), 3565127242U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_382799984(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_1365080327(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

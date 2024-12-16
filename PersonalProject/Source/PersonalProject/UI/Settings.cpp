@@ -129,10 +129,46 @@ void USettings::ShowAccessibilitySettings()
 
 void USettings::InitializeDisplayModeBox()
 {
+	DisplayModes.Reset();
 
+	DisplayModes.Add(EWindowMode::Fullscreen);
+	DisplayModes.Add(EWindowMode::WindowedFullscreen);
+	DisplayModes.Add(EWindowMode::Windowed);
+
+	DisplayModeComboBox->ClearOptions();
+
+	for (const auto& Mode : DisplayModes)
+	{
+		if (Mode == EWindowMode::Fullscreen)
+		{
+			const auto DisplayString = FString::Printf(TEXT("Fullscreen"));
+			DisplayModeComboBox->AddOption(DisplayString);
+		}
+		else if (Mode == EWindowMode::WindowedFullscreen)
+		{
+			const auto DisplayString = FString::Printf(TEXT("Borderless"));
+			DisplayModeComboBox->AddOption(DisplayString);
+		}
+		else if (Mode == EWindowMode::Windowed)
+		{
+			const auto DisplayString = FString::Printf(TEXT("Windowed"), Mode);
+			DisplayModeComboBox->AddOption(DisplayString);
+		}
+	}
+
+	const auto CurrentDisplayMode = GameUserSettings->GetFullscreenMode();
+
+	const auto SelectedIndex = DisplayModes.IndexOfByPredicate(
+		[&CurrentDisplayMode](const EWindowMode::Type& InDisplayMode)
+		{
+			return InDisplayMode == CurrentDisplayMode;
+		});
+
+	DisplayModeComboBox->SetSelectedIndex(SelectedIndex);
+	DisplayModeComboBox->OnSelectionChanged.Clear();
+	DisplayModeComboBox->OnSelectionChanged.AddDynamic(this, &USettings::OnDisplayModeChanged);
 }
 
-// CRASHES WHEN OPENING SETTINGS IN EDITOR
 void USettings::InitializeResolutionBox()
 {
 	Resolutions.Reset();
@@ -159,7 +195,6 @@ void USettings::InitializeResolutionBox()
 		{
 			return InResolution == CurrentResolution;
 		});
-	check(SelectedIndex >= 0);
 
 	ResolutionComboBox->SetSelectedIndex(SelectedIndex);
 
@@ -171,4 +206,10 @@ void USettings::OnResolutionChanged(FString InSelectedItem, ESelectInfo::Type In
 {
 	const auto SelectedResolution = Resolutions[ResolutionComboBox->GetSelectedIndex()];
 	GameUserSettings->SetScreenResolution(SelectedResolution);
+}
+
+void USettings::OnDisplayModeChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType)
+{
+	const auto SelectedDisplayMode = DisplayModes[DisplayModeComboBox->GetSelectedIndex()];
+	GameUserSettings->SetFullscreenMode(SelectedDisplayMode);
 }
