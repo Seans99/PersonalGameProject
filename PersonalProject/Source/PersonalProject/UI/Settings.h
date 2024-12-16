@@ -12,6 +12,8 @@ class UHorizontalBox;
 class UVerticalBox;
 class UImage;
 class UComboBoxString;
+class UCheckBox;
+class USlider;
 
 UCLASS()
 class PERSONALPROJECT_API USettings : public UGUIBase
@@ -90,20 +92,41 @@ public:
 	void Close();
 
 protected:
+	void InitializeDisplayModeBox();
+	void InitializeResolutionBox();
+	void InitializeVSync();
+	void InitializeMasterVolume();
+	void InitializeMusicVolume();
+
 	UFUNCTION()
 	void OnResolutionChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType);
 
 	UFUNCTION()
 	void OnDisplayModeChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType);
 
-	void InitializeDisplayModeBox();
-	void InitializeResolutionBox();
+	UFUNCTION()
+	void OnVSyncChanged(bool bInIsChecked);
+
+	UFUNCTION()
+	void OnMasterVolumeChanged(float Value);
+
+	UFUNCTION()
+	void OnMusicVolumeChanged(float Value);
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UComboBoxString* DisplayModeComboBox;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UComboBoxString* ResolutionComboBox;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UCheckBox* VSyncCheckBox;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	USlider* MasterVolumeSlider;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	USlider* MusicVolumeSlider;
 
 	UPROPERTY()
 	TArray<FIntPoint> Resolutions;

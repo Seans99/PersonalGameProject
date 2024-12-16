@@ -18,9 +18,11 @@ PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_USettings_NoRegister();
 SLATECORE_API UEnum* Z_Construct_UEnum_SlateCore_ESelectInfo();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UCheckBox_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UComboBoxString_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UHorizontalBox_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
+UMG_API UClass* Z_Construct_UClass_USlider_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
 // End Cross Module References
@@ -159,6 +161,90 @@ DEFINE_FUNCTION(USettings::execOnDisplayModeChanged)
 }
 // End Class USettings Function OnDisplayModeChanged
 
+// Begin Class USettings Function OnMasterVolumeChanged
+struct Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics
+{
+	struct Settings_eventOnMasterVolumeChanged_Parms
+	{
+		float Value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Settings_eventOnMasterVolumeChanged_Parms, Value), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::NewProp_Value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "OnMasterVolumeChanged", nullptr, nullptr, Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::PropPointers), sizeof(Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::Settings_eventOnMasterVolumeChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::Settings_eventOnMasterVolumeChanged_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USettings_OnMasterVolumeChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_OnMasterVolumeChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execOnMasterVolumeChanged)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnMasterVolumeChanged(Z_Param_Value);
+	P_NATIVE_END;
+}
+// End Class USettings Function OnMasterVolumeChanged
+
+// Begin Class USettings Function OnMusicVolumeChanged
+struct Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics
+{
+	struct Settings_eventOnMusicVolumeChanged_Parms
+	{
+		float Value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Settings_eventOnMusicVolumeChanged_Parms, Value), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::NewProp_Value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "OnMusicVolumeChanged", nullptr, nullptr, Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::PropPointers), sizeof(Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::Settings_eventOnMusicVolumeChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::Settings_eventOnMusicVolumeChanged_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USettings_OnMusicVolumeChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_OnMusicVolumeChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execOnMusicVolumeChanged)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnMusicVolumeChanged(Z_Param_Value);
+	P_NATIVE_END;
+}
+// End Class USettings Function OnMusicVolumeChanged
+
 // Begin Class USettings Function OnResolutionChanged
 struct Z_Construct_UFunction_USettings_OnResolutionChanged_Statics
 {
@@ -205,6 +291,53 @@ DEFINE_FUNCTION(USettings::execOnResolutionChanged)
 	P_NATIVE_END;
 }
 // End Class USettings Function OnResolutionChanged
+
+// Begin Class USettings Function OnVSyncChanged
+struct Z_Construct_UFunction_USettings_OnVSyncChanged_Statics
+{
+	struct Settings_eventOnVSyncChanged_Parms
+	{
+		bool bInIsChecked;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_bInIsChecked_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bInIsChecked;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::NewProp_bInIsChecked_SetBit(void* Obj)
+{
+	((Settings_eventOnVSyncChanged_Parms*)Obj)->bInIsChecked = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::NewProp_bInIsChecked = { "bInIsChecked", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(Settings_eventOnVSyncChanged_Parms), &Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::NewProp_bInIsChecked_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::NewProp_bInIsChecked,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettings, nullptr, "OnVSyncChanged", nullptr, nullptr, Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::PropPointers), sizeof(Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::Settings_eventOnVSyncChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::Settings_eventOnVSyncChanged_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USettings_OnVSyncChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USettings_OnVSyncChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USettings::execOnVSyncChanged)
+{
+	P_GET_UBOOL(Z_Param_bInIsChecked);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnVSyncChanged(Z_Param_bInIsChecked);
+	P_NATIVE_END;
+}
+// End Class USettings Function OnVSyncChanged
 
 // Begin Class USettings Function ShowAccessibilitySettings
 struct Z_Construct_UFunction_USettings_ShowAccessibilitySettings_Statics
@@ -331,7 +464,10 @@ void USettings::StaticRegisterNativesUSettings()
 		{ "Back", &USettings::execBack },
 		{ "Close", &USettings::execClose },
 		{ "OnDisplayModeChanged", &USettings::execOnDisplayModeChanged },
+		{ "OnMasterVolumeChanged", &USettings::execOnMasterVolumeChanged },
+		{ "OnMusicVolumeChanged", &USettings::execOnMusicVolumeChanged },
 		{ "OnResolutionChanged", &USettings::execOnResolutionChanged },
+		{ "OnVSyncChanged", &USettings::execOnVSyncChanged },
 		{ "ShowAccessibilitySettings", &USettings::execShowAccessibilitySettings },
 		{ "ShowAudioSettings", &USettings::execShowAudioSettings },
 		{ "ShowControlsSettings", &USettings::execShowControlsSettings },
@@ -447,6 +583,24 @@ struct Z_Construct_UClass_USettings_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_VSyncCheckBox_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MasterVolumeSlider_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MusicVolumeSlider_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Settings" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Settings.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Resolutions_MetaData[] = {
 		{ "ModuleRelativePath", "UI/Settings.h" },
 	};
@@ -470,6 +624,9 @@ struct Z_Construct_UClass_USettings_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SettingsButtons;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DisplayModeComboBox;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResolutionComboBox;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_VSyncCheckBox;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MasterVolumeSlider;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MusicVolumeSlider;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Resolutions_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Resolutions;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_DisplayModes_Inner;
@@ -481,7 +638,10 @@ struct Z_Construct_UClass_USettings_Statics
 		{ &Z_Construct_UFunction_USettings_Back, "Back" }, // 1190003293
 		{ &Z_Construct_UFunction_USettings_Close, "Close" }, // 249359394
 		{ &Z_Construct_UFunction_USettings_OnDisplayModeChanged, "OnDisplayModeChanged" }, // 121858667
+		{ &Z_Construct_UFunction_USettings_OnMasterVolumeChanged, "OnMasterVolumeChanged" }, // 1553505150
+		{ &Z_Construct_UFunction_USettings_OnMusicVolumeChanged, "OnMusicVolumeChanged" }, // 1687306441
 		{ &Z_Construct_UFunction_USettings_OnResolutionChanged, "OnResolutionChanged" }, // 1075504879
+		{ &Z_Construct_UFunction_USettings_OnVSyncChanged, "OnVSyncChanged" }, // 763715170
 		{ &Z_Construct_UFunction_USettings_ShowAccessibilitySettings, "ShowAccessibilitySettings" }, // 2928490662
 		{ &Z_Construct_UFunction_USettings_ShowAudioSettings, "ShowAudioSettings" }, // 3036620564
 		{ &Z_Construct_UFunction_USettings_ShowControlsSettings, "ShowControlsSettings" }, // 3163461455
@@ -509,6 +669,9 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Stat
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_SettingsButtons = { "SettingsButtons", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, SettingsButtons), Z_Construct_UClass_UHorizontalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SettingsButtons_MetaData), NewProp_SettingsButtons_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_DisplayModeComboBox = { "DisplayModeComboBox", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, DisplayModeComboBox), Z_Construct_UClass_UComboBoxString_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DisplayModeComboBox_MetaData), NewProp_DisplayModeComboBox_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_ResolutionComboBox = { "ResolutionComboBox", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, ResolutionComboBox), Z_Construct_UClass_UComboBoxString_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResolutionComboBox_MetaData), NewProp_ResolutionComboBox_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_VSyncCheckBox = { "VSyncCheckBox", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, VSyncCheckBox), Z_Construct_UClass_UCheckBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VSyncCheckBox_MetaData), NewProp_VSyncCheckBox_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_MasterVolumeSlider = { "MasterVolumeSlider", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, MasterVolumeSlider), Z_Construct_UClass_USlider_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MasterVolumeSlider_MetaData), NewProp_MasterVolumeSlider_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_MusicVolumeSlider = { "MusicVolumeSlider", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, MusicVolumeSlider), Z_Construct_UClass_USlider_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MusicVolumeSlider_MetaData), NewProp_MusicVolumeSlider_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_Resolutions_Inner = { "Resolutions", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_USettings_Statics::NewProp_Resolutions = { "Resolutions", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USettings, Resolutions), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Resolutions_MetaData), NewProp_Resolutions_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_USettings_Statics::NewProp_DisplayModes_Inner = { "DisplayModes", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Engine_EWindowMode, METADATA_PARAMS(0, nullptr) }; // 3411615937
@@ -530,6 +693,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USettings
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_SettingsButtons,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_DisplayModeComboBox,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_ResolutionComboBox,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_VSyncCheckBox,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_MasterVolumeSlider,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_MusicVolumeSlider,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_Resolutions_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_Resolutions,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettings_Statics::NewProp_DisplayModes_Inner,
@@ -574,14 +740,14 @@ USettings::~USettings() {}
 // End Class USettings
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USettings, USettings::StaticClass, TEXT("USettings"), &Z_Registration_Info_UClass_USettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettings), 3565127242U) },
+		{ Z_Construct_UClass_USettings, USettings::StaticClass, TEXT("USettings"), &Z_Registration_Info_UClass_USettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettings), 1778416336U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_1365080327(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_2215151127(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

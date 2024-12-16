@@ -1,10 +1,13 @@
 #include "Settings.h"
 #include "../PrimarySystems/PrimaryGameMode.h"
+#include "../PrimarySystems/PrimaryGameInstance.h"
 #include "Components/Button.h"
 #include "Components/HorizontalBox.h"
 #include "Components/VerticalBox.h"
 #include "Components/Image.h"
 #include "Components/ComboBoxString.h"
+#include "Components/CheckBox.h"
+#include "Components/Slider.h"
 #include "GameFramework/GameUserSettings.h"
 #include "../UI/UIComponents/CustomButtonV1.h"
 #include <Kismet/GameplayStatics.h>
@@ -24,8 +27,14 @@ void USettings::NativeConstruct()
 	ApplyBtn->OnClicked.AddDynamic(this, &USettings::Apply);
 	CloseBtn->OnClicked.AddDynamic(this, &USettings::Close);
 
+	MasterVolumeSlider->OnValueChanged.AddDynamic(this, &USettings::OnMasterVolumeChanged);
+	MusicVolumeSlider->OnValueChanged.AddDynamic(this, &USettings::OnMusicVolumeChanged);
+
 	InitializeDisplayModeBox();
 	InitializeResolutionBox();
+	InitializeVSync();
+	InitializeMasterVolume();
+	InitializeMusicVolume();
 }
 
 void USettings::Back()
@@ -179,7 +188,9 @@ void USettings::InitializeResolutionBox()
 
 	if (Resolutions.Num() == 0)
 	{
-		UE_LOG(LogTemp, Error, TEXT("No Supported Resolutions Found!"));
+		UE_LOG(LogTemp, Error, TEXT("No Supported Resolutions Found! Adding default options."));
+		Resolutions.Add(FIntPoint(1920, 1080));
+		Resolutions.Add(FIntPoint(1280, 720));
 		return;
 	}
 
@@ -202,6 +213,29 @@ void USettings::InitializeResolutionBox()
 	ResolutionComboBox->OnSelectionChanged.AddDynamic(this, &USettings::OnResolutionChanged);
 }
 
+void USettings::InitializeVSync()
+{
+	VSyncCheckBox->SetIsChecked(GameUserSettings->IsVSyncEnabled());
+	VSyncCheckBox->OnCheckStateChanged.Clear();
+	VSyncCheckBox->OnCheckStateChanged.AddDynamic(this, &USettings::OnVSyncChanged);
+}
+
+void USettings::InitializeMasterVolume()
+{
+	if (UPrimaryGameInstance* PrimaryGameInstance = Cast<UPrimaryGameInstance>(GetWorld()->GetGameInstance()))
+	{
+		MasterVolumeSlider->SetValue(PrimaryGameInstance->GetMasterVolume());
+	}
+}
+
+void USettings::InitializeMusicVolume()
+{
+	if (UPrimaryGameInstance* PrimaryGameInstance = Cast<UPrimaryGameInstance>(GetWorld()->GetGameInstance()))
+	{
+		MusicVolumeSlider->SetValue(PrimaryGameInstance->GetMusicVolume());
+	}
+}
+
 void USettings::OnResolutionChanged(FString InSelectedItem, ESelectInfo::Type InSelectionType)
 {
 	const auto SelectedResolution = Resolutions[ResolutionComboBox->GetSelectedIndex()];
@@ -212,4 +246,26 @@ void USettings::OnDisplayModeChanged(FString InSelectedItem, ESelectInfo::Type I
 {
 	const auto SelectedDisplayMode = DisplayModes[DisplayModeComboBox->GetSelectedIndex()];
 	GameUserSettings->SetFullscreenMode(SelectedDisplayMode);
+}
+
+void USettings::OnVSyncChanged(bool bInIsChecked)
+{
+	GameUserSettings->SetVSyncEnabled(bInIsChecked);
+	GameUserSettings->ApplySettings(false);
+}
+
+void USettings::OnMasterVolumeChanged(float Value)
+{
+	if (UPrimaryGameInstance* PrimaryGameInstance = Cast<UPrimaryGameInstance>(GetWorld()->GetGameInstance()))
+	{
+		PrimaryGameInstance->SetMasterVolume(Value);
+	}
+}
+
+void USettings::OnMusicVolumeChanged(float Value)
+{
+	if (UPrimaryGameInstance* PrimaryGameInstance = Cast<UPrimaryGameInstance>(GetWorld()->GetGameInstance()))
+	{
+		PrimaryGameInstance->SetMusicVolume(Value);
+	}
 }

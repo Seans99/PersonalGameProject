@@ -14,7 +14,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PERSONALPROJECT_Settings_generated_h
 
-#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnMusicVolumeChanged); \
+	DECLARE_FUNCTION(execOnMasterVolumeChanged); \
+	DECLARE_FUNCTION(execOnVSyncChanged); \
 	DECLARE_FUNCTION(execOnDisplayModeChanged); \
 	DECLARE_FUNCTION(execOnResolutionChanged); \
 	DECLARE_FUNCTION(execClose); \
@@ -26,7 +29,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execShowDisplaySettings);
 
 
-#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSettings(); \
 	friend struct Z_Construct_UClass_USettings_Statics; \
@@ -35,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(USettings)
 
 
-#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_21_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USettings(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -49,13 +52,13 @@ public: \
 	NO_API virtual ~USettings();
 
 
-#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_16_PROLOG
-#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_19_GENERATED_BODY \
+#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_18_PROLOG
+#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_19_INCLASS_NO_PURE_DECLS \
-	FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_19_ENHANCED_CONSTRUCTORS \
+	FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,7 +66,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PERSONALPROJECT_API UClass* StaticClass<class USettings>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h
+#define CURRENT_FILE_ID FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_Settings_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
