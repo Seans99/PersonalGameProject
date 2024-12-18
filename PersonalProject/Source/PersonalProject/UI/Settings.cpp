@@ -182,17 +182,12 @@ void USettings::InitializeResolutionBox()
 {
 	Resolutions.Reset();
 
-	UKismetSystemLibrary::GetSupportedFullscreenResolutions(Resolutions);
+	Resolutions.Add(FIntPoint(1280, 720));
+	Resolutions.Add(FIntPoint(1920, 1080));
+	Resolutions.Add(FIntPoint(2560, 1440));
+	Resolutions.Add(FIntPoint(3840, 2160));
 
 	ResolutionComboBox->ClearOptions();
-
-	if (Resolutions.Num() == 0)
-	{
-		UE_LOG(LogTemp, Error, TEXT("No Supported Resolutions Found! Adding default options."));
-		Resolutions.Add(FIntPoint(1920, 1080));
-		Resolutions.Add(FIntPoint(1280, 720));
-		return;
-	}
 
 	for (const auto& Resolution : Resolutions)
 	{
