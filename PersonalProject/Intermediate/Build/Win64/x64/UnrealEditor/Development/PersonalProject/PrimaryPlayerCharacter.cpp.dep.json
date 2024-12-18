@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primaryplayercharacter.cpp",
+        "Source": "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primaryplayercharacter.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primaryplayercharacter.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primaryplayercharacter.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
@@ -17,7 +17,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primaryplayercharacter.generated.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primaryplayercharacter.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmappingcontext.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedactionkeymapping.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputaction.h",
@@ -62,16 +62,16 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\charactermovementcomponentasync.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponentasync.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primarygamemode.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primarygamemode.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primarygamemode.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primaryplayercontroller.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primaryplayercontroller.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\components\\staminacomponent.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\staminacomponent.generated.h"
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primarygamemode.generated.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primaryplayercontroller.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primaryplayercontroller.generated.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\components\\staminacomponent.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\staminacomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
