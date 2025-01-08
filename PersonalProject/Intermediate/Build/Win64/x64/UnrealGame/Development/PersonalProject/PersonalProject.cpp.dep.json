@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\personalproject.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalproject\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealgame\\development\\personalproject\\definitions.personalproject.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\personalproject.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
