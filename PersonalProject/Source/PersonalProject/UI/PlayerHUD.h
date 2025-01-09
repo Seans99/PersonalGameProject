@@ -5,9 +5,12 @@
 #include "PlayerHUD.generated.h"
 
 class APrimaryPlayerCharacter;
+class UCameraComponent;
+
 class UHealthComponent;
 class UStaminaComponent;
 
+class UCanvasPanel;
 class UProgressBar;
 class UTextBlock;
 class UImage;
@@ -28,6 +31,12 @@ public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UProgressBar* StaminaBar;
 
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UCanvasPanel* CompassPanel;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UImage* CompassPoints;
+
 private:
 	UFUNCTION()
 	void HealthChange();
@@ -35,8 +44,15 @@ private:
 	UFUNCTION()
 	void StaminaChange();
 
+	UFUNCTION()
+	void SetDirection();
+
 private:
 	APrimaryPlayerCharacter* Player;
 	UHealthComponent* PlayerHC;
 	UStaminaComponent* PlayerSTAM;
+
+	FTimerHandle CompassTimer;
+
+	UCameraComponent* Rotation;
 };

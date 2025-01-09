@@ -30,6 +30,12 @@
     <Filter Include="Source\PersonalProject">
       <UniqueIdentifier>{9B33E1DF-2944-3673-9145-A4D3FE3B5D93}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\KeyPad.cpp">
+      <Filter>Source\PersonalProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\KeyPad.h">
+      <Filter>Source\PersonalProject</Filter>
+    </ClInclude>
     <None Include="..\..\Source\PersonalProject\PersonalProject.Build.cs">
       <Filter>Source\PersonalProject</Filter>
     </None>
@@ -37,6 +43,12 @@
       <Filter>Source\PersonalProject</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\PersonalProject.h">
+      <Filter>Source\PersonalProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\Tablet_Log.cpp">
+      <Filter>Source\PersonalProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\Tablet_Log.h">
       <Filter>Source\PersonalProject</Filter>
     </ClInclude>
     <Filter Include="Source\PersonalProject\Components">

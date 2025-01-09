@@ -257,11 +257,19 @@
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
+    <ClCompile Include="..\..\Source\PersonalProject\KeyPad.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\KeyPad.h"/>
     <None Include="..\..\Source\PersonalProject\PersonalProject.Build.cs"/>
     <ClCompile Include="..\..\Source\PersonalProject\PersonalProject.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\PersonalProject.h"/>
+    <ClCompile Include="..\..\Source\PersonalProject\Tablet_Log.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\Tablet_Log.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\Components\HealthComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
