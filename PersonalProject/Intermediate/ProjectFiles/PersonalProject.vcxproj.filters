@@ -30,12 +30,6 @@
     <Filter Include="Source\PersonalProject">
       <UniqueIdentifier>{9B33E1DF-2944-3673-9145-A4D3FE3B5D93}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\PersonalProject\KeyPad.cpp">
-      <Filter>Source\PersonalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\KeyPad.h">
-      <Filter>Source\PersonalProject</Filter>
-    </ClInclude>
     <None Include="..\..\Source\PersonalProject\PersonalProject.Build.cs">
       <Filter>Source\PersonalProject</Filter>
     </None>
@@ -45,11 +39,26 @@
     <ClInclude Include="..\..\Source\PersonalProject\PersonalProject.h">
       <Filter>Source\PersonalProject</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\PersonalProject\Tablet_Log.cpp">
-      <Filter>Source\PersonalProject</Filter>
+    <Filter Include="Source\PersonalProject\Actors">
+      <UniqueIdentifier>{7049C8A4-3EC5-3F4A-9489-532437DA1EA1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\Actors\Door.cpp">
+      <Filter>Source\PersonalProject\Actors</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\Tablet_Log.h">
-      <Filter>Source\PersonalProject</Filter>
+    <ClInclude Include="..\..\Source\PersonalProject\Actors\Door.h">
+      <Filter>Source\PersonalProject\Actors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\Actors\KeyPad.cpp">
+      <Filter>Source\PersonalProject\Actors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\Actors\KeyPad.h">
+      <Filter>Source\PersonalProject\Actors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\Actors\Tablet_Log.cpp">
+      <Filter>Source\PersonalProject\Actors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\Actors\Tablet_Log.h">
+      <Filter>Source\PersonalProject\Actors</Filter>
     </ClInclude>
     <Filter Include="Source\PersonalProject\Components">
       <UniqueIdentifier>{50075FD4-36A6-35CA-8672-BE7CA40D5671}</UniqueIdentifier>

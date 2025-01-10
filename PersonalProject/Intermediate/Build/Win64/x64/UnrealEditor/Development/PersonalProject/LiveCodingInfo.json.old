@@ -2,6 +2,22 @@
 	"RemapUnityFiles": 
 	{
 		"Module.PersonalProject.cpp.obj": [
+			"Door.gen.cpp.obj",
+			"HealthComponent.cpp.obj",
+			"StaminaComponent.cpp.obj",
+			"PersonalProject.cpp.obj",
+			"PrimaryGameInstance.cpp.obj",
+			"PrimaryGameMode.cpp.obj",
+			"PrimaryPlayerCharacter.cpp.obj",
+			"PrimaryPlayerController.cpp.obj",
+			"GUIBase.cpp.obj",
+			"KeyPrompt.cpp.obj",
+			"MainMenu.cpp.obj",
+			"PauseMenu.cpp.obj",
+			"PlayerHUD.cpp.obj",
+			"Settings.cpp.obj",
+			"TitleScreen.cpp.obj",
+			"CustomButtonV1.cpp.obj",
 			"CustomButtonV1.gen.cpp.obj",
 			"GUIBase.gen.cpp.obj",
 			"HealthComponent.gen.cpp.obj",
@@ -19,23 +35,9 @@
 			"StaminaComponent.gen.cpp.obj",
 			"Tablet_Log.gen.cpp.obj",
 			"TitleScreen.gen.cpp.obj",
-			"HealthComponent.cpp.obj",
-			"StaminaComponent.cpp.obj",
+			"Door.cpp.obj",
 			"KeyPad.cpp.obj",
-			"PersonalProject.cpp.obj",
-			"PrimaryGameInstance.cpp.obj",
-			"PrimaryGameMode.cpp.obj",
-			"PrimaryPlayerCharacter.cpp.obj",
-			"PrimaryPlayerController.cpp.obj",
-			"Tablet_Log.cpp.obj",
-			"GUIBase.cpp.obj",
-			"KeyPrompt.cpp.obj",
-			"MainMenu.cpp.obj",
-			"PauseMenu.cpp.obj",
-			"PlayerHUD.cpp.obj",
-			"Settings.cpp.obj",
-			"TitleScreen.cpp.obj",
-			"CustomButtonV1.cpp.obj"
+			"Tablet_Log.cpp.obj"
 		]
 	}
 }
