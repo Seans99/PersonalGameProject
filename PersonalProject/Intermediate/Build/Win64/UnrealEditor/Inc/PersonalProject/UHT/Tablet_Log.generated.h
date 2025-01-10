@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PERSONALPROJECT_Tablet_Log_generated_h
 
-#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATablet_Log(); \
 	friend struct Z_Construct_UClass_ATablet_Log_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ATablet_Log)
 
 
-#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ATablet_Log(ATablet_Log&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ATablet_Log();
 
 
-#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_7_PROLOG
-#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_GENERATED_BODY \
+#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_7_PROLOG
+#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_INCLASS_NO_PURE_DECLS \
-	FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_ENHANCED_CONSTRUCTORS \
+	FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PERSONALPROJECT_API UClass* StaticClass<class ATablet_Log>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h
+#define CURRENT_FILE_ID FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Tablet_Log_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
