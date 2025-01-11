@@ -9,10 +9,18 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef PERSONALPROJECT_Door_generated_h
 #error "Door.generated.h already included, missing '#pragma once' in Door.h"
 #endif
 #define PERSONALPROJECT_Door_generated_h
+
+#define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Door_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnBoxEndOverlap); \
+	DECLARE_FUNCTION(execOnBoxBeginOverlap);
+
 
 #define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Door_h_13_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +47,7 @@ public: \
 #define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Door_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Door_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Door_h_13_INCLASS_NO_PURE_DECLS \
 	FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Door_h_13_ENHANCED_CONSTRUCTORS \
 private: \
