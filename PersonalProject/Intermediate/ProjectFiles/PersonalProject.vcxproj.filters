@@ -111,6 +111,12 @@
     <ClInclude Include="..\..\Source\PersonalProject\UI\GUIBase.h">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\KeyPadUI.cpp">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\KeyPadUI.h">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\UI\KeyPrompt.cpp">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClCompile>

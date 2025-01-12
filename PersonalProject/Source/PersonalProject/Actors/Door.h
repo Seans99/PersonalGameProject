@@ -26,7 +26,7 @@ public:
 	bool bIslocked = false;
 
 	UPROPERTY(EditAnywhere)
-	float DoorOpenCloseTime = 2.f;
+	float DoorOpenCloseTime = 1.5f;
 
 	UPROPERTY(EditAnywhere)
 	FVector DoorMoveOffset;

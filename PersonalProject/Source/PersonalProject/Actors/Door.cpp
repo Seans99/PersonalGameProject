@@ -28,7 +28,6 @@ void ADoor::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* 
 	{
 		if (!bIslocked)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Open Door"));
 			bShouldOpen = true;
 		}
 	}
@@ -38,7 +37,6 @@ void ADoor::OnBoxEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* Ot
 {
 	if (Cast<APrimaryPlayerCharacter>(OtherActor))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Close Door"));
 		bShouldOpen = false;
 	}
 }
@@ -51,7 +49,6 @@ void ADoor::Tick(float DeltaTime)
 
 	if (bShouldOpen)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Opening Door"));
 		TargetLocation = OriginalLocation + DoorMoveOffset;
 	}
 
