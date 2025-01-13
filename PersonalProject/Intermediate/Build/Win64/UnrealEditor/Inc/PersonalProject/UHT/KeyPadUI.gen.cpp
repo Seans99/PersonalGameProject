@@ -29,9 +29,6 @@ struct Z_Construct_UClass_UKeyPadUI_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "UI/KeyPadUI.h" },
 		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
 	};
@@ -80,14 +77,14 @@ UKeyPadUI::~UKeyPadUI() {}
 // End Class UKeyPadUI
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UKeyPadUI, UKeyPadUI::StaticClass, TEXT("UKeyPadUI"), &Z_Registration_Info_UClass_UKeyPadUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKeyPadUI), 482257927U) },
+		{ Z_Construct_UClass_UKeyPadUI, UKeyPadUI::StaticClass, TEXT("UKeyPadUI"), &Z_Registration_Info_UClass_UKeyPadUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKeyPadUI), 2925328140U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_3061225750(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_933554391(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

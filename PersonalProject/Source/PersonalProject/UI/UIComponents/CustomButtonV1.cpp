@@ -16,11 +16,13 @@ void UCustomButtonV1::NativeConstruct()
 void UCustomButtonV1::HoverEffect()
 {
 	ButtonText->SetColorAndOpacity(HoveredTextColor);
+	Button->SetRenderScale(FVector2D(1.05,1.05));
 }
 
 void UCustomButtonV1::UnHoverEffect()
 {
 	ButtonText->SetColorAndOpacity(DefaultTextColor);
+	Button->SetRenderScale(FVector2D(1, 1));
 }
 
 void UCustomButtonV1::SetButtonText(FString Text)

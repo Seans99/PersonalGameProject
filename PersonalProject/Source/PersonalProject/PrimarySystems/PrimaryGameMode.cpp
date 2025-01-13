@@ -9,6 +9,7 @@
 #include "UObject/ConstructorHelpers.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/Actor.h"
+#include "Components/CanvasPanelSlot.h"
 
 APrimaryGameMode::APrimaryGameMode()
 {
