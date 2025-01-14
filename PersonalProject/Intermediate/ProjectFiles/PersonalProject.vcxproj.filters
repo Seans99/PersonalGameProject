@@ -54,6 +54,12 @@
     <ClInclude Include="..\..\Source\PersonalProject\Actors\KeyPad.h">
       <Filter>Source\PersonalProject\Actors</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\Actors\NavPoint.cpp">
+      <Filter>Source\PersonalProject\Actors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\Actors\NavPoint.h">
+      <Filter>Source\PersonalProject\Actors</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\Actors\Tablet_Log.cpp">
       <Filter>Source\PersonalProject\Actors</Filter>
     </ClCompile>

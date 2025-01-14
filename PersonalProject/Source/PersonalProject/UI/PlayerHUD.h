@@ -37,6 +37,9 @@ public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UImage* CompassPoints;
 
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UImage* Objective;
+
 private:
 	UFUNCTION()
 	void HealthChange();
@@ -46,6 +49,14 @@ private:
 
 	UFUNCTION()
 	void SetDirection();
+
+	UFUNCTION()
+	double CheckNavPoint();
+
+	UFUNCTION()
+	bool CheckIfbehind();
+
+	FVector GetNavPointRotXNorm2D();
 
 private:
 	APrimaryPlayerCharacter* Player;

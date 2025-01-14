@@ -4,7 +4,6 @@
 #include "GUIBase.h"
 #include "KeyPrompt.generated.h"
 
-class UVerticalBox;
 class UEditableTextBox;
 
 UCLASS()

@@ -70,6 +70,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float SprintSpeed = 1200;
 
+public:
+	FVector NavPoint;
+
 private:
 	APrimaryGameMode* GameMode;
 

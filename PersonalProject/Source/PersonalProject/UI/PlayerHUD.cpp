@@ -9,6 +9,7 @@
 #include "Components/CanvasPanel.h"
 #include "Components/CanvasPanelSlot.h"
 #include <Kismet/GameplayStatics.h>
+#include "Kismet/KismetMathLibrary.h"
 
 void UPlayerHUD::NativeConstruct()
 {
@@ -59,6 +60,16 @@ void UPlayerHUD::NativeTick(const FGeometry& Geometry, float DeltaTime)
 {
 	Super::NativeTick(Geometry, DeltaTime);
 
+	UPanelSlot* PanelSlot = Objective->Slot;
+
+	if (UCanvasPanelSlot* CanvasSlot = Cast<UCanvasPanelSlot>(PanelSlot))
+	{
+		if (!CheckIfbehind())
+		{
+			float PosX = Rotation->GetComponentRotation().Yaw * -1 * 10 - 2700;
+			CanvasSlot->SetPosition(FVector2D(CheckNavPoint(), -65));
+		}
+	}
 }
 
 void UPlayerHUD::HealthChange()
@@ -80,4 +91,51 @@ void UPlayerHUD::SetDirection()
 		float PosX = Rotation->GetComponentRotation().Yaw * -1 * 10 - 2700;
 		CanvasSlot->SetPosition(FVector2D(PosX, -30));
 	}
+}
+
+double UPlayerHUD::CheckNavPoint()
+{
+	FVector RotationX = GetNavPointRotXNorm2D();
+
+	FVector CamRight = Rotation->GetRightVector();
+	FVector CamForward = Rotation->GetForwardVector();
+
+	double PosX = (CamRight.Dot(RotationX) / CamForward.Dot(RotationX)) * 700;
+
+	return PosX;
+}
+
+bool UPlayerHUD::CheckIfbehind()
+{
+	FVector ObjNorm = GetNavPointRotXNorm2D().GetSafeNormal();
+	FVector CamNorm = Rotation->GetForwardVector().GetSafeNormal();
+
+	double DotProd = FVector::DotProduct(ObjNorm, CamNorm);
+	double AcosRad = FMath::Acos(DotProd);
+	double Degrees = FMath::RadiansToDegrees(AcosRad);
+
+	if (Degrees < 140)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+FVector UPlayerHUD::GetNavPointRotXNorm2D()
+{
+	FVector NavPoint;
+
+	if (Player)
+	{
+		NavPoint = Player->NavPoint;
+	}
+
+	FVector StartLocation = NavPoint;
+	FVector TargetLocation = Rotation->GetComponentLocation();
+
+	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(StartLocation, TargetLocation);
+	FVector RotationX = LookAtRotation.Vector().GetSafeNormal2D();
+
+	return RotationX;
 }

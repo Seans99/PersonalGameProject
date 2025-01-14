@@ -3,22 +3,19 @@
 	{
 		"Module.PersonalProject.cpp.obj": [
 			"Door.cpp.obj",
-			"KeyPad.cpp.obj",
 			"Tablet_Log.cpp.obj",
 			"HealthComponent.cpp.obj",
 			"StaminaComponent.cpp.obj",
 			"PersonalProject.cpp.obj",
 			"PrimaryGameInstance.cpp.obj",
-			"PrimaryPlayerCharacter.cpp.obj",
+			"PrimaryGameMode.cpp.obj",
 			"PrimaryPlayerController.cpp.obj",
 			"GUIBase.cpp.obj",
-			"KeyPadUI.cpp.obj",
-			"KeyPrompt.cpp.obj",
 			"MainMenu.cpp.obj",
 			"PauseMenu.cpp.obj",
-			"PlayerHUD.cpp.obj",
 			"Settings.cpp.obj",
 			"TitleScreen.cpp.obj",
+			"CustomButtonV1.cpp.obj",
 			"CustomButtonV1.gen.cpp.obj",
 			"Door.gen.cpp.obj",
 			"GUIBase.gen.cpp.obj",
@@ -27,6 +24,7 @@
 			"KeyPadUI.gen.cpp.obj",
 			"KeyPrompt.gen.cpp.obj",
 			"MainMenu.gen.cpp.obj",
+			"NavPoint.gen.cpp.obj",
 			"PauseMenu.gen.cpp.obj",
 			"PersonalProject.init.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
@@ -38,8 +36,12 @@
 			"StaminaComponent.gen.cpp.obj",
 			"Tablet_Log.gen.cpp.obj",
 			"TitleScreen.gen.cpp.obj",
-			"PrimaryGameMode.cpp.obj",
-			"CustomButtonV1.cpp.obj"
+			"KeyPad.cpp.obj",
+			"NavPoint.cpp.obj",
+			"PrimaryPlayerCharacter.cpp.obj",
+			"KeyPadUI.cpp.obj",
+			"KeyPrompt.cpp.obj",
+			"PlayerHUD.cpp.obj"
 		]
 	}
 }
