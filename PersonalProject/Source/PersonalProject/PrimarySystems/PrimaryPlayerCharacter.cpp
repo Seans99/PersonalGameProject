@@ -7,6 +7,8 @@
 #include "../PrimarySystems/PrimaryGameMode.h"
 #include "../PrimarySystems/PrimaryPlayerController.h"
 #include "../Components/StaminaComponent.h"
+#include "../Actors/KeyPad.h"
+#include <Kismet/GameplayStatics.h>
 
 // Sets default values
 APrimaryPlayerCharacter::APrimaryPlayerCharacter()
@@ -63,6 +65,7 @@ void APrimaryPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 		Input->BindAction(AttackAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Attack);
 		Input->BindAction(SprintAction, ETriggerEvent::Started, this, &APrimaryPlayerCharacter::StartSprint);
 		Input->BindAction(SprintAction, ETriggerEvent::Completed, this, &APrimaryPlayerCharacter::StopSprint);
+		Input->BindAction(InteractAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Interact);
 	}
 }
 
@@ -138,6 +141,28 @@ void APrimaryPlayerCharacter::StopSprint()
 void APrimaryPlayerCharacter::HandleStaminaDepleted()
 {
 	StopSprint();
+}
+
+void APrimaryPlayerCharacter::Interact()
+{
+	TArray<AActor*> FoundKeyPads;
+
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AKeyPad::StaticClass(), FoundKeyPads);
+
+	for (AActor* KeyPad : FoundKeyPads)
+	{
+		if (KeyPad)
+		{
+			if (AKeyPad* keypad = Cast<AKeyPad>(KeyPad))
+			{
+				if (keypad->Interactable)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Interact with KeyPad"));
+					if (OnInteract.IsBound()) OnInteract.Broadcast();
+				}
+			}
+		}
+	}
 }
 
 

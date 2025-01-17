@@ -6,6 +6,10 @@
 
 class UWidgetComponent;
 class UBoxComponent;
+class UCameraComponent;
+
+class APrimaryPlayerCharacter;
+class APrimaryPlayerController;
 
 UCLASS()
 class PERSONALPROJECT_API AKeyPad : public AActor
@@ -20,10 +24,16 @@ public:
 	UStaticMeshComponent* KeyPadMesh;
 
 	UPROPERTY(EditAnywhere)
-	UBoxComponent* BoxCollider;
+	UBoxComponent* BoxComponent;
 
 	UPROPERTY(EditAnywhere)
 	UWidgetComponent* KeyPadUI;
+
+	UPROPERTY(EditAnywhere)
+	UWidgetComponent* KeyPrompt;
+
+	UPROPERTY(EditAnywhere)
+	UCameraComponent* Camera;
 
 protected:
 	virtual void BeginPlay() override;
@@ -41,6 +51,27 @@ protected:
 		AActor* OtherActor,
 		UPrimitiveComponent* OtherComp,
 		int32 OtherBodyIndex);
+
+	UFUNCTION()
+	void HandleKeyPadInteract();
+
+	UFUNCTION()
+	void HandleStopViewKeyPad();
+
+	UFUNCTION()
+	void ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeViewFlag, bool ViewInteractState);
+
+public:
+	bool Interactable = false;
+	bool CanChangeViewTarget = false;
+	bool CanChangeViewTargetToPlayer = false;
+
+private:
+	float TimeToNextCameraChange;
+
+private:
+	APrimaryPlayerCharacter* Player;
+	APrimaryPlayerController* PlayerController;
 
 public:	
 	virtual void Tick(float DeltaTime) override;

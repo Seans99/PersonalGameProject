@@ -5,6 +5,8 @@
 #include "InputActionValue.h"
 #include "PrimaryPlayerCharacter.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FInteractSignature);
+
 class UCameraComponent;
 class APrimaryGameMode;
 class APrimaryPlayerController;
@@ -52,6 +54,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
 	class UInputAction* SprintAction;
 
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	class UInputAction* InteractAction;
+
 protected:
 	void Move(const FInputActionValue& InputValue);
 	void Jump();
@@ -59,6 +64,7 @@ protected:
 	void Attack();
 	void StartSprint();
 	void StopSprint();
+	void Interact();
 
 	UFUNCTION()
 	void HandleStaminaDepleted();
@@ -69,6 +75,10 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float SprintSpeed = 1200;
+
+public:
+	UPROPERTY()
+	FInteractSignature OnInteract;
 
 public:
 	FVector NavPoint;
