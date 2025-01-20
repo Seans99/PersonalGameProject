@@ -14,6 +14,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PERSONALPROJECT_KeyPadUI_generated_h
 
+#define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execKey9Press); \
+	DECLARE_FUNCTION(execKey8Press); \
+	DECLARE_FUNCTION(execKey7Press); \
+	DECLARE_FUNCTION(execKey6Press); \
+	DECLARE_FUNCTION(execKey5Press); \
+	DECLARE_FUNCTION(execKey4Press); \
+	DECLARE_FUNCTION(execKey3Press); \
+	DECLARE_FUNCTION(execKey2Press); \
+	DECLARE_FUNCTION(execKey1Press); \
+	DECLARE_FUNCTION(execKey0Press);
+
+
 #define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUKeyPadUI(); \
@@ -41,6 +54,7 @@ public: \
 #define FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_15_ENHANCED_CONSTRUCTORS \
 private: \

@@ -20,9 +20,313 @@ UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
 // End Cross Module References
 
+// Begin Class UKeyPadUI Function Key0Press
+struct Z_Construct_UFunction_UKeyPadUI_Key0Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key0Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key0Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key0Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key0Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key0Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key0Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey0Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key0Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key0Press
+
+// Begin Class UKeyPadUI Function Key1Press
+struct Z_Construct_UFunction_UKeyPadUI_Key1Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key1Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key1Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key1Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key1Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key1Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key1Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey1Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key1Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key1Press
+
+// Begin Class UKeyPadUI Function Key2Press
+struct Z_Construct_UFunction_UKeyPadUI_Key2Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key2Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key2Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key2Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key2Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key2Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key2Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey2Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key2Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key2Press
+
+// Begin Class UKeyPadUI Function Key3Press
+struct Z_Construct_UFunction_UKeyPadUI_Key3Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key3Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key3Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key3Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key3Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key3Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key3Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey3Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key3Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key3Press
+
+// Begin Class UKeyPadUI Function Key4Press
+struct Z_Construct_UFunction_UKeyPadUI_Key4Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key4Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key4Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key4Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key4Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key4Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key4Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey4Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key4Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key4Press
+
+// Begin Class UKeyPadUI Function Key5Press
+struct Z_Construct_UFunction_UKeyPadUI_Key5Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key5Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key5Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key5Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key5Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key5Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key5Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey5Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key5Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key5Press
+
+// Begin Class UKeyPadUI Function Key6Press
+struct Z_Construct_UFunction_UKeyPadUI_Key6Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key6Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key6Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key6Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key6Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key6Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key6Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey6Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key6Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key6Press
+
+// Begin Class UKeyPadUI Function Key7Press
+struct Z_Construct_UFunction_UKeyPadUI_Key7Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key7Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key7Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key7Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key7Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key7Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key7Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey7Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key7Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key7Press
+
+// Begin Class UKeyPadUI Function Key8Press
+struct Z_Construct_UFunction_UKeyPadUI_Key8Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key8Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key8Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key8Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key8Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key8Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key8Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey8Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key8Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key8Press
+
+// Begin Class UKeyPadUI Function Key9Press
+struct Z_Construct_UFunction_UKeyPadUI_Key9Press_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UKeyPadUI_Key9Press_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKeyPadUI, nullptr, "Key9Press", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UKeyPadUI_Key9Press_Statics::Function_MetaDataParams), Z_Construct_UFunction_UKeyPadUI_Key9Press_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UKeyPadUI_Key9Press()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UKeyPadUI_Key9Press_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UKeyPadUI::execKey9Press)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Key9Press();
+	P_NATIVE_END;
+}
+// End Class UKeyPadUI Function Key9Press
+
 // Begin Class UKeyPadUI
 void UKeyPadUI::StaticRegisterNativesUKeyPadUI()
 {
+	UClass* Class = UKeyPadUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Key0Press", &UKeyPadUI::execKey0Press },
+		{ "Key1Press", &UKeyPadUI::execKey1Press },
+		{ "Key2Press", &UKeyPadUI::execKey2Press },
+		{ "Key3Press", &UKeyPadUI::execKey3Press },
+		{ "Key4Press", &UKeyPadUI::execKey4Press },
+		{ "Key5Press", &UKeyPadUI::execKey5Press },
+		{ "Key6Press", &UKeyPadUI::execKey6Press },
+		{ "Key7Press", &UKeyPadUI::execKey7Press },
+		{ "Key8Press", &UKeyPadUI::execKey8Press },
+		{ "Key9Press", &UKeyPadUI::execKey9Press },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UKeyPadUI);
 UClass* Z_Construct_UClass_UKeyPadUI_NoRegister()
@@ -165,6 +469,19 @@ struct Z_Construct_UClass_UKeyPadUI_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Enter;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UKeyPadUI_Key0Press, "Key0Press" }, // 1725327917
+		{ &Z_Construct_UFunction_UKeyPadUI_Key1Press, "Key1Press" }, // 2671744800
+		{ &Z_Construct_UFunction_UKeyPadUI_Key2Press, "Key2Press" }, // 2767523823
+		{ &Z_Construct_UFunction_UKeyPadUI_Key3Press, "Key3Press" }, // 162113874
+		{ &Z_Construct_UFunction_UKeyPadUI_Key4Press, "Key4Press" }, // 26210571
+		{ &Z_Construct_UFunction_UKeyPadUI_Key5Press, "Key5Press" }, // 4145437513
+		{ &Z_Construct_UFunction_UKeyPadUI_Key6Press, "Key6Press" }, // 32772748
+		{ &Z_Construct_UFunction_UKeyPadUI_Key7Press, "Key7Press" }, // 1201287969
+		{ &Z_Construct_UFunction_UKeyPadUI_Key8Press, "Key8Press" }, // 442210163
+		{ &Z_Construct_UFunction_UKeyPadUI_Key9Press, "Key9Press" }, // 3343014208
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UKeyPadUI>::IsAbstract,
 	};
@@ -219,11 +536,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UKeyPadUI_Statics::Clas
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UKeyPadUI_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UKeyPadUI_Statics::PropPointers),
 	0,
 	0x00B010A0u,
@@ -250,10 +567,10 @@ UKeyPadUI::~UKeyPadUI() {}
 struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UKeyPadUI, UKeyPadUI::StaticClass, TEXT("UKeyPadUI"), &Z_Registration_Info_UClass_UKeyPadUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKeyPadUI), 925180979U) },
+		{ Z_Construct_UClass_UKeyPadUI, UKeyPadUI::StaticClass, TEXT("UKeyPadUI"), &Z_Registration_Info_UClass_UKeyPadUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKeyPadUI), 4012677128U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_3002935289(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_2688220091(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

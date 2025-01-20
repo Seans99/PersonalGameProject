@@ -18,6 +18,9 @@ protected:
 	virtual void NativeConstruct() override;
 
 public:
+	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
+
+public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UVerticalBox* VerticalBox;
 
@@ -73,5 +76,36 @@ public:
 	UButton* Enter;
 
 public:
+	UFUNCTION()
+	void Key0Press();
 
+	UFUNCTION()
+	void Key1Press();
+
+	UFUNCTION()
+	void Key2Press();
+
+	UFUNCTION()
+	void Key3Press();
+
+	UFUNCTION()
+	void Key4Press();
+
+	UFUNCTION()
+	void Key5Press();
+
+	UFUNCTION()
+	void Key6Press();
+
+	UFUNCTION()
+	void Key7Press();
+
+	UFUNCTION()
+	void Key8Press();
+
+	UFUNCTION()
+	void Key9Press();
+
+private:
+	int32 Password[4];
 };
