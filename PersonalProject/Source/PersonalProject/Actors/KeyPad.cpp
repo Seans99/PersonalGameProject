@@ -16,11 +16,11 @@ AKeyPad::AKeyPad()
 	BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &AKeyPad::OnBoxBeginOverlap);
 	BoxComponent->OnComponentEndOverlap.AddDynamic(this, &AKeyPad::OnBoxEndOverlap);
 
-	KeyPadUI = CreateDefaultSubobject<UWidgetComponent>("KeyPadUI");
-	KeyPadUI->SetupAttachment(KeyPadMesh);
-
 	KeyPrompt = CreateDefaultSubobject<UWidgetComponent>("KeyPrompt");
 	KeyPrompt->SetupAttachment(KeyPadMesh);
+
+	KeyPadUI = CreateDefaultSubobject<UWidgetComponent>("KeyPadUI");
+	KeyPadUI->SetupAttachment(KeyPadMesh);
 
 	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
 	Camera->SetupAttachment(KeyPadMesh);
@@ -38,11 +38,7 @@ void AKeyPad::BeginPlay()
 	if (Player)
 	{
 		Player->OnInteract.AddDynamic(this, &AKeyPad::HandleKeyPadInteract);
-	}
-
-	if (PlayerController)
-	{
-		PlayerController->OnStopViewInteractable.AddDynamic(this, &AKeyPad::HandleStopViewKeyPad);
+		Player->OnCancel.AddDynamic(this, &AKeyPad::HandleStopViewKeyPad);
 	}
 }
 
@@ -82,11 +78,11 @@ void AKeyPad::HandleStopViewKeyPad()
 	KeyPrompt->SetVisibility(true);
 	Interactable = true;
 	KeyPadUI->SetVisibility(false);
-	PlayerController->DisableMouseInGame();
+	PlayerController->DisableMouse();
 	CanChangeViewTargetToPlayer = true;
 }
 
-void AKeyPad::ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeViewFlag, bool ViewInteractState)
+void AKeyPad::ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeViewFlag)
 {
 	const float TimeBetweenCameraChange = 2.0f;
 	const float SmoothBlendTime = 0.75f;
@@ -100,7 +96,6 @@ void AKeyPad::ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeV
 			{
 				PlayerController->SetViewTargetWithBlend(Target, SmoothBlendTime);
 				CanChangeViewFlag = false;
-				PlayerController->ViewingInteractable = ViewInteractState;
 			}
 			else
 			{
@@ -117,11 +112,11 @@ void AKeyPad::Tick(float DeltaTime)
 
 	if (CanChangeViewTarget)
 	{
-		ChangeViewTarget(DeltaTime, this, CanChangeViewTarget, true);
+		ChangeViewTarget(DeltaTime, this, CanChangeViewTarget);
 	}
 	if (CanChangeViewTargetToPlayer)
 	{
-		ChangeViewTarget(DeltaTime, Player, CanChangeViewTargetToPlayer, false);
+		ChangeViewTarget(DeltaTime, Player, CanChangeViewTargetToPlayer);
 	}
 }
 

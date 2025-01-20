@@ -59,7 +59,7 @@ protected:
 	void HandleStopViewKeyPad();
 
 	UFUNCTION()
-	void ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeViewFlag, bool ViewInteractState);
+	void ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeViewFlag);
 
 public:
 	bool Interactable = false;

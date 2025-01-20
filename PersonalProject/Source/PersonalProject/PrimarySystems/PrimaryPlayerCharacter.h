@@ -57,6 +57,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
 	class UInputAction* InteractAction;
 
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	class UInputAction* CancelAction;
+
 protected:
 	void Move(const FInputActionValue& InputValue);
 	void Jump();
@@ -65,6 +68,7 @@ protected:
 	void StartSprint();
 	void StopSprint();
 	void Interact();
+	void Cancel();
 
 	UFUNCTION()
 	void HandleStaminaDepleted();
@@ -79,6 +83,9 @@ public:
 public:
 	UPROPERTY()
 	FInteractSignature OnInteract;
+
+	UPROPERTY()
+	FInteractSignature OnCancel;
 
 public:
 	FVector NavPoint;

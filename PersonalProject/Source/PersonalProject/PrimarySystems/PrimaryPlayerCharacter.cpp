@@ -66,6 +66,7 @@ void APrimaryPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 		Input->BindAction(SprintAction, ETriggerEvent::Started, this, &APrimaryPlayerCharacter::StartSprint);
 		Input->BindAction(SprintAction, ETriggerEvent::Completed, this, &APrimaryPlayerCharacter::StopSprint);
 		Input->BindAction(InteractAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Interact);
+		Input->BindAction(CancelAction, ETriggerEvent::Triggered, this, &APrimaryPlayerCharacter::Cancel);
 	}
 }
 
@@ -163,6 +164,11 @@ void APrimaryPlayerCharacter::Interact()
 			}
 		}
 	}
+}
+
+void APrimaryPlayerCharacter::Cancel()
+{
+	if (OnCancel.IsBound()) OnCancel.Broadcast();
 }
 
 

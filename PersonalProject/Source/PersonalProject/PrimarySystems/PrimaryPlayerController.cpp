@@ -12,13 +12,9 @@ APrimaryPlayerController::APrimaryPlayerController()
 void APrimaryPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (IsInputKeyDown(EKeys::Escape) && GameMode->GetCurrentState() == EGameState::EInGame && !ViewingInteractable)
+	if (IsInputKeyDown(EKeys::Escape) && GameMode->GetCurrentState() == EGameState::EInGame)
 	{
 		GameMode->SetState(EGameState::EPause);
-	}
-	else if (IsInputKeyDown(EKeys::Escape) && GameMode->GetCurrentState() == EGameState::EInGame && ViewingInteractable)
-	{
-		if (OnStopViewInteractable.IsBound()) OnStopViewInteractable.Broadcast();
 	}
 }
 
@@ -37,11 +33,6 @@ void APrimaryPlayerController::DisableMouse()
 void APrimaryPlayerController::EnableMouseInGame()
 {
 	SetShowMouseCursor(true);
-	SetInputMode(FInputModeGameOnly());
+	SetInputMode(FInputModeGameAndUI());
 }
 
-void APrimaryPlayerController::DisableMouseInGame()
-{
-	SetShowMouseCursor(false);
-	SetInputMode(FInputModeGameOnly());
-}

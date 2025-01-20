@@ -4,8 +4,6 @@
 #include "GameFramework/PlayerController.h"
 #include "PrimaryPlayerController.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FViewingInteractSignature);
-
 class APrimaryGameMode;
 
 UCLASS()
@@ -24,13 +22,8 @@ public:
 	void DisableMouse();
 
 	void EnableMouseInGame();
-	void DisableMouseInGame();
 
 public:
-	bool ViewingInteractable = false;
-
-	UPROPERTY()
-	FViewingInteractSignature OnStopViewInteractable;
 
 private:
 	APrimaryGameMode* GameMode;
