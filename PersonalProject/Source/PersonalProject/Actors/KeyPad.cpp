@@ -66,20 +66,28 @@ void AKeyPad::OnBoxEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* 
 
 void AKeyPad::HandleKeyPadInteract()
 {
-	KeyPrompt->SetVisibility(false);
-	Interactable = false;
-	KeyPadUI->SetVisibility(true);
-	PlayerController->EnableMouseInGame();
-	CanChangeViewTarget = true;
+	if (!bInteractingWithKeyPad)
+	{
+		KeyPrompt->SetVisibility(false);
+		Interactable = false;
+		KeyPadUI->SetVisibility(true);
+		PlayerController->EnableMouseInGame();
+		bInteractingWithKeyPad = true;
+		CanChangeViewTarget = true;
+	}
 }
 
 void AKeyPad::HandleStopViewKeyPad()
 {
-	KeyPrompt->SetVisibility(true);
-	Interactable = true;
-	KeyPadUI->SetVisibility(false);
-	PlayerController->DisableMouse();
-	CanChangeViewTargetToPlayer = true;
+	if (bInteractingWithKeyPad)
+	{
+		KeyPrompt->SetVisibility(true);
+		Interactable = true;
+		KeyPadUI->SetVisibility(false);
+		PlayerController->DisableMouse();
+		bInteractingWithKeyPad = false;
+		CanChangeViewTargetToPlayer = true;
+	}
 }
 
 void AKeyPad::ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeViewFlag)

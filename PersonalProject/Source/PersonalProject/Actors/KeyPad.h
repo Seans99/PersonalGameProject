@@ -68,6 +68,7 @@ public:
 
 private:
 	float TimeToNextCameraChange;
+	bool bInteractingWithKeyPad = false;
 
 private:
 	APrimaryPlayerCharacter* Player;
