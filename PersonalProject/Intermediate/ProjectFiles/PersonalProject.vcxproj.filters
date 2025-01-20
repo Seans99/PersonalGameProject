@@ -84,12 +84,6 @@
     <Filter Include="Source\PersonalProject\PrimarySystems">
       <UniqueIdentifier>{3FD8BCC3-A5CF-3EC9-9252-EFB7E7B897AF}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameInstance.cpp">
-      <Filter>Source\PersonalProject\PrimarySystems</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameInstance.h">
-      <Filter>Source\PersonalProject\PrimarySystems</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameMode.cpp">
       <Filter>Source\PersonalProject\PrimarySystems</Filter>
     </ClCompile>
@@ -107,6 +101,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerController.h">
       <Filter>Source\PersonalProject\PrimarySystems</Filter>
+    </ClInclude>
+    <Filter Include="Source\PersonalProject\PrimarySystems\GameInstances">
+      <UniqueIdentifier>{6D5026DE-3D45-38AB-A3A4-610B2B997D1A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\GameInstances\SoundManager.cpp">
+      <Filter>Source\PersonalProject\PrimarySystems\GameInstances</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\GameInstances\SoundManager.h">
+      <Filter>Source\PersonalProject\PrimarySystems\GameInstances</Filter>
     </ClInclude>
     <Filter Include="Source\PersonalProject\UI">
       <UniqueIdentifier>{8A102ED0-A86A-3244-87B3-BB482EEDEAA9}</UniqueIdentifier>

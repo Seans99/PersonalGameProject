@@ -1,6 +1,6 @@
 #include "Settings.h"
 #include "../PrimarySystems/PrimaryGameMode.h"
-#include "../PrimarySystems/PrimaryGameInstance.h"
+#include "../PrimarySystems/GameInstances/SoundManager.h"
 #include "Components/Button.h"
 #include "Components/HorizontalBox.h"
 #include "Components/VerticalBox.h"
@@ -217,17 +217,17 @@ void USettings::InitializeVSync()
 
 void USettings::InitializeMasterVolume()
 {
-	if (UPrimaryGameInstance* PrimaryGameInstance = Cast<UPrimaryGameInstance>(GetWorld()->GetGameInstance()))
+	if (USoundManager* SoundManager = GetGameInstance()->GetSubsystem<USoundManager>())
 	{
-		MasterVolumeSlider->SetValue(PrimaryGameInstance->GetMasterVolume());
+		MasterVolumeSlider->SetValue(SoundManager->GetMasterVolume());
 	}
 }
 
 void USettings::InitializeMusicVolume()
 {
-	if (UPrimaryGameInstance* PrimaryGameInstance = Cast<UPrimaryGameInstance>(GetWorld()->GetGameInstance()))
+	if (USoundManager* SoundManager = GetGameInstance()->GetSubsystem<USoundManager>())
 	{
-		MusicVolumeSlider->SetValue(PrimaryGameInstance->GetMusicVolume());
+		MusicVolumeSlider->SetValue(SoundManager->GetMusicVolume());
 	}
 }
 
@@ -251,16 +251,16 @@ void USettings::OnVSyncChanged(bool bInIsChecked)
 
 void USettings::OnMasterVolumeChanged(float Value)
 {
-	if (UPrimaryGameInstance* PrimaryGameInstance = Cast<UPrimaryGameInstance>(GetWorld()->GetGameInstance()))
+	if (USoundManager* SoundManager = GetGameInstance()->GetSubsystem<USoundManager>())
 	{
-		PrimaryGameInstance->SetMasterVolume(Value);
+		SoundManager->SetMasterVolume(Value);
 	}
 }
 
 void USettings::OnMusicVolumeChanged(float Value)
 {
-	if (UPrimaryGameInstance* PrimaryGameInstance = Cast<UPrimaryGameInstance>(GetWorld()->GetGameInstance()))
+	if (USoundManager* SoundManager = GetGameInstance()->GetSubsystem<USoundManager>())
 	{
-		PrimaryGameInstance->SetMusicVolume(Value);
+		SoundManager->SetMusicVolume(Value);
 	}
 }

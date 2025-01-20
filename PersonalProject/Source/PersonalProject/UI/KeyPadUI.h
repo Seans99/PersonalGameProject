@@ -107,5 +107,5 @@ public:
 	void Key9Press();
 
 private:
-	int32 Password[4];
+	
 };
