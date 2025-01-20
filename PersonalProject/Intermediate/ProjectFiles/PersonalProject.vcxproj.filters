@@ -105,6 +105,12 @@
     <Filter Include="Source\PersonalProject\PrimarySystems\GameInstances">
       <UniqueIdentifier>{6D5026DE-3D45-38AB-A3A4-610B2B997D1A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\GameInstances\CodeGenerator.cpp">
+      <Filter>Source\PersonalProject\PrimarySystems\GameInstances</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\GameInstances\CodeGenerator.h">
+      <Filter>Source\PersonalProject\PrimarySystems\GameInstances</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\GameInstances\SoundManager.cpp">
       <Filter>Source\PersonalProject\PrimarySystems\GameInstances</Filter>
     </ClCompile>
@@ -154,6 +160,12 @@
       <Filter>Source\PersonalProject\UI</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\UI\Settings.h">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\TextLogUI.cpp">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\TextLogUI.h">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\UI\TitleScreen.cpp">

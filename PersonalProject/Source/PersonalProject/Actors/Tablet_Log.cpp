@@ -15,6 +15,9 @@ ATablet_Log::ATablet_Log()
 	KeyPrompt = CreateDefaultSubobject<UWidgetComponent>("KeyPromptWidget");
 	KeyPrompt->SetupAttachment(LogMesh);
 
+	Log = CreateDefaultSubobject<UWidgetComponent>("LogUI");
+	Log->SetupAttachment(LogMesh);
+
 	BoxComponent = CreateDefaultSubobject<UBoxComponent>("BoxComponent");
 	BoxComponent->SetupAttachment(LogMesh);
 	BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &ATablet_Log::OnBoxBeginOverlap);

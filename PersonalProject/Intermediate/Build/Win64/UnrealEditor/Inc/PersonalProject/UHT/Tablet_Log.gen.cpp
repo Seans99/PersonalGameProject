@@ -205,6 +205,11 @@ struct Z_Construct_UClass_ATablet_Log_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Actors/Tablet_Log.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Log_MetaData[] = {
+		{ "Category", "Tablet_Log" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Actors/Tablet_Log.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BoxComponent_MetaData[] = {
 		{ "Category", "Tablet_Log" },
 		{ "EditInline", "true" },
@@ -214,6 +219,7 @@ struct Z_Construct_UClass_ATablet_Log_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LogMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PointLight;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_KeyPrompt;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Log;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -230,11 +236,13 @@ struct Z_Construct_UClass_ATablet_Log_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATablet_Log_Statics::NewProp_LogMesh = { "LogMesh", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATablet_Log, LogMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LogMesh_MetaData), NewProp_LogMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATablet_Log_Statics::NewProp_PointLight = { "PointLight", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATablet_Log, PointLight), Z_Construct_UClass_UPointLightComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PointLight_MetaData), NewProp_PointLight_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATablet_Log_Statics::NewProp_KeyPrompt = { "KeyPrompt", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATablet_Log, KeyPrompt), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_KeyPrompt_MetaData), NewProp_KeyPrompt_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATablet_Log_Statics::NewProp_Log = { "Log", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATablet_Log, Log), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Log_MetaData), NewProp_Log_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATablet_Log_Statics::NewProp_BoxComponent = { "BoxComponent", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATablet_Log, BoxComponent), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BoxComponent_MetaData), NewProp_BoxComponent_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATablet_Log_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATablet_Log_Statics::NewProp_LogMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATablet_Log_Statics::NewProp_PointLight,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATablet_Log_Statics::NewProp_KeyPrompt,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATablet_Log_Statics::NewProp_Log,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATablet_Log_Statics::NewProp_BoxComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ATablet_Log_Statics::PropPointers) < 2048);
@@ -278,10 +286,10 @@ ATablet_Log::~ATablet_Log() {}
 struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ATablet_Log, ATablet_Log::StaticClass, TEXT("ATablet_Log"), &Z_Registration_Info_UClass_ATablet_Log, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATablet_Log), 1110641658U) },
+		{ Z_Construct_UClass_ATablet_Log, ATablet_Log::StaticClass, TEXT("ATablet_Log"), &Z_Registration_Info_UClass_ATablet_Log, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATablet_Log), 1030593056U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_1967695333(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_2924412483(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

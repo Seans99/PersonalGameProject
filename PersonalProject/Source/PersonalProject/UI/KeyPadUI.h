@@ -9,6 +9,8 @@ class UVerticalBox;
 class UEditableTextBox;
 class UButton;
 
+class UCodeGenerator;
+
 UCLASS()
 class PERSONALPROJECT_API UKeyPadUI : public UGUIBase
 {
@@ -72,9 +74,6 @@ public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UButton* key9;
 
-	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UButton* Enter;
-
 public:
 	UFUNCTION()
 	void Key0Press();
@@ -107,5 +106,9 @@ public:
 	void Key9Press();
 
 private:
-	
+	void CheckCode(FString& EnteredCode);
+
+private:
+	TArray<int32> PassCode;
+	UCodeGenerator* Code;
 };

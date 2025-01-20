@@ -28,6 +28,9 @@ public:
 	UWidgetComponent* KeyPrompt;
 
 	UPROPERTY(EditAnywhere)
+	UWidgetComponent* Log;
+
+	UPROPERTY(EditAnywhere)
 	UBoxComponent* BoxComponent;
 
 protected:

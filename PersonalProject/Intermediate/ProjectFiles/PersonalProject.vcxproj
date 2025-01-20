@@ -298,6 +298,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryPlayerController.h"/>
+    <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\GameInstances\CodeGenerator.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\PrimarySystems\GameInstances\CodeGenerator.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\GameInstances\SoundManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -330,6 +334,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\UI\Settings.h"/>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\TextLogUI.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\TextLogUI.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\UI\TitleScreen.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
