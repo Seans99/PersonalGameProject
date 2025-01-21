@@ -106,9 +106,6 @@ public:
 	void Key9Press();
 
 private:
-	void CheckCode(FString& EnteredCode);
-
-private:
 	TArray<int32> PassCode;
 	UCodeGenerator* Code;
 };

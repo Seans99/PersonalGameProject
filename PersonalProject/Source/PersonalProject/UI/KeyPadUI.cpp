@@ -25,13 +25,13 @@ void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
 	FString EnteredCode;
 
+	for (int32 Num : PassCode)
+	{
+		EnteredCode += FString::FromInt(Num);
+	}
+
 	if (PassCode.Num() < 4)
 	{
-		for (int32 Num : PassCode)
-		{
-			EnteredCode += FString::FromInt(Num);
-		}
-
 		if (EnteredCode != "")
 		{
 			Screen->SetText(FText::FromString(EnteredCode));
@@ -40,26 +40,21 @@ void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 
 	if (PassCode.Num() == 4)
 	{
-		CheckCode(EnteredCode);
-	}
-}
+		int32 CurrentCode = Code->GetRandomCode();
+		FString CodeString = FString::FromInt(CurrentCode);
 
-void UKeyPadUI::CheckCode(FString& EnteredCode)
-{
-	int32 CurrentCode = Code->GetRandomCode();
-	FString CodeString = FString::FromInt(CurrentCode);
-
-	if (EnteredCode == CodeString)
-	{
-		FString Unlocked = "Valid";
-		Screen->SetText(FText::FromString(Unlocked));
-	}
-	else
-	{
-		FString Locked = "Invalid";
-		Screen->SetText(FText::FromString(Locked));
-		EnteredCode = "";
-		PassCode.Empty();
+		if (EnteredCode == CodeString)
+		{
+			FString Unlocked = "Valid";
+			Screen->SetText(FText::FromString(Unlocked));
+		}
+		else
+		{
+			FString Locked = "Invalid";
+			Screen->SetText(FText::FromString(Locked));
+			EnteredCode = "";
+			PassCode.Empty();
+		}
 	}
 }
 
