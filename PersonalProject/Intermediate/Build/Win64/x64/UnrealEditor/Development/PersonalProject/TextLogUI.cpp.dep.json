@@ -37,7 +37,13 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetanimationevents.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
             "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\guibase.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\textlogui.generated.h"
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\textlogui.generated.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\gameinstances\\codegenerator.h",
+            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\codegenerator.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\umg\\public\\components\\multilineeditabletext.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\umg\\public\\components\\textwidgettypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textwidgettypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\multilineeditabletext.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

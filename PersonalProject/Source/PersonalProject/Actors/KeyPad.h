@@ -62,9 +62,10 @@ protected:
 	void ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeViewFlag);
 
 public:
-	bool Interactable = false;
-	bool CanChangeViewTarget = false;
-	bool CanChangeViewTargetToPlayer = false;
+	bool bInteractable = false;
+	bool bCanChangeViewTarget = false;
+	bool bCanChangeViewTargetToPlayer = false;
+	bool bPlayerInRange = false;
 
 private:
 	float TimeToNextCameraChange;

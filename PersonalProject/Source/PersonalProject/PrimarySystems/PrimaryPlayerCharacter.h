@@ -82,7 +82,10 @@ public:
 
 public:
 	UPROPERTY()
-	FInteractSignature OnInteract;
+	FInteractSignature OnInteractKeyPad;
+
+	UPROPERTY()
+	FInteractSignature OnInteractLog;
 
 	UPROPERTY()
 	FInteractSignature OnCancel;

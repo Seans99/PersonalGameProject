@@ -9,6 +9,8 @@ class UPointLightComponent;
 class UWidgetComponent;
 class UBoxComponent;
 
+class APrimaryPlayerCharacter;
+
 UCLASS()
 class PERSONALPROJECT_API ATablet_Log : public AActor
 {
@@ -50,7 +52,19 @@ protected:
 		UPrimitiveComponent* OtherComp,
 		int32 OtherBodyIndex);
 
+	UFUNCTION()
+	void HandleInteract();
+
+	UFUNCTION()
+	void HandleClose();
+
 public:	
 	virtual void Tick(float DeltaTime) override;
 
+public:
+	bool bInteractable = false;
+	bool bPlayerInRange = false;
+
+private:
+	APrimaryPlayerCharacter* Player;
 };

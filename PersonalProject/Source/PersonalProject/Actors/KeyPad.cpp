@@ -37,7 +37,7 @@ void AKeyPad::BeginPlay()
 	
 	if (Player)
 	{
-		Player->OnInteract.AddDynamic(this, &AKeyPad::HandleKeyPadInteract);
+		Player->OnInteractKeyPad.AddDynamic(this, &AKeyPad::HandleKeyPadInteract);
 		Player->OnCancel.AddDynamic(this, &AKeyPad::HandleStopViewKeyPad);
 	}
 }
@@ -47,7 +47,8 @@ void AKeyPad::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 	if (Cast<APrimaryPlayerCharacter>(OtherActor))
 	{
 		KeyPrompt->SetVisibility(true);
-		Interactable = true;
+		bInteractable = true;
+		bPlayerInRange = true;
 	}
 }
 
@@ -56,7 +57,8 @@ void AKeyPad::OnBoxEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* 
 	if (Cast<APrimaryPlayerCharacter>(OtherActor))
 	{
 		KeyPrompt->SetVisibility(false);
-		Interactable = false;
+		bInteractable = false;
+		bPlayerInRange = false;
 		if (KeyPadUI->IsVisible())
 		{
 			KeyPadUI->SetVisibility(false);
@@ -66,27 +68,33 @@ void AKeyPad::OnBoxEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* 
 
 void AKeyPad::HandleKeyPadInteract()
 {
-	if (!bInteractingWithKeyPad)
+	if (bPlayerInRange)
 	{
-		KeyPrompt->SetVisibility(false);
-		Interactable = false;
-		KeyPadUI->SetVisibility(true);
-		PlayerController->EnableMouseInGame();
-		bInteractingWithKeyPad = true;
-		CanChangeViewTarget = true;
+		if (!bInteractingWithKeyPad)
+		{
+			KeyPrompt->SetVisibility(false);
+			bInteractable = false;
+			KeyPadUI->SetVisibility(true);
+			PlayerController->EnableMouseInGame();
+			bInteractingWithKeyPad = true;
+			bCanChangeViewTarget = true;
+		}
 	}
 }
 
 void AKeyPad::HandleStopViewKeyPad()
 {
-	if (bInteractingWithKeyPad)
+	if (bPlayerInRange)
 	{
-		KeyPrompt->SetVisibility(true);
-		Interactable = true;
-		KeyPadUI->SetVisibility(false);
-		PlayerController->DisableMouse();
-		bInteractingWithKeyPad = false;
-		CanChangeViewTargetToPlayer = true;
+		if (bInteractingWithKeyPad)
+		{
+			KeyPrompt->SetVisibility(true);
+			bInteractable = true;
+			KeyPadUI->SetVisibility(false);
+			PlayerController->DisableMouse();
+			bInteractingWithKeyPad = false;
+			bCanChangeViewTargetToPlayer = true;
+		}
 	}
 }
 
@@ -118,13 +126,13 @@ void AKeyPad::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (CanChangeViewTarget)
+	if (bCanChangeViewTarget)
 	{
-		ChangeViewTarget(DeltaTime, this, CanChangeViewTarget);
+		ChangeViewTarget(DeltaTime, this, bCanChangeViewTarget);
 	}
-	if (CanChangeViewTargetToPlayer)
+	if (bCanChangeViewTargetToPlayer)
 	{
-		ChangeViewTarget(DeltaTime, Player, CanChangeViewTargetToPlayer);
+		ChangeViewTarget(DeltaTime, Player, bCanChangeViewTargetToPlayer);
 	}
 }
 

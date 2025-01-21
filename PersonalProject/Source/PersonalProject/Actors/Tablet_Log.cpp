@@ -3,6 +3,7 @@
 #include "Components/WidgetComponent.h"
 #include "Components/BoxComponent.h"
 #include "../PrimarySystems/PrimaryPlayerCharacter.h"
+#include <Kismet/GameplayStatics.h>
 
 ATablet_Log::ATablet_Log()
 {
@@ -30,6 +31,13 @@ void ATablet_Log::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	Player = Cast<APrimaryPlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+
+	if (Player)
+	{
+		Player->OnInteractLog.AddDynamic(this, &ATablet_Log::HandleInteract);
+		Player->OnCancel.AddDynamic(this, &ATablet_Log::HandleClose);
+	}
 }
 
 void ATablet_Log::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -37,6 +45,8 @@ void ATablet_Log::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AA
 	if (Cast<APrimaryPlayerCharacter>(OtherActor))
 	{
 		KeyPrompt->SetVisibility(true);
+		bInteractable = true;
+		bPlayerInRange = true;
 	}
 }
 
@@ -45,6 +55,32 @@ void ATablet_Log::OnBoxEndOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 	if (Cast<APrimaryPlayerCharacter>(OtherActor))
 	{
 		KeyPrompt->SetVisibility(false);
+		bInteractable = false;
+		bPlayerInRange = false;
+		if (Log->IsVisible())
+		{
+			Log->SetVisibility(false);
+		}
+	}
+}
+
+void ATablet_Log::HandleInteract()
+{
+	if (bPlayerInRange)
+	{
+		bInteractable = false;
+		KeyPrompt->SetVisibility(false);
+		Log->SetVisibility(true);
+	}
+}
+
+void ATablet_Log::HandleClose()
+{
+	if (bPlayerInRange)
+	{
+		bInteractable = true;
+		KeyPrompt->SetVisibility(true);
+		Log->SetVisibility(false);
 	}
 }
 
@@ -52,5 +88,9 @@ void ATablet_Log::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (Log->IsVisible())
+	{
+		// Look at player
+	}
 }
 

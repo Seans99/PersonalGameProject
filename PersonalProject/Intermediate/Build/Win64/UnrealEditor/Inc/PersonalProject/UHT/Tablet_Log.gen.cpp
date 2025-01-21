@@ -24,6 +24,64 @@ UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
 // End Cross Module References
 
+// Begin Class ATablet_Log Function HandleClose
+struct Z_Construct_UFunction_ATablet_Log_HandleClose_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Actors/Tablet_Log.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATablet_Log_HandleClose_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATablet_Log, nullptr, "HandleClose", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ATablet_Log_HandleClose_Statics::Function_MetaDataParams), Z_Construct_UFunction_ATablet_Log_HandleClose_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ATablet_Log_HandleClose()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ATablet_Log_HandleClose_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ATablet_Log::execHandleClose)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleClose();
+	P_NATIVE_END;
+}
+// End Class ATablet_Log Function HandleClose
+
+// Begin Class ATablet_Log Function HandleInteract
+struct Z_Construct_UFunction_ATablet_Log_HandleInteract_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Actors/Tablet_Log.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATablet_Log_HandleInteract_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATablet_Log, nullptr, "HandleInteract", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ATablet_Log_HandleInteract_Statics::Function_MetaDataParams), Z_Construct_UFunction_ATablet_Log_HandleInteract_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ATablet_Log_HandleInteract()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ATablet_Log_HandleInteract_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ATablet_Log::execHandleInteract)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleInteract();
+	P_NATIVE_END;
+}
+// End Class ATablet_Log Function HandleInteract
+
 // Begin Class ATablet_Log Function OnBoxBeginOverlap
 struct Z_Construct_UFunction_ATablet_Log_OnBoxBeginOverlap_Statics
 {
@@ -173,6 +231,8 @@ void ATablet_Log::StaticRegisterNativesATablet_Log()
 {
 	UClass* Class = ATablet_Log::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleClose", &ATablet_Log::execHandleClose },
+		{ "HandleInteract", &ATablet_Log::execHandleInteract },
 		{ "OnBoxBeginOverlap", &ATablet_Log::execOnBoxBeginOverlap },
 		{ "OnBoxEndOverlap", &ATablet_Log::execOnBoxEndOverlap },
 	};
@@ -224,6 +284,8 @@ struct Z_Construct_UClass_ATablet_Log_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATablet_Log_HandleClose, "HandleClose" }, // 3487473011
+		{ &Z_Construct_UFunction_ATablet_Log_HandleInteract, "HandleInteract" }, // 1797820632
 		{ &Z_Construct_UFunction_ATablet_Log_OnBoxBeginOverlap, "OnBoxBeginOverlap" }, // 3738189944
 		{ &Z_Construct_UFunction_ATablet_Log_OnBoxEndOverlap, "OnBoxEndOverlap" }, // 3800346350
 	};
@@ -286,10 +348,10 @@ ATablet_Log::~ATablet_Log() {}
 struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ATablet_Log, ATablet_Log::StaticClass, TEXT("ATablet_Log"), &Z_Registration_Info_UClass_ATablet_Log, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATablet_Log), 1030593056U) },
+		{ Z_Construct_UClass_ATablet_Log, ATablet_Log::StaticClass, TEXT("ATablet_Log"), &Z_Registration_Info_UClass_ATablet_Log, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATablet_Log), 4270776351U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_2924412483(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_4083448640(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_Tablet_Log_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

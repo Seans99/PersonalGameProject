@@ -143,7 +143,10 @@ struct Z_Construct_UClass_APrimaryPlayerCharacter_Statics
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnInteract_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnInteractKeyPad_MetaData[] = {
+		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnInteractLog_MetaData[] = {
 		{ "ModuleRelativePath", "PrimarySystems/PrimaryPlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCancel_MetaData[] = {
@@ -161,7 +164,8 @@ struct Z_Construct_UClass_APrimaryPlayerCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CancelAction;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SprintSpeed;
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnInteract;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnInteractKeyPad;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnInteractLog;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnCancel;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -185,7 +189,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APrimaryPlayer
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_CancelAction = { "CancelAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryPlayerCharacter, CancelAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CancelAction_MetaData), NewProp_CancelAction_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryPlayerCharacter, WalkSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkSpeed_MetaData), NewProp_WalkSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_SprintSpeed = { "SprintSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryPlayerCharacter, SprintSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SprintSpeed_MetaData), NewProp_SprintSpeed_MetaData) };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_OnInteract = { "OnInteract", nullptr, (EPropertyFlags)0x0010000000080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryPlayerCharacter, OnInteract), Z_Construct_UDelegateFunction_PersonalProject_InteractSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnInteract_MetaData), NewProp_OnInteract_MetaData) }; // 3086195334
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_OnInteractKeyPad = { "OnInteractKeyPad", nullptr, (EPropertyFlags)0x0010000000080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryPlayerCharacter, OnInteractKeyPad), Z_Construct_UDelegateFunction_PersonalProject_InteractSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnInteractKeyPad_MetaData), NewProp_OnInteractKeyPad_MetaData) }; // 3086195334
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_OnInteractLog = { "OnInteractLog", nullptr, (EPropertyFlags)0x0010000000080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryPlayerCharacter, OnInteractLog), Z_Construct_UDelegateFunction_PersonalProject_InteractSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnInteractLog_MetaData), NewProp_OnInteractLog_MetaData) }; // 3086195334
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_OnCancel = { "OnCancel", nullptr, (EPropertyFlags)0x0010000000080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APrimaryPlayerCharacter, OnCancel), Z_Construct_UDelegateFunction_PersonalProject_InteractSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCancel_MetaData), NewProp_OnCancel_MetaData) }; // 3086195334
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APrimaryPlayerCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_Camera,
@@ -199,7 +204,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APrimaryP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_CancelAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_WalkSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_SprintSpeed,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_OnInteract,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_OnInteractKeyPad,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_OnInteractLog,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APrimaryPlayerCharacter_Statics::NewProp_OnCancel,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APrimaryPlayerCharacter_Statics::PropPointers) < 2048);
@@ -243,10 +249,10 @@ APrimaryPlayerCharacter::~APrimaryPlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APrimaryPlayerCharacter, APrimaryPlayerCharacter::StaticClass, TEXT("APrimaryPlayerCharacter"), &Z_Registration_Info_UClass_APrimaryPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APrimaryPlayerCharacter), 1096579401U) },
+		{ Z_Construct_UClass_APrimaryPlayerCharacter, APrimaryPlayerCharacter::StaticClass, TEXT("APrimaryPlayerCharacter"), &Z_Registration_Info_UClass_APrimaryPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APrimaryPlayerCharacter), 2615145878U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_603087440(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_2517871320(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_PrimarySystems_PrimaryPlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

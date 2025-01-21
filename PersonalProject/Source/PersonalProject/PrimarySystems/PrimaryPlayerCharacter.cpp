@@ -8,6 +8,7 @@
 #include "../PrimarySystems/PrimaryPlayerController.h"
 #include "../Components/StaminaComponent.h"
 #include "../Actors/KeyPad.h"
+#include "../Actors/Tablet_Log.h"
 #include <Kismet/GameplayStatics.h>
 
 // Sets default values
@@ -147,8 +148,10 @@ void APrimaryPlayerCharacter::HandleStaminaDepleted()
 void APrimaryPlayerCharacter::Interact()
 {
 	TArray<AActor*> FoundKeyPads;
+	TArray<AActor*> FoundLogs;
 
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AKeyPad::StaticClass(), FoundKeyPads);
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATablet_Log::StaticClass(), FoundLogs);
 
 	for (AActor* KeyPad : FoundKeyPads)
 	{
@@ -156,10 +159,23 @@ void APrimaryPlayerCharacter::Interact()
 		{
 			if (AKeyPad* keypad = Cast<AKeyPad>(KeyPad))
 			{
-				if (keypad->Interactable)
+				if (keypad->bInteractable)
 				{
-					UE_LOG(LogTemp, Warning, TEXT("Interact with KeyPad"));
-					if (OnInteract.IsBound()) OnInteract.Broadcast();
+					if (OnInteractKeyPad.IsBound()) OnInteractKeyPad.Broadcast();
+				}
+			}
+		}
+	}
+
+	for (AActor* Log : FoundLogs)
+	{
+		if (Log)
+		{
+			if (ATablet_Log* log = Cast<ATablet_Log>(Log))
+			{
+				if (log->bInteractable)
+				{
+					if (OnInteractLog.IsBound()) OnInteractLog.Broadcast();
 				}
 			}
 		}

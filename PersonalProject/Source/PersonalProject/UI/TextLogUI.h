@@ -7,6 +7,8 @@
 class UImage;
 class UMultiLineEditableText;
 
+class UCodeGenerator;
+
 UCLASS()
 class PERSONALPROJECT_API UTextLogUI : public UGUIBase
 {
@@ -21,4 +23,7 @@ public:
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UMultiLineEditableText* Text;
+
+private:
+	UCodeGenerator* Code;
 };
