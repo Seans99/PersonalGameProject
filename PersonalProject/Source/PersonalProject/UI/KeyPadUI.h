@@ -107,5 +107,6 @@ public:
 
 private:
 	TArray<int32> PassCode;
+	TArray<AActor*> Doors;
 	UCodeGenerator* Code;
 };

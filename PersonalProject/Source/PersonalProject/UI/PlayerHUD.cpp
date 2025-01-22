@@ -67,7 +67,7 @@ void UPlayerHUD::NativeTick(const FGeometry& Geometry, float DeltaTime)
 		if (!CheckIfbehind())
 		{
 			float PosX = Rotation->GetComponentRotation().Yaw * -1 * 10 - 2700;
-			CanvasSlot->SetPosition(FVector2D(CheckNavPoint(), -65));
+			CanvasSlot->SetPosition(FVector2D(CheckNavPoint(), -35));
 		}
 	}
 }

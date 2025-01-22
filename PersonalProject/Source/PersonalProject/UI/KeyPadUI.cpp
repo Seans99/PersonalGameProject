@@ -2,12 +2,15 @@
 #include "Components/Button.h"
 #include "Components/EditableTextBox.h"
 #include "../PrimarySystems/GameInstances/CodeGenerator.h"
+#include "../Actors/Door.h"
+#include <Kismet/GameplayStatics.h>
 
 void UKeyPadUI::NativeConstruct()
 {
 	Super::NativeConstruct();
 
 	Code = GetGameInstance()->GetSubsystem<UCodeGenerator>();
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ADoor::StaticClass(), Doors);
 
 	key0->OnClicked.AddDynamic(this, &UKeyPadUI::Key0Press);
 	key1->OnClicked.AddDynamic(this, &UKeyPadUI::Key1Press);
@@ -47,6 +50,19 @@ void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 		{
 			FString Unlocked = "Valid";
 			Screen->SetText(FText::FromString(Unlocked));
+			for (AActor* Door : Doors)
+			{
+				if (Door && Door->Tags.Contains("LockedDoor0"))
+				{
+					if (ADoor* LockedDoor = Cast<ADoor>(Door))
+					{
+						if (LockedDoor->bIslocked)
+						{
+							LockedDoor->bIslocked = false;
+						}
+					}
+				}
+			}
 		}
 		else
 		{
