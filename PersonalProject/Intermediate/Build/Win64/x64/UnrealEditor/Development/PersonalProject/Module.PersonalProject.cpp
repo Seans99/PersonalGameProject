@@ -38,6 +38,7 @@
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/PrimarySystems/PrimaryPlayerCharacter.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/PrimarySystems/PrimaryPlayerController.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/UI/GUIBase.cpp"
+#include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/UI/KeyPadUI.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/UI/KeyPrompt.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/UI/MainMenu.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/UI/PauseMenu.cpp"

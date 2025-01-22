@@ -41,6 +41,7 @@
 			"PrimaryPlayerCharacter.cpp.obj",
 			"PrimaryPlayerController.cpp.obj",
 			"GUIBase.cpp.obj",
+			"KeyPadUI.cpp.obj",
 			"KeyPrompt.cpp.obj",
 			"MainMenu.cpp.obj",
 			"PauseMenu.cpp.obj",
@@ -48,8 +49,7 @@
 			"Settings.cpp.obj",
 			"TextLogUI.cpp.obj",
 			"TitleScreen.cpp.obj",
-			"CustomButtonV1.cpp.obj",
-			"KeyPadUI.cpp.obj"
+			"CustomButtonV1.cpp.obj"
 		]
 	}
 }
