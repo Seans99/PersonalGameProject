@@ -4,6 +4,7 @@
 #include "Components/BoxComponent.h"
 #include "../PrimarySystems/PrimaryPlayerCharacter.h"
 #include <Kismet/GameplayStatics.h>
+#include <Kismet/KismetMathLibrary.h>
 
 ATablet_Log::ATablet_Log()
 {
@@ -90,7 +91,12 @@ void ATablet_Log::Tick(float DeltaTime)
 
 	if (Log->IsVisible())
 	{
-		// Look at player
+		FVector Start = Log->GetComponentLocation();
+		FVector Target = Player->GetActorLocation();
+
+		FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(Start, Target);
+		
+		Log->SetWorldRotation(LookAtRotation);
 	}
 }
 
