@@ -26,7 +26,6 @@
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/Actors/Door.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/Actors/KeyPad.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/Actors/NavPoint.cpp"
-#include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/Actors/Tablet_Log.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/Components/HealthComponent.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/Components/StaminaComponent.cpp"
 #include "C:/Users/sean.schelvis/GitHub/PersonalGameProject/PersonalProject/Source/PersonalProject/Interfaces/Interactable.cpp"

@@ -29,7 +29,6 @@
 			"Door.cpp.obj",
 			"KeyPad.cpp.obj",
 			"NavPoint.cpp.obj",
-			"Tablet_Log.cpp.obj",
 			"HealthComponent.cpp.obj",
 			"StaminaComponent.cpp.obj",
 			"Interactable.cpp.obj",
@@ -49,7 +48,8 @@
 			"Settings.cpp.obj",
 			"TextLogUI.cpp.obj",
 			"TitleScreen.cpp.obj",
-			"CustomButtonV1.cpp.obj"
+			"CustomButtonV1.cpp.obj",
+			"Tablet_Log.cpp.obj"
 		]
 	}
 }

@@ -29,6 +29,7 @@
 			"Door.cpp.obj",
 			"KeyPad.cpp.obj",
 			"NavPoint.cpp.obj",
+			"Tablet_Log.cpp.obj",
 			"HealthComponent.cpp.obj",
 			"StaminaComponent.cpp.obj",
 			"Interactable.cpp.obj",
@@ -40,7 +41,6 @@
 			"PrimaryPlayerCharacter.cpp.obj",
 			"PrimaryPlayerController.cpp.obj",
 			"GUIBase.cpp.obj",
-			"KeyPadUI.cpp.obj",
 			"KeyPrompt.cpp.obj",
 			"MainMenu.cpp.obj",
 			"PauseMenu.cpp.obj",
@@ -49,7 +49,7 @@
 			"TextLogUI.cpp.obj",
 			"TitleScreen.cpp.obj",
 			"CustomButtonV1.cpp.obj",
-			"Tablet_Log.cpp.obj"
+			"KeyPadUI.cpp.obj"
 		]
 	}
 }
