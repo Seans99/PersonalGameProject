@@ -333,12 +333,17 @@ struct Z_Construct_UClass_AKeyPad_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Actors/KeyPad.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DoorToOpen_MetaData[] = {
+		{ "Category", "KeyPad" },
+		{ "ModuleRelativePath", "Actors/KeyPad.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_KeyPadMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_KeyPadUI;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_KeyPrompt;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_DoorToOpen;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -359,12 +364,14 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AKeyPad_Static
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AKeyPad_Statics::NewProp_KeyPadUI = { "KeyPadUI", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AKeyPad, KeyPadUI), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_KeyPadUI_MetaData), NewProp_KeyPadUI_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AKeyPad_Statics::NewProp_KeyPrompt = { "KeyPrompt", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AKeyPad, KeyPrompt), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_KeyPrompt_MetaData), NewProp_KeyPrompt_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AKeyPad_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AKeyPad, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Camera_MetaData), NewProp_Camera_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_AKeyPad_Statics::NewProp_DoorToOpen = { "DoorToOpen", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AKeyPad, DoorToOpen), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorToOpen_MetaData), NewProp_DoorToOpen_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AKeyPad_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyPad_Statics::NewProp_KeyPadMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyPad_Statics::NewProp_BoxComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyPad_Statics::NewProp_KeyPadUI,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyPad_Statics::NewProp_KeyPrompt,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyPad_Statics::NewProp_Camera,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyPad_Statics::NewProp_DoorToOpen,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AKeyPad_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AKeyPad_Statics::DependentSingletons[])() = {
@@ -407,10 +414,10 @@ AKeyPad::~AKeyPad() {}
 struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_KeyPad_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AKeyPad, AKeyPad::StaticClass, TEXT("AKeyPad"), &Z_Registration_Info_UClass_AKeyPad, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AKeyPad), 1127928745U) },
+		{ Z_Construct_UClass_AKeyPad, AKeyPad::StaticClass, TEXT("AKeyPad"), &Z_Registration_Info_UClass_AKeyPad, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AKeyPad), 4048613373U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_KeyPad_h_2117350276(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_KeyPad_h_3931037121(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_KeyPad_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_KeyPad_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

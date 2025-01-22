@@ -105,8 +105,13 @@ public:
 	UFUNCTION()
 	void Key9Press();
 
+public:
+	FString DoorToOpen;
+
 private:
 	TArray<int32> PassCode;
 	TArray<AActor*> Doors;
+
+private:
 	UCodeGenerator* Code;
 };

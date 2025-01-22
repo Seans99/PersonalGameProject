@@ -3,6 +3,7 @@
 #include "Components/EditableTextBox.h"
 #include "../PrimarySystems/GameInstances/CodeGenerator.h"
 #include "../Actors/Door.h"
+#include "../Actors/KeyPad.h"
 #include <Kismet/GameplayStatics.h>
 
 void UKeyPadUI::NativeConstruct()
@@ -50,9 +51,10 @@ void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 		{
 			FString Unlocked = "Valid";
 			Screen->SetText(FText::FromString(Unlocked));
+
 			for (AActor* Door : Doors)
 			{
-				if (Door && Door->Tags.Contains("LockedDoor0"))
+				if (Door && Door->Tags.Contains(DoorToOpen))
 				{
 					if (ADoor* LockedDoor = Cast<ADoor>(Door))
 					{

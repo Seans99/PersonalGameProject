@@ -5,6 +5,7 @@
 #include "../PrimarySystems/PrimaryPlayerCharacter.h"
 #include "../PrimarySystems/PrimaryPlayerController.h"
 #include <Kismet/GameplayStatics.h>
+#include "../UI/KeyPadUI.h"
 
 AKeyPad::AKeyPad()
 {
@@ -21,7 +22,7 @@ AKeyPad::AKeyPad()
 
 	KeyPadUI = CreateDefaultSubobject<UWidgetComponent>("KeyPadUI");
 	KeyPadUI->SetupAttachment(KeyPadMesh);
-
+	
 	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
 	Camera->SetupAttachment(KeyPadMesh);
 
@@ -39,6 +40,11 @@ void AKeyPad::BeginPlay()
 	{
 		Player->OnInteractKeyPad.AddDynamic(this, &AKeyPad::HandleKeyPadInteract);
 		Player->OnCancel.AddDynamic(this, &AKeyPad::HandleStopViewKeyPad);
+	}
+
+	if (UKeyPadUI* UI = Cast<UKeyPadUI>(KeyPadUI->GetWidget()))
+	{
+		UI->DoorToOpen = DoorToOpen;
 	}
 }
 

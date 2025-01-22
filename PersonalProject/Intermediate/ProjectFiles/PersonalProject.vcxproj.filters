@@ -81,6 +81,21 @@
     <ClInclude Include="..\..\Source\PersonalProject\Components\StaminaComponent.h">
       <Filter>Source\PersonalProject\Components</Filter>
     </ClInclude>
+    <Filter Include="Source\PersonalProject\Interfaces">
+      <UniqueIdentifier>{EF4C24DE-D651-3565-9A04-6897F615F195}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PersonalProject\Interfaces\Interactable.cpp">
+      <Filter>Source\PersonalProject\Interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\Interfaces\Interactable.h">
+      <Filter>Source\PersonalProject\Interfaces</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\Interfaces\Unlockable.cpp">
+      <Filter>Source\PersonalProject\Interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\Interfaces\Unlockable.h">
+      <Filter>Source\PersonalProject\Interfaces</Filter>
+    </ClInclude>
     <Filter Include="Source\PersonalProject\PrimarySystems">
       <UniqueIdentifier>{3FD8BCC3-A5CF-3EC9-9252-EFB7E7B897AF}</UniqueIdentifier>
     </Filter>

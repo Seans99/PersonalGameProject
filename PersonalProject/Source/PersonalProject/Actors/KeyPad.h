@@ -62,6 +62,10 @@ protected:
 	void ChangeViewTarget(float DeltaTime, AActor* Target, bool& CanChangeViewFlag);
 
 public:
+	UPROPERTY(EditAnywhere)
+	FString DoorToOpen;
+
+public:
 	bool bInteractable = false;
 	bool bCanChangeViewTarget = false;
 	bool bCanChangeViewTargetToPlayer = false;
