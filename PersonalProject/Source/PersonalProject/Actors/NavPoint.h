@@ -5,6 +5,7 @@
 #include "NavPoint.generated.h"
 
 class UBoxComponent;
+class APrimaryPlayerCharacter;
 
 UCLASS()
 class PERSONALPROJECT_API ANavPoint : public AActor
@@ -16,7 +17,10 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere)
-	UBoxComponent* BoxCollider;
+	UBoxComponent* BoxComponent;
+
+	UPROPERTY(EditAnywhere, Category = "Info")
+	int32 ID;
 
 protected:
 	virtual void BeginPlay() override;
@@ -28,6 +32,10 @@ protected:
 		int32 OtherBodyIndex,
 		bool bFromSweep,
 		const FHitResult& SweepResult);
+
+private:
+	TArray<AActor*> NavPoints;
+	APrimaryPlayerCharacter* Player;
 
 public:	
 	virtual void Tick(float DeltaTime) override;

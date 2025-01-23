@@ -123,13 +123,18 @@ struct Z_Construct_UClass_ANavPoint_Statics
 		{ "IncludePath", "Actors/NavPoint.h" },
 		{ "ModuleRelativePath", "Actors/NavPoint.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BoxCollider_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BoxComponent_MetaData[] = {
 		{ "Category", "NavPoint" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Actors/NavPoint.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ID_MetaData[] = {
+		{ "Category", "Info" },
+		{ "ModuleRelativePath", "Actors/NavPoint.h" },
+	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxCollider;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxComponent;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ID;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -141,9 +146,11 @@ struct Z_Construct_UClass_ANavPoint_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANavPoint_Statics::NewProp_BoxCollider = { "BoxCollider", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANavPoint, BoxCollider), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BoxCollider_MetaData), NewProp_BoxCollider_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANavPoint_Statics::NewProp_BoxComponent = { "BoxComponent", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANavPoint, BoxComponent), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BoxComponent_MetaData), NewProp_BoxComponent_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ANavPoint_Statics::NewProp_ID = { "ID", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANavPoint, ID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ID_MetaData), NewProp_ID_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANavPoint_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavPoint_Statics::NewProp_BoxCollider,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavPoint_Statics::NewProp_BoxComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavPoint_Statics::NewProp_ID,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ANavPoint_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ANavPoint_Statics::DependentSingletons[])() = {
@@ -186,10 +193,10 @@ ANavPoint::~ANavPoint() {}
 struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_NavPoint_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANavPoint, ANavPoint::StaticClass, TEXT("ANavPoint"), &Z_Registration_Info_UClass_ANavPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANavPoint), 3653230566U) },
+		{ Z_Construct_UClass_ANavPoint, ANavPoint::StaticClass, TEXT("ANavPoint"), &Z_Registration_Info_UClass_ANavPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANavPoint), 429152707U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_NavPoint_h_2880901291(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_NavPoint_h_1148433528(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_NavPoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_NavPoint_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
