@@ -8,6 +8,8 @@ class UHorizontalBox;
 class UVerticalBox;
 class UEditableTextBox;
 class UButton;
+class UImage;
+class UTextBlock;
 
 class UCodeGenerator;
 
@@ -42,7 +44,10 @@ public:
 	UHorizontalBox* HorizontalBox5;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	UEditableTextBox* Screen;
+	UImage* ScreenBG;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UTextBlock* ScreenText;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	UButton* key0;

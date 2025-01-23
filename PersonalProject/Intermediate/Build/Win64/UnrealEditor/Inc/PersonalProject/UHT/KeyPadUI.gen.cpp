@@ -14,8 +14,9 @@ PERSONALPROJECT_API UClass* Z_Construct_UClass_UGUIBase();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UKeyPadUI();
 PERSONALPROJECT_API UClass* Z_Construct_UClass_UKeyPadUI_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
-UMG_API UClass* Z_Construct_UClass_UEditableTextBox_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UHorizontalBox_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
 // End Cross Module References
@@ -376,7 +377,13 @@ struct Z_Construct_UClass_UKeyPadUI_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Screen_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ScreenBG_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "KeyPadUI" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/KeyPadUI.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ScreenText_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "KeyPadUI" },
 		{ "EditInline", "true" },
@@ -449,7 +456,8 @@ struct Z_Construct_UClass_UKeyPadUI_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HorizontalBox3;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HorizontalBox4;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HorizontalBox5;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Screen;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ScreenBG;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ScreenText;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_key0;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_key1;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_key2;
@@ -486,7 +494,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Stat
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_HorizontalBox3 = { "HorizontalBox3", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, HorizontalBox3), Z_Construct_UClass_UHorizontalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HorizontalBox3_MetaData), NewProp_HorizontalBox3_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_HorizontalBox4 = { "HorizontalBox4", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, HorizontalBox4), Z_Construct_UClass_UHorizontalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HorizontalBox4_MetaData), NewProp_HorizontalBox4_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_HorizontalBox5 = { "HorizontalBox5", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, HorizontalBox5), Z_Construct_UClass_UHorizontalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HorizontalBox5_MetaData), NewProp_HorizontalBox5_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_Screen = { "Screen", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, Screen), Z_Construct_UClass_UEditableTextBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Screen_MetaData), NewProp_Screen_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_ScreenBG = { "ScreenBG", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, ScreenBG), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScreenBG_MetaData), NewProp_ScreenBG_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_ScreenText = { "ScreenText", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, ScreenText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScreenText_MetaData), NewProp_ScreenText_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_key0 = { "key0", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, key0), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_key0_MetaData), NewProp_key0_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_key1 = { "key1", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, key1), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_key1_MetaData), NewProp_key1_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKeyPadUI_Statics::NewProp_key2 = { "key2", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKeyPadUI, key2), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_key2_MetaData), NewProp_key2_MetaData) };
@@ -504,7 +513,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UKeyPadUI
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_HorizontalBox3,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_HorizontalBox4,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_HorizontalBox5,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_Screen,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_ScreenBG,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_ScreenText,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_key0,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_key1,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKeyPadUI_Statics::NewProp_key2,
@@ -555,14 +565,14 @@ UKeyPadUI::~UKeyPadUI() {}
 // End Class UKeyPadUI
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UKeyPadUI, UKeyPadUI::StaticClass, TEXT("UKeyPadUI"), &Z_Registration_Info_UClass_UKeyPadUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKeyPadUI), 81002107U) },
+		{ Z_Construct_UClass_UKeyPadUI, UKeyPadUI::StaticClass, TEXT("UKeyPadUI"), &Z_Registration_Info_UClass_UKeyPadUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKeyPadUI), 1394704862U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_2432169619(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_3404010223(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_UI_KeyPadUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

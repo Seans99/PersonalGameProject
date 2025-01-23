@@ -15,5 +15,5 @@ class PERSONALPROJECT_API IInteractable
 	GENERATED_BODY()
 
 public:
-	virtual bool Interact();
+	virtual void Interact() = 0;
 };

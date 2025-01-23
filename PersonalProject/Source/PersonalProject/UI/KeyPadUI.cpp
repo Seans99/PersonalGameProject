@@ -1,6 +1,8 @@
 #include "KeyPadUI.h"
 #include "Components/Button.h"
 #include "Components/EditableTextBox.h"
+#include "Components/Image.h"
+#include "Components/TextBlock.h"
 #include "../PrimarySystems/GameInstances/CodeGenerator.h"
 #include "../Actors/Door.h"
 #include "../Actors/KeyPad.h"
@@ -38,7 +40,7 @@ void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	{
 		if (EnteredCode != "")
 		{
-			Screen->SetText(FText::FromString(EnteredCode));
+			ScreenText->SetText(FText::FromString(EnteredCode));
 		}
 	}
 
@@ -49,8 +51,9 @@ void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 
 		if (EnteredCode == CodeString)
 		{
-			FString Unlocked = "Valid";
-			Screen->SetText(FText::FromString(Unlocked));
+			FString Unlocked = "Unlocked";
+			ScreenText->SetText(FText::FromString(Unlocked));
+			ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::Green));
 
 			for (AActor* Door : Doors)
 			{
@@ -68,8 +71,9 @@ void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 		}
 		else
 		{
-			FString Locked = "Invalid";
-			Screen->SetText(FText::FromString(Locked));
+			FString Locked = "Error";
+			ScreenText->SetText(FText::FromString(Locked));
+			ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::Red));
 			EnteredCode = "";
 			PassCode.Empty();
 		}
@@ -81,6 +85,7 @@ void UKeyPadUI::Key0Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(0);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -89,6 +94,7 @@ void UKeyPadUI::Key1Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(1);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -97,6 +103,7 @@ void UKeyPadUI::Key2Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(2);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -105,6 +112,7 @@ void UKeyPadUI::Key3Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(3);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -113,6 +121,7 @@ void UKeyPadUI::Key4Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(4);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -121,6 +130,7 @@ void UKeyPadUI::Key5Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(5);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -129,6 +139,7 @@ void UKeyPadUI::Key6Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(6);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -137,6 +148,7 @@ void UKeyPadUI::Key7Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(7);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -145,6 +157,7 @@ void UKeyPadUI::Key8Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(8);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
@@ -153,6 +166,7 @@ void UKeyPadUI::Key9Press()
 	if (PassCode.Num() < 4)
 	{
 		PassCode.Add(9);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
 	}
 }
 
