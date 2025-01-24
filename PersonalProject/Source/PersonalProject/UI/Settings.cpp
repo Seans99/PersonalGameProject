@@ -11,6 +11,9 @@
 #include "GameFramework/GameUserSettings.h"
 #include "../UI/UIComponents/CustomButtonV1.h"
 #include <Kismet/GameplayStatics.h>
+#include "../PrimarySystems/PrimaryPlayerController.h"
+#include "EnhancedInputSubsystems.h"
+#include "EnhancedInputComponent.h"
 
 void USettings::NativeConstruct()
 {

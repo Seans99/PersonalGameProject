@@ -18,7 +18,7 @@ struct FHitResult;
 #define PERSONALPROJECT_ObjectivePoint_generated_h
 
 #define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execRemoveObjectiveWidget); \
+	DECLARE_FUNCTION(execHideObjectiveWidget); \
 	DECLARE_FUNCTION(execOnBoxBeginOverlap);
 
 

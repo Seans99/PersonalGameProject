@@ -56,6 +56,7 @@ private:
 	APrimaryPlayerCharacter* Player;
 
 	bool bObjectiveDisplayed;
+	bool bHasBeenTriggered = false;
 
 	FTimerHandle TimerHandle;
 

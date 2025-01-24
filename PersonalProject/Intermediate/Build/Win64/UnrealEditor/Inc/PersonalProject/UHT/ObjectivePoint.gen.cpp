@@ -23,6 +23,35 @@ PERSONALPROJECT_API UClass* Z_Construct_UClass_UObjectiveUI_NoRegister();
 UPackage* Z_Construct_UPackage__Script_PersonalProject();
 // End Cross Module References
 
+// Begin Class AObjectivePoint Function HideObjectiveWidget
+struct Z_Construct_UFunction_AObjectivePoint_HideObjectiveWidget_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Actors/ObjectivePoint.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AObjectivePoint_HideObjectiveWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AObjectivePoint, nullptr, "HideObjectiveWidget", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AObjectivePoint_HideObjectiveWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_AObjectivePoint_HideObjectiveWidget_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AObjectivePoint_HideObjectiveWidget()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AObjectivePoint_HideObjectiveWidget_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AObjectivePoint::execHideObjectiveWidget)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HideObjectiveWidget();
+	P_NATIVE_END;
+}
+// End Class AObjectivePoint Function HideObjectiveWidget
+
 // Begin Class AObjectivePoint Function OnBoxBeginOverlap
 struct Z_Construct_UFunction_AObjectivePoint_OnBoxBeginOverlap_Statics
 {
@@ -104,42 +133,13 @@ DEFINE_FUNCTION(AObjectivePoint::execOnBoxBeginOverlap)
 }
 // End Class AObjectivePoint Function OnBoxBeginOverlap
 
-// Begin Class AObjectivePoint Function RemoveObjectiveWidget
-struct Z_Construct_UFunction_AObjectivePoint_RemoveObjectiveWidget_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Actors/ObjectivePoint.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AObjectivePoint_RemoveObjectiveWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AObjectivePoint, nullptr, "RemoveObjectiveWidget", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AObjectivePoint_RemoveObjectiveWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_AObjectivePoint_RemoveObjectiveWidget_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_AObjectivePoint_RemoveObjectiveWidget()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AObjectivePoint_RemoveObjectiveWidget_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AObjectivePoint::execRemoveObjectiveWidget)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->RemoveObjectiveWidget();
-	P_NATIVE_END;
-}
-// End Class AObjectivePoint Function RemoveObjectiveWidget
-
 // Begin Class AObjectivePoint
 void AObjectivePoint::StaticRegisterNativesAObjectivePoint()
 {
 	UClass* Class = AObjectivePoint::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "HideObjectiveWidget", &AObjectivePoint::execHideObjectiveWidget },
 		{ "OnBoxBeginOverlap", &AObjectivePoint::execOnBoxBeginOverlap },
-		{ "RemoveObjectiveWidget", &AObjectivePoint::execRemoveObjectiveWidget },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -191,8 +191,8 @@ struct Z_Construct_UClass_AObjectivePoint_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AObjectivePoint_HideObjectiveWidget, "HideObjectiveWidget" }, // 3974746753
 		{ &Z_Construct_UFunction_AObjectivePoint_OnBoxBeginOverlap, "OnBoxBeginOverlap" }, // 3574834164
-		{ &Z_Construct_UFunction_AObjectivePoint_RemoveObjectiveWidget, "RemoveObjectiveWidget" }, // 3833523174
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -255,10 +255,10 @@ AObjectivePoint::~AObjectivePoint() {}
 struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AObjectivePoint, AObjectivePoint::StaticClass, TEXT("AObjectivePoint"), &Z_Registration_Info_UClass_AObjectivePoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AObjectivePoint), 2376033781U) },
+		{ Z_Construct_UClass_AObjectivePoint, AObjectivePoint::StaticClass, TEXT("AObjectivePoint"), &Z_Registration_Info_UClass_AObjectivePoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AObjectivePoint), 546701819U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_1847492090(TEXT("/Script/PersonalProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_344188612(TEXT("/Script/PersonalProject"),
 	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

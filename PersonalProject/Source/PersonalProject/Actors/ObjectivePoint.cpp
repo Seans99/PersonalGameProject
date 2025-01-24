@@ -45,31 +45,35 @@ void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent
 {
 	if (Cast<APrimaryPlayerCharacter>(OtherActor))
 	{
-		for (auto& ObjPoint : ObjectivePoints)
+		bHasBeenTriggered = true;
+		if (!bHasBeenTriggered)
 		{
-			if (AObjectivePoint* Objective = Cast<AObjectivePoint>(ObjPoint))
+			for (auto& ObjPoint : ObjectivePoints)
 			{
-				if (Objective->ID += 1)
+				if (AObjectivePoint* Objective = Cast<AObjectivePoint>(ObjPoint))
 				{
-					if (Player)
+					if (Objective->ID += 1)
 					{
-						Player->ObjectivePoint = Objective->GetActorLocation();
+						if (Player)
+						{
+							Player->ObjectivePoint = Objective->GetActorLocation();
+						}
 					}
 				}
 			}
-		}
 
-		if (!bObjectiveDisplayed)
-		{
-			bObjectiveDisplayed = true;
-			ObjectiveWidget->SetVisibility(ESlateVisibility::Visible);
-			GetWorld()->GetTimerManager().SetTimer(
-				TimerHandle,
-				this,
-				&AObjectivePoint::HideObjectiveWidget,
-				3.f,
-				false
-			);
+			if (!bObjectiveDisplayed)
+			{
+				bObjectiveDisplayed = true;
+				ObjectiveWidget->SetVisibility(ESlateVisibility::Visible);
+				GetWorld()->GetTimerManager().SetTimer(
+					TimerHandle,
+					this,
+					&AObjectivePoint::HideObjectiveWidget,
+					3.f,
+					false
+				);
+			}
 		}
 	}
 }

@@ -11,10 +11,8 @@
 			"KeyPadUI.gen.cpp.obj",
 			"KeyPrompt.gen.cpp.obj",
 			"MainMenu.gen.cpp.obj",
-			"ObjectivePoint.gen.cpp.obj",
 			"ObjectiveUI.gen.cpp.obj",
 			"PauseMenu.gen.cpp.obj",
-			"PersonalProject.init.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
 			"PrimaryGameMode.gen.cpp.obj",
 			"PrimaryPlayerCharacter.gen.cpp.obj",
@@ -43,11 +41,13 @@
 			"ObjectiveUI.cpp.obj",
 			"PauseMenu.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"Settings.cpp.obj",
 			"TextLogUI.cpp.obj",
 			"TitleScreen.cpp.obj",
 			"CustomButtonV1.cpp.obj",
-			"ObjectivePoint.cpp.obj"
+			"ObjectivePoint.gen.cpp.obj",
+			"PersonalProject.init.gen.cpp.obj",
+			"ObjectivePoint.cpp.obj",
+			"Settings.cpp.obj"
 		]
 	}
 }
