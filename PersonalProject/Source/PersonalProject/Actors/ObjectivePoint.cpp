@@ -49,7 +49,7 @@ void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent
 		{
 			if (AObjectivePoint* Objective = Cast<AObjectivePoint>(ObjPoint))
 			{
-				if (Objective->ID == ID + 1)
+				if (Objective->ID += 1)
 				{
 					if (Player)
 					{
@@ -66,7 +66,7 @@ void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent
 			GetWorld()->GetTimerManager().SetTimer(
 				TimerHandle,
 				this,
-				&AObjectivePoint::RemoveObjectiveWidget,
+				&AObjectivePoint::HideObjectiveWidget,
 				3.f,
 				false
 			);
@@ -74,11 +74,11 @@ void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent
 	}
 }
 
-void AObjectivePoint::RemoveObjectiveWidget()
+void AObjectivePoint::HideObjectiveWidget()
 {
 	if (ObjectiveWidget)
 	{
-		ObjectiveWidget->RemoveFromViewport();
+		ObjectiveWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 }
 

@@ -49,7 +49,7 @@ protected:
 		const FHitResult& SweepResult);
 
 	UFUNCTION()
-	void RemoveObjectiveWidget();
+	void HideObjectiveWidget();
 
 private:
 	TArray<AActor*> ObjectivePoints;
