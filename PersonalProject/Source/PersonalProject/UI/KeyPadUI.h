@@ -80,6 +80,9 @@ public:
 	UButton* key9;
 
 public:
+	void OnKeyPress(int32 KeyNum);
+
+public:
 	UFUNCTION()
 	void Key0Press();
 

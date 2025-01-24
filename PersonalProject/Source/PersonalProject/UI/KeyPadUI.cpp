@@ -80,94 +80,54 @@ void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	}
 }
 
+void UKeyPadUI::OnKeyPress(int32 KeyNum)
+{
+	if (PassCode.Num() < 4)
+	{
+		PassCode.Add(KeyNum);
+		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
+	}
+}
+
 void UKeyPadUI::Key0Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(0);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(0);
 }
-
 void UKeyPadUI::Key1Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(1);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(1);
 }
-
 void UKeyPadUI::Key2Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(2);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(2);
 }
-
 void UKeyPadUI::Key3Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(3);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(3);
 }
-
 void UKeyPadUI::Key4Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(4);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(4);
 }
-
 void UKeyPadUI::Key5Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(5);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(5);
 }
-
 void UKeyPadUI::Key6Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(6);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(6);
 }
-
 void UKeyPadUI::Key7Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(7);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(7);
 }
-
 void UKeyPadUI::Key8Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(8);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(8);
 }
-
 void UKeyPadUI::Key9Press()
 {
-	if (PassCode.Num() < 4)
-	{
-		PassCode.Add(9);
-		ScreenText->SetColorAndOpacity(FSlateColor(FLinearColor::White));
-	}
+	OnKeyPress(9);
 }
 
 

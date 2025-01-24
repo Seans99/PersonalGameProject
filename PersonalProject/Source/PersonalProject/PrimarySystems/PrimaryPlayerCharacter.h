@@ -91,7 +91,7 @@ public:
 	FInteractSignature OnCancel;
 
 public:
-	FVector NavPoint;
+	FVector ObjectivePoint;
 
 private:
 	APrimaryGameMode* GameMode;

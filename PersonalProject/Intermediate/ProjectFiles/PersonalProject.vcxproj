@@ -270,10 +270,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\Actors\KeyPad.h"/>
-    <ClCompile Include="..\..\Source\PersonalProject\Actors\NavPoint.cpp">
+    <ClCompile Include="..\..\Source\PersonalProject\Actors\ObjectivePoint.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\Actors\NavPoint.h"/>
+    <ClInclude Include="..\..\Source\PersonalProject\Actors\ObjectivePoint.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\Actors\Tablet_Log.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -286,10 +286,6 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\Components\StaminaComponent.h"/>
-    <ClCompile Include="..\..\Source\PersonalProject\Interfaces\Interactable.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\Interfaces\Interactable.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\PrimarySystems\PrimaryGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -326,6 +322,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\UI\MainMenu.h"/>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\ObjectiveUI.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\ObjectiveUI.h"/>
     <ClCompile Include="..\..\Source\PersonalProject\UI\PauseMenu.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

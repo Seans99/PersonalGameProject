@@ -54,10 +54,10 @@
     <ClInclude Include="..\..\Source\PersonalProject\Actors\KeyPad.h">
       <Filter>Source\PersonalProject\Actors</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\PersonalProject\Actors\NavPoint.cpp">
+    <ClCompile Include="..\..\Source\PersonalProject\Actors\ObjectivePoint.cpp">
       <Filter>Source\PersonalProject\Actors</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\Actors\NavPoint.h">
+    <ClInclude Include="..\..\Source\PersonalProject\Actors\ObjectivePoint.h">
       <Filter>Source\PersonalProject\Actors</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\Actors\Tablet_Log.cpp">
@@ -80,15 +80,6 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\Components\StaminaComponent.h">
       <Filter>Source\PersonalProject\Components</Filter>
-    </ClInclude>
-    <Filter Include="Source\PersonalProject\Interfaces">
-      <UniqueIdentifier>{EF4C24DE-D651-3565-9A04-6897F615F195}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\PersonalProject\Interfaces\Interactable.cpp">
-      <Filter>Source\PersonalProject\Interfaces</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\PersonalProject\Interfaces\Interactable.h">
-      <Filter>Source\PersonalProject\Interfaces</Filter>
     </ClInclude>
     <Filter Include="Source\PersonalProject\PrimarySystems">
       <UniqueIdentifier>{3FD8BCC3-A5CF-3EC9-9252-EFB7E7B897AF}</UniqueIdentifier>
@@ -151,6 +142,12 @@
       <Filter>Source\PersonalProject\UI</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PersonalProject\UI\MainMenu.h">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PersonalProject\UI\ObjectiveUI.cpp">
+      <Filter>Source\PersonalProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PersonalProject\UI\ObjectiveUI.h">
       <Filter>Source\PersonalProject\UI</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\PersonalProject\UI\PauseMenu.cpp">

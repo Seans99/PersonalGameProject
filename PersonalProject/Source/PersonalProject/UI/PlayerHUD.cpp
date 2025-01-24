@@ -62,6 +62,18 @@ void UPlayerHUD::NativeTick(const FGeometry& Geometry, float DeltaTime)
 
 	UPanelSlot* PanelSlot = Objective->Slot;
 
+	if (Player)
+	{
+		if (Player->ObjectivePoint == FVector::ZeroVector)
+		{
+			Objective->SetVisibility(ESlateVisibility::Hidden);
+		}
+		else
+		{
+			Objective->SetVisibility(ESlateVisibility::Visible);
+		}
+	}
+
 	if (UCanvasPanelSlot* CanvasSlot = Cast<UCanvasPanelSlot>(PanelSlot))
 	{
 		if (!CheckIfbehind())
@@ -128,7 +140,7 @@ FVector UPlayerHUD::GetNavPointRotXNorm2D()
 
 	if (Player)
 	{
-		NavPoint = Player->NavPoint;
+		NavPoint = Player->ObjectivePoint;
 	}
 
 	FVector StartLocation = NavPoint;
