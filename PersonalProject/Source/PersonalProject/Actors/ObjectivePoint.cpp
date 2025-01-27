@@ -56,12 +56,12 @@ void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent
 		bHasBeenTriggered = true;
 		OverlappingPlayer->CurrentObjectiveID = ObjectiveID;
 
-		TArray<AActor*> ObjectivePoints;
-		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AObjectivePoint::StaticClass(), ObjectivePoints);
+		TArray<AActor*> FoundActors;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AObjectivePoint::StaticClass(), FoundActors);
 
-		for (AActor* Point : ObjectivePoints)
+		for (AActor* Actor : FoundActors)
 		{
-			AObjectivePoint* Objective = Cast<AObjectivePoint>(Point);
+			AObjectivePoint* Objective = Cast<AObjectivePoint>(Actor);
 			if (Objective && Objective->ObjectiveID == ObjectiveID + 1)
 			{
 				OverlappingPlayer->ObjectivePoint = Objective->GetActorLocation();

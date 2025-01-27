@@ -11,11 +11,15 @@ void UTextLogUI::NativeConstruct()
 	if (Code)
 	{
 		int32 CurrentCode = Code->GetRandomCode();
-		if (CurrentCode)
-		{
-			FString NewText = "The pass code is ";
-			NewText += FString::FromInt(CurrentCode);
-			Text->SetText(FText::FromString(NewText));
-		}
+        if (CurrentCode)
+        {
+            FString NewText = "Log Entry #7492\n\n";
+            NewText += "I have reprogrammed the access code to the next room. The door has been offline for a while, but the code ";
+            NewText += FString::FromInt(CurrentCode);
+            NewText += " should grant access.\n";
+            NewText += "- Max";
+
+            Text->SetText(FText::FromString(NewText));
+        }
 	}
 }
