@@ -4,6 +4,7 @@
 		"Module.PersonalProject.cpp.obj": [
 			"Door.cpp.obj",
 			"KeyPad.cpp.obj",
+			"ObjectivePoint.cpp.obj",
 			"Tablet_Log.cpp.obj",
 			"HealthComponent.cpp.obj",
 			"StaminaComponent.cpp.obj",
@@ -11,6 +12,7 @@
 			"CodeGenerator.cpp.obj",
 			"SoundManager.cpp.obj",
 			"PrimaryGameMode.cpp.obj",
+			"PrimaryPlayerCharacter.cpp.obj",
 			"PrimaryPlayerController.cpp.obj",
 			"GUIBase.cpp.obj",
 			"KeyPadUI.cpp.obj",
@@ -45,9 +47,7 @@
 			"StaminaComponent.gen.cpp.obj",
 			"Tablet_Log.gen.cpp.obj",
 			"TextLogUI.gen.cpp.obj",
-			"TitleScreen.gen.cpp.obj",
-			"ObjectivePoint.cpp.obj",
-			"PrimaryPlayerCharacter.cpp.obj"
+			"TitleScreen.gen.cpp.obj"
 		]
 	}
 }

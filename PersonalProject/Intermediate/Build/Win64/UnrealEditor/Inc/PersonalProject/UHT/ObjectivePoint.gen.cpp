@@ -194,6 +194,10 @@ struct Z_Construct_UClass_AObjectivePoint_Statics
 		{ "Category", "Info" },
 		{ "ModuleRelativePath", "Actors/ObjectivePoint.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bShowObjectivePopup_MetaData[] = {
+		{ "Category", "Info" },
+		{ "ModuleRelativePath", "Actors/ObjectivePoint.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ObjectiveWidgetClass_MetaData[] = {
 		{ "Category", "ObjectivePoint" },
 		{ "ModuleRelativePath", "Actors/ObjectivePoint.h" },
@@ -214,6 +218,8 @@ struct Z_Construct_UClass_AObjectivePoint_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxComponent;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ObjectiveID;
+	static void NewProp_bShowObjectivePopup_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShowObjectivePopup;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_ObjectiveWidgetClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ObjectiveWidget;
 	static const UECodeGen_Private::FTextPropertyParams NewProp_ObjectiveTitle;
@@ -233,6 +239,11 @@ struct Z_Construct_UClass_AObjectivePoint_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AObjectivePoint_Statics::NewProp_BoxComponent = { "BoxComponent", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AObjectivePoint, BoxComponent), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BoxComponent_MetaData), NewProp_BoxComponent_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AObjectivePoint_Statics::NewProp_ObjectiveID = { "ObjectiveID", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AObjectivePoint, ObjectiveID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ObjectiveID_MetaData), NewProp_ObjectiveID_MetaData) };
+void Z_Construct_UClass_AObjectivePoint_Statics::NewProp_bShowObjectivePopup_SetBit(void* Obj)
+{
+	((AObjectivePoint*)Obj)->bShowObjectivePopup = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AObjectivePoint_Statics::NewProp_bShowObjectivePopup = { "bShowObjectivePopup", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AObjectivePoint), &Z_Construct_UClass_AObjectivePoint_Statics::NewProp_bShowObjectivePopup_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bShowObjectivePopup_MetaData), NewProp_bShowObjectivePopup_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AObjectivePoint_Statics::NewProp_ObjectiveWidgetClass = { "ObjectiveWidgetClass", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AObjectivePoint, ObjectiveWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UObjectiveUI_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ObjectiveWidgetClass_MetaData), NewProp_ObjectiveWidgetClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AObjectivePoint_Statics::NewProp_ObjectiveWidget = { "ObjectiveWidget", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AObjectivePoint, ObjectiveWidget), Z_Construct_UClass_UObjectiveUI_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ObjectiveWidget_MetaData), NewProp_ObjectiveWidget_MetaData) };
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UClass_AObjectivePoint_Statics::NewProp_ObjectiveTitle = { "ObjectiveTitle", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AObjectivePoint, ObjectiveTitle), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ObjectiveTitle_MetaData), NewProp_ObjectiveTitle_MetaData) };
@@ -240,6 +251,7 @@ const UECodeGen_Private::FTextPropertyParams Z_Construct_UClass_AObjectivePoint_
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AObjectivePoint_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AObjectivePoint_Statics::NewProp_BoxComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AObjectivePoint_Statics::NewProp_ObjectiveID,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AObjectivePoint_Statics::NewProp_bShowObjectivePopup,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AObjectivePoint_Statics::NewProp_ObjectiveWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AObjectivePoint_Statics::NewProp_ObjectiveWidget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AObjectivePoint_Statics::NewProp_ObjectiveTitle,
@@ -283,14 +295,14 @@ AObjectivePoint::~AObjectivePoint() {}
 // End Class AObjectivePoint
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AObjectivePoint, AObjectivePoint::StaticClass, TEXT("AObjectivePoint"), &Z_Registration_Info_UClass_AObjectivePoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AObjectivePoint), 2091542533U) },
+		{ Z_Construct_UClass_AObjectivePoint, AObjectivePoint::StaticClass, TEXT("AObjectivePoint"), &Z_Registration_Info_UClass_AObjectivePoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AObjectivePoint), 723086256U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_2719619129(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean_schelvis_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_1683917659(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

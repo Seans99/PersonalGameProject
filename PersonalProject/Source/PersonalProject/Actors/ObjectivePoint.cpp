@@ -34,15 +34,18 @@ void AObjectivePoint::BeginPlay()
 		}
 	}
 
-	if (ObjectiveWidget)
+	if (bShowObjectivePopup)
 	{
-		ObjectiveWidget = CreateWidget<UObjectiveUI>(GetWorld(), ObjectiveWidgetClass);
 		if (ObjectiveWidget)
 		{
-			ObjectiveWidget->AddToViewport();
+			ObjectiveWidget = CreateWidget<UObjectiveUI>(GetWorld(), ObjectiveWidgetClass);
+			if (ObjectiveWidget)
+			{
+				ObjectiveWidget->AddToViewport();
+			}
+			ObjectiveWidget->SetObjective(ObjectiveTitle, ObjectiveDesc);
+			ObjectiveWidget->SetVisibility(ESlateVisibility::Hidden);
 		}
-		ObjectiveWidget->SetObjective(ObjectiveTitle, ObjectiveDesc);
-		ObjectiveWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 }
 
@@ -65,17 +68,20 @@ void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent
 				}
 			}
 
-			if (!bObjectiveDisplayed)
+			if (bShowObjectivePopup)
 			{
-				bObjectiveDisplayed = true;
-				ObjectiveWidget->SetVisibility(ESlateVisibility::Visible);
-				GetWorld()->GetTimerManager().SetTimer(
-					TimerHandle,
-					this,
-					&AObjectivePoint::HideObjectiveWidget,
-					3.f,
-					false
-				);
+				if (!bObjectiveDisplayed)
+				{
+					bObjectiveDisplayed = true;
+					ObjectiveWidget->SetVisibility(ESlateVisibility::Visible);
+					GetWorld()->GetTimerManager().SetTimer(
+						TimerHandle,
+						this,
+						&AObjectivePoint::HideObjectiveWidget,
+						3.f,
+						false
+					);
+				}
 			}
 		}
 	}

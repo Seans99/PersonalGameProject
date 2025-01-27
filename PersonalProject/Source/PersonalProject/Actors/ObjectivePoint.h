@@ -24,6 +24,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Info")
 	int32 ObjectiveID;
 
+	UPROPERTY(EditAnywhere, Category = "Info")
+	bool bShowObjectivePopup = false;
+
 public:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UObjectiveUI> ObjectiveWidgetClass;
