@@ -6,6 +6,7 @@
 #include "PrimaryPlayerCharacter.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FInteractSignature);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FJournalSignature);
 
 class UCameraComponent;
 class APrimaryGameMode;
@@ -60,6 +61,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
 	class UInputAction* CancelAction;
 
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	class UInputAction* JournalAction;
+
 protected:
 	void Move(const FInputActionValue& InputValue);
 	void Jump();
@@ -69,6 +73,7 @@ protected:
 	void StopSprint();
 	void Interact();
 	void Cancel();
+	void Journal();
 
 	UFUNCTION()
 	void HandleStaminaDepleted();
@@ -92,6 +97,10 @@ public:
 
 public:
 	FVector ObjectivePoint;
+	int32 CurrentObjectiveID;
+
+	UPROPERTY()
+	FJournalSignature OnShowJournal;
 
 private:
 	APrimaryGameMode* GameMode;

@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\singlefile\\primarygamemode.h",
+        "Source": "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\singlefile\\primarygamemode.h",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primarygamemode.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\source\\personalproject\\primarysystems\\primarygamemode.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -689,7 +689,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\worldpartitionstreamingsource.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\playercontroller.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
-            "c:\\users\\sean9\\documents\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primarygamemode.generated.h"
+            "c:\\users\\sean.schelvis\\github\\personalgameproject\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\primarygamemode.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

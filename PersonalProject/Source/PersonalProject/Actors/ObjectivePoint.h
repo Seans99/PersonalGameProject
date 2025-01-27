@@ -22,7 +22,7 @@ public:
 	UBoxComponent* BoxComponent;
 
 	UPROPERTY(EditAnywhere, Category = "Info")
-	int32 ID;
+	int32 ObjectiveID;
 
 public:
 	UPROPERTY(EditAnywhere)
@@ -50,6 +50,9 @@ protected:
 
 	UFUNCTION()
 	void HideObjectiveWidget();
+
+	UFUNCTION()
+	void ShowCurrentObjective();
 
 private:
 	TArray<AActor*> ObjectivePoints;

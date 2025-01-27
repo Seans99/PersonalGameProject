@@ -21,7 +21,12 @@ void AObjectivePoint::BeginPlay()
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AObjectivePoint::StaticClass(), ObjectivePoints);
 	Player = Cast<APrimaryPlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 
-	if (ID == 1)
+	if (Player)
+	{
+		Player->OnShowJournal.AddDynamic(this, &AObjectivePoint::ShowCurrentObjective);
+	}
+
+	if (ObjectiveID == 1)
 	{
 		if (Player)
 		{
@@ -43,21 +48,19 @@ void AObjectivePoint::BeginPlay()
 
 void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (Cast<APrimaryPlayerCharacter>(OtherActor))
+	if (APrimaryPlayerCharacter* Other = Cast<APrimaryPlayerCharacter>(OtherActor))
 	{
-		bHasBeenTriggered = true;
 		if (!bHasBeenTriggered)
 		{
+			Other->CurrentObjectiveID = ObjectiveID;
+			bHasBeenTriggered = true;
 			for (auto& ObjPoint : ObjectivePoints)
 			{
 				if (AObjectivePoint* Objective = Cast<AObjectivePoint>(ObjPoint))
 				{
-					if (Objective->ID += 1)
+					if (Objective->ObjectiveID == ObjectiveID + 1)
 					{
-						if (Player)
-						{
-							Player->ObjectivePoint = Objective->GetActorLocation();
-						}
+						Other->ObjectivePoint = Objective->GetActorLocation();
 					}
 				}
 			}
@@ -82,7 +85,30 @@ void AObjectivePoint::HideObjectiveWidget()
 {
 	if (ObjectiveWidget)
 	{
+		bObjectiveDisplayed = false;
 		ObjectiveWidget->SetVisibility(ESlateVisibility::Hidden);
+		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+	}
+}
+
+void AObjectivePoint::ShowCurrentObjective()
+{
+	if (Player->CurrentObjectiveID == ObjectiveID)
+	{
+		if (ObjectiveWidget && !bObjectiveDisplayed)
+		{
+			bObjectiveDisplayed = true;
+			FText Title = FText::FromString("Current Objective");
+			ObjectiveWidget->SetObjective(Title, ObjectiveDesc);
+			ObjectiveWidget->SetVisibility(ESlateVisibility::Visible);
+			GetWorld()->GetTimerManager().SetTimer(
+				TimerHandle,
+				this,
+				&AObjectivePoint::HideObjectiveWidget,
+				3.f,
+				false
+			);
+		}
 	}
 }
 

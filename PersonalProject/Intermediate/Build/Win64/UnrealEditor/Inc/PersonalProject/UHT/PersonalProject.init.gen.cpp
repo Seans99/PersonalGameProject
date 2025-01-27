@@ -9,6 +9,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePersonalProject_init() {}
 	PERSONALPROJECT_API UFunction* Z_Construct_UDelegateFunction_PersonalProject_HealthCompSignature__DelegateSignature();
 	PERSONALPROJECT_API UFunction* Z_Construct_UDelegateFunction_PersonalProject_InteractSignature__DelegateSignature();
+	PERSONALPROJECT_API UFunction* Z_Construct_UDelegateFunction_PersonalProject_JournalSignature__DelegateSignature();
 	PERSONALPROJECT_API UFunction* Z_Construct_UDelegateFunction_PersonalProject_OnButtonClicked__DelegateSignature();
 	PERSONALPROJECT_API UFunction* Z_Construct_UDelegateFunction_PersonalProject_StaminaCompSignature__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_PersonalProject;
@@ -19,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodePersonalProject_init() {}
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_PersonalProject_HealthCompSignature__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_PersonalProject_InteractSignature__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PersonalProject_JournalSignature__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_PersonalProject_OnButtonClicked__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_PersonalProject_StaminaCompSignature__DelegateSignature,
 			};
@@ -27,13 +29,13 @@ void EmptyLinkFunctionForGeneratedCodePersonalProject_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xCAA6AFA6,
-				0xFC737E95,
+				0x4BC170B5,
+				0xB0D5E76A,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_PersonalProject.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_PersonalProject.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_PersonalProject(Z_Construct_UPackage__Script_PersonalProject, TEXT("/Script/PersonalProject"), Z_Registration_Info_UPackage__Script_PersonalProject, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xCAA6AFA6, 0xFC737E95));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_PersonalProject(Z_Construct_UPackage__Script_PersonalProject, TEXT("/Script/PersonalProject"), Z_Registration_Info_UPackage__Script_PersonalProject, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x4BC170B5, 0xB0D5E76A));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
