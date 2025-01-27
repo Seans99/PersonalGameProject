@@ -11,7 +11,6 @@
 			"CodeGenerator.cpp.obj",
 			"SoundManager.cpp.obj",
 			"PrimaryGameMode.cpp.obj",
-			"PrimaryPlayerCharacter.cpp.obj",
 			"PrimaryPlayerController.cpp.obj",
 			"GUIBase.cpp.obj",
 			"KeyPadUI.cpp.obj",
@@ -47,7 +46,8 @@
 			"Tablet_Log.gen.cpp.obj",
 			"TextLogUI.gen.cpp.obj",
 			"TitleScreen.gen.cpp.obj",
-			"ObjectivePoint.cpp.obj"
+			"ObjectivePoint.cpp.obj",
+			"PrimaryPlayerCharacter.cpp.obj"
 		]
 	}
 }
