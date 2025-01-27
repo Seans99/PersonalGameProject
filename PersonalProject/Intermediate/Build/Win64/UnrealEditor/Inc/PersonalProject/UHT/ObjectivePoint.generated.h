@@ -20,6 +20,7 @@ struct FHitResult;
 #define FID_Users_sean9_Documents_GitHub_PersonalGameProject_PersonalProject_Source_PersonalProject_Actors_ObjectivePoint_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execShowCurrentObjective); \
 	DECLARE_FUNCTION(execHideObjectiveWidget); \
+	DECLARE_FUNCTION(execDisplayObjectiveWidget); \
 	DECLARE_FUNCTION(execOnBoxBeginOverlap);
 
 

@@ -52,6 +52,9 @@ protected:
 		const FHitResult& SweepResult);
 
 	UFUNCTION()
+	void DisplayObjectiveWidget();
+
+	UFUNCTION()
 	void HideObjectiveWidget();
 
 	UFUNCTION()

@@ -42,48 +42,49 @@ void AObjectivePoint::BeginPlay()
 			if (ObjectiveWidget)
 			{
 				ObjectiveWidget->AddToViewport();
+				ObjectiveWidget->SetObjective(ObjectiveTitle, ObjectiveDesc);
+				ObjectiveWidget->SetVisibility(ESlateVisibility::Hidden);
 			}
-			ObjectiveWidget->SetObjective(ObjectiveTitle, ObjectiveDesc);
-			ObjectiveWidget->SetVisibility(ESlateVisibility::Hidden);
 		}
 	}
 }
 
 void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (APrimaryPlayerCharacter* Other = Cast<APrimaryPlayerCharacter>(OtherActor))
+	if (APrimaryPlayerCharacter* OverlappingPlayer = Cast<APrimaryPlayerCharacter>(OtherActor))
 	{
-		if (!bHasBeenTriggered)
-		{
-			Other->CurrentObjectiveID = ObjectiveID;
-			bHasBeenTriggered = true;
-			for (auto& ObjPoint : ObjectivePoints)
-			{
-				if (AObjectivePoint* Objective = Cast<AObjectivePoint>(ObjPoint))
-				{
-					if (Objective->ObjectiveID == ObjectiveID + 1)
-					{
-						Other->ObjectivePoint = Objective->GetActorLocation();
-					}
-				}
-			}
+		bHasBeenTriggered = true;
+		OverlappingPlayer->CurrentObjectiveID = ObjectiveID;
 
-			if (bShowObjectivePopup)
+		TArray<AActor*> ObjectivePoints;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AObjectivePoint::StaticClass(), ObjectivePoints);
+
+		for (AActor* Point : ObjectivePoints)
+		{
+			AObjectivePoint* Objective = Cast<AObjectivePoint>(Point);
+			if (Objective && Objective->ObjectiveID == ObjectiveID + 1)
 			{
-				if (!bObjectiveDisplayed)
-				{
-					bObjectiveDisplayed = true;
-					ObjectiveWidget->SetVisibility(ESlateVisibility::Visible);
-					GetWorld()->GetTimerManager().SetTimer(
-						TimerHandle,
-						this,
-						&AObjectivePoint::HideObjectiveWidget,
-						3.f,
-						false
-					);
-				}
+				OverlappingPlayer->ObjectivePoint = Objective->GetActorLocation();
+				break;
 			}
 		}
+
+		if (bShowObjectivePopup && ObjectiveWidget)
+		{
+			DisplayObjectiveWidget();
+		}
+	}
+}
+
+void AObjectivePoint::DisplayObjectiveWidget()
+{
+	if (ObjectiveWidget || !bObjectiveDisplayed)
+	{
+		bObjectiveDisplayed = true;
+		ObjectiveWidget->SetVisibility(ESlateVisibility::Visible);
+
+		// Hide widget after a delay
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AObjectivePoint::HideObjectiveWidget, 3.f, false);
 	}
 }
 
@@ -93,28 +94,20 @@ void AObjectivePoint::HideObjectiveWidget()
 	{
 		bObjectiveDisplayed = false;
 		ObjectiveWidget->SetVisibility(ESlateVisibility::Hidden);
-		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+		if (GetWorld()->GetTimerManager().IsTimerActive(TimerHandle))
+		{
+			GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+		}
 	}
 }
 
 void AObjectivePoint::ShowCurrentObjective()
 {
-	if (Player->CurrentObjectiveID == ObjectiveID)
+	if (Player && Player->CurrentObjectiveID == ObjectiveID && ObjectiveWidget && !bObjectiveDisplayed)
 	{
-		if (ObjectiveWidget && !bObjectiveDisplayed)
-		{
-			bObjectiveDisplayed = true;
-			FText Title = FText::FromString("Current Objective");
-			ObjectiveWidget->SetObjective(Title, ObjectiveDesc);
-			ObjectiveWidget->SetVisibility(ESlateVisibility::Visible);
-			GetWorld()->GetTimerManager().SetTimer(
-				TimerHandle,
-				this,
-				&AObjectivePoint::HideObjectiveWidget,
-				3.f,
-				false
-			);
-		}
+		FText CurrentObjectiveTitle = FText::FromString(TEXT("Current Objective"));
+		ObjectiveWidget->SetObjective(CurrentObjectiveTitle, ObjectiveDesc);
+		DisplayObjectiveWidget();
 	}
 }
 
