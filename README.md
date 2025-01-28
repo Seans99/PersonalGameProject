@@ -8,6 +8,7 @@ WASD - Movement
 E - Interact
 C - Close log/Cancel 
 ESC - Pause
+J - Show Current Objective
 
 # Images
 
