@@ -8,6 +8,8 @@ class UBoxComponent;
 class APrimaryPlayerCharacter;
 class UWidgetComponent;
 class UObjectiveUI;
+class APrimaryGameMode;
+class UObjectiveManager;
 
 UCLASS()
 class PERSONALPROJECT_API AObjectivePoint : public AActor
@@ -29,15 +31,6 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<UObjectiveUI> ObjectiveWidgetClass;
-
-	UPROPERTY(EditAnywhere)
-	UObjectiveUI* ObjectiveWidget;
-
-	UPROPERTY(EditAnywhere)
-	FText ObjectiveTitle;
-
-	UPROPERTY(EditAnywhere)
 	FText ObjectiveDesc;
 
 protected:
@@ -52,12 +45,6 @@ protected:
 		const FHitResult& SweepResult);
 
 	UFUNCTION()
-	void DisplayObjectiveWidget();
-
-	UFUNCTION()
-	void HideObjectiveWidget();
-
-	UFUNCTION()
 	void ShowCurrentObjective();
 
 private:
@@ -68,6 +55,10 @@ private:
 	bool bHasBeenTriggered = false;
 
 	FTimerHandle TimerHandle;
+
+private:
+	APrimaryGameMode* Gamemode;
+	UObjectiveManager* ObjManager;
 
 public:	
 	virtual void Tick(float DeltaTime) override;

@@ -9,7 +9,9 @@ class UMainMenu;
 class USettings;
 class UPauseMenu;
 class UPlayerHUD;
+class UObjectiveUI;
 class APrimaryPlayerController;
+class UObjectiveManager;
 
 UENUM(BlueprintType)
 enum class EGameState : uint8
@@ -81,8 +83,21 @@ public:
 	UPROPERTY()
 	UPlayerHUD* PlayerHudWidget;
 
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UObjectiveUI> ObjectiveWidgetClass;
+
+	UPROPERTY()
+	UObjectiveUI* ObjectiveWidget;
+
+public:
+	bool bShowObjective = false;
+
 public:
 	APrimaryPlayerController* Controller;
+	UObjectiveManager* ObjManager;
+
+private:
+	FTimerHandle TimerHandle;
 
 private:
 	void TitleScreenSetup();
@@ -91,4 +106,6 @@ private:
 	void InGameSetup();
 	void PauseSetup();
 	void GameOverSetup();
+	void Objective();
+	void RemoveObjectiveWidget();
 };

@@ -5,7 +5,9 @@
 #include "../UI/PauseMenu.h"
 #include "../UI/PlayerHUD.h"
 #include "../UI/UIComponents/CustomButtonV1.h"
+#include "../UI/ObjectiveUI.h"
 #include "PrimaryPlayerController.h"
+#include "GameInstances/ObjectiveManager.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/Actor.h"
@@ -26,6 +28,9 @@ void APrimaryGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
+	ObjManager = GetGameInstance()->GetSubsystem<UObjectiveManager>();
+	ObjManager->SetHasObjective(false);
+
 	FString CurrentLevel = UGameplayStatics::GetCurrentLevelName(this);
 
 	if (CurrentLevel == MainLevel)
@@ -41,6 +46,29 @@ void APrimaryGameMode::BeginPlay()
 void APrimaryGameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	switch (CurrentState)
+	{
+	case EGameState::ETitleScreen:
+		break;
+	case EGameState::EMainMenu:
+		break;
+	case EGameState::ESettings:
+		break;
+	case EGameState::EInGame:
+		if (bShowObjective)
+		{
+			bShowObjective = false;
+			Objective();
+		}
+		break;
+	case EGameState::EPause:
+		break;
+	case EGameState::EGameOver:
+		break;
+	default:
+		break;
+	}
 }
 
 void APrimaryGameMode::TitleScreenSetup()
@@ -194,6 +222,38 @@ void APrimaryGameMode::PauseSetup()
 void APrimaryGameMode::GameOverSetup()
 {
 	// Logic for Game Over state 
+}
+
+void APrimaryGameMode::Objective()
+{
+	if (ObjectiveWidget)
+	{
+		if (!ObjectiveWidget->IsInViewport())
+		{
+			ObjectiveWidget = CreateWidget<UObjectiveUI>(GetWorld(), ObjectiveWidgetClass);
+			if (ObjectiveWidget)
+			{
+				FText Title = FText::FromString("Objective");
+				ObjectiveWidget->AddToViewport();
+				ObjectiveWidget->SetObjective(Title, ObjManager->GetCurrentObjectiveDesc());
+			}
+			GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &APrimaryGameMode::RemoveObjectiveWidget, 3.f, false);
+		}
+		else
+		{
+			FText Title = FText::FromString("Objective");
+			ObjectiveWidget->SetObjective(Title, ObjManager->GetCurrentObjectiveDesc());
+		}
+	}
+}
+
+void APrimaryGameMode::RemoveObjectiveWidget()
+{
+	if (ObjectiveWidget)
+	{
+		ObjectiveWidget->RemoveFromViewport();
+		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+	}
 }
 
 void APrimaryGameMode::SetState(EGameState NewState)
