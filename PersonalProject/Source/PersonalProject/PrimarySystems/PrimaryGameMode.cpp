@@ -187,6 +187,11 @@ void APrimaryGameMode::PauseSetup()
 	CurrentState = EGameState::EPause;
 	UGameplayStatics::SetGamePaused(GetWorld(), true);
 
+	if (ObjectiveWidget)
+	{
+		ObjectiveWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+
 	if (SettingsWidget)
 	{
 		SettingsWidget->SetVisibility(ESlateVisibility::Hidden);
