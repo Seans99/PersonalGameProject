@@ -22,4 +22,8 @@ void UTextLogUI::NativeConstruct()
             Text->SetText(FText::FromString(NewText));
         }
 	}
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("CodeGenerator subsystem is null!"));
+    }
 }

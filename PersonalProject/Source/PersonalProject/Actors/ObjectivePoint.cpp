@@ -50,21 +50,28 @@ void AObjectivePoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent
 		TArray<AActor*> FoundActors;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AObjectivePoint::StaticClass(), FoundActors);
 
-		for (AActor* Actor : FoundActors)
+		if (FoundActors.Num() == 0)
 		{
-			AObjectivePoint* Objective = Cast<AObjectivePoint>(Actor);
-			if (Objective && Objective->ObjectiveID == ObjectiveID + 1)
-			{
-				OverlappingPlayer->ObjectivePoint = Objective->GetActorLocation();
-				break;
-			}
+			UE_LOG(LogTemp, Error, TEXT("No objective points found in level!"));
 		}
-
-		if (bShowObjectivePopup)
+		else
 		{
-			ObjManager->SetCurrentObjectiveDesc(ObjectiveDesc);
-			ObjManager->SetHasObjective(true);
-			Gamemode->bShowObjective = true;
+			for (AActor* Actor : FoundActors)
+			{
+				AObjectivePoint* Objective = Cast<AObjectivePoint>(Actor);
+				if (Objective && Objective->ObjectiveID == ObjectiveID + 1)
+				{
+					OverlappingPlayer->ObjectivePoint = Objective->GetActorLocation();
+					break;
+				}
+			}
+
+			if (bShowObjectivePopup)
+			{
+				ObjManager->SetCurrentObjectiveDesc(ObjectiveDesc);
+				ObjManager->SetHasObjective(true);
+				Gamemode->bShowObjective = true;
+			}
 		}
 	}
 }

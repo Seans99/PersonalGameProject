@@ -13,7 +13,16 @@ void UKeyPadUI::NativeConstruct()
 	Super::NativeConstruct();
 
 	Code = GetGameInstance()->GetSubsystem<UCodeGenerator>();
+	if (!Code)
+	{
+		UE_LOG(LogTemp, Error, TEXT("CodeGenerator subsystem is null!"));
+	}
+
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ADoor::StaticClass(), Doors);
+	if (Doors.Num() == 0)
+	{
+		UE_LOG(LogTemp, Error, TEXT("No doors found in the level!"));
+	}
 
 	key0->OnClicked.AddDynamic(this, &UKeyPadUI::Key0Press);
 	key1->OnClicked.AddDynamic(this, &UKeyPadUI::Key1Press);
@@ -29,6 +38,11 @@ void UKeyPadUI::NativeConstruct()
 
 void UKeyPadUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
+	if (!Code)
+	{
+		return;
+	}
+
 	FString EnteredCode;
 
 	for (int32 Num : PassCode)
